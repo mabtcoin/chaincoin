@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2013 Zetacoin developers
+// Copyright (c) 2013 Chaincoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -66,7 +66,7 @@ map<uint256, map<uint256, CDataStream*> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Zetacoin Signed Message:\n";
+const string strMessageMagic = "Chaincoin Signed Message:\n";
 
 double dHashesPerSec = 0.0;
 int64 nHPSTimerStart = 0;
@@ -474,7 +474,7 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 bool IsStandardTx(const CTransaction& tx, string& reason)
 {
-    if (tx.nVersion > CTransaction::CURRENT_VERSION) {
+    if (tx.nVersion > CTransaction::TXMSG_VERSION) {
         reason = "version";
         return false;
     }
@@ -484,11 +484,15 @@ bool IsStandardTx(const CTransaction& tx, string& reason)
         return false;
     }
 
+	// Disallow large transaction comments
+	if (tx.strTxComment.length() > MAX_TX_COMMENT_LEN)
+		return false;
+        
     // Extremely large transactions with lots of inputs can cost the network
     // almost as much to process as they cost the sender in fees, because
     // computing signature hashes is O(ninputs*txsize). Limiting transactions
     // to MAX_STANDARD_TX_SIZE mitigates CPU exhaustion attacks.
-    unsigned int sz = tx.GetSerializeSize(SER_NETWORK, CTransaction::CURRENT_VERSION);
+    unsigned int sz = tx.GetSerializeSize(SER_NETWORK, tx.nVersion);
     if (sz >= MAX_STANDARD_TX_SIZE) {
         reason = "tx-size";
         return false;
@@ -1245,8 +1249,8 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
     return pblock->GetHash();
 }
 
-static const int64 nStartSubsidy = 1000 * COIN;
-static const int64 nMinSubsidy = 1 * COIN;
+static const int64 nStartSubsidy = 16 * COIN;
+static const int64 nMinSubsidy = 0.001 * COIN;
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
@@ -1266,14 +1270,14 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 2 * 60; // 2 minutes
-static const int64 nTargetSpacing = 30; // 30 seconds
-static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 4 blocks
+static const int64 nTargetTimespan = 90; // 90 seconds
+static const int64 nTargetSpacing = 90; // 90 seconds
+static const int64 nInterval = 1; // Chaincoin: retarget every block
 
-static const int64 nAveragingInterval = nInterval * 20; // 80 blocks
-static const int64 nAveragingTargetTimespan = nAveragingInterval * nTargetSpacing; // 40 minutes
+static const int64 nAveragingInterval = 8; // 8 blocks
+static const int64 nAveragingTargetTimespan = nAveragingInterval * nTargetSpacing; // 12 minutes
 
-static const int64 nMaxAdjustDown = 20; // 20% adjustment down
+static const int64 nMaxAdjustDown = 3; // 3% adjustment down
 static const int64 nMaxAdjustUp = 1; // 1% adjustment up
 
 static const int64 nTargetTimespanAdjDown = nTargetTimespan * (100 + nMaxAdjustDown) / 100;
@@ -1282,26 +1286,31 @@ static const int64 nTargetTimespanAdjDown = nTargetTimespan * (100 + nMaxAdjustD
 // minimum amount of work that could possibly be required nTime after
 // minimum work required was nBase
 //
-unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
+unsigned int ComputeMinWork(unsigned int nBase, int64 nTime, int64 nCheckpointTime, int64 nBlockTime)
 {
     const CBigNum &bnLimit = Params().ProofOfWorkLimit();
     // Testnet has min-difficulty blocks
     // after nTargetSpacing*2 time between blocks:
     if (TestNet() && nTime > nTargetSpacing*2)
         return bnLimit.GetCompact();
-
+            
     CBigNum bnResult;
-    bnResult.SetCompact(nBase);
-    while (nTime > 0 && bnResult < bnLimit)
-    {
-        // Maximum adjustment...
-        bnResult *= (100 + nMaxAdjustDown);
-        bnResult /= 100;
-        // ... in best-case exactly adjustment times-normal target time
-        nTime -= nTargetTimespanAdjDown;
-    }
-    if (bnResult > bnLimit)
+    if (nTime > nTargetTimespan * 7500)
         bnResult = bnLimit;
+    else
+    {
+        bnResult.SetCompact(nBase);
+        while (nTime > 0 && bnResult < bnLimit)
+        {
+            // Maximum adjustment...
+            bnResult *= (100 + nMaxAdjustDown);
+            bnResult /= 100;
+            // ... in best-case exactly adjustment times-normal target time
+            nTime -= nTargetTimespanAdjDown;
+        }
+        if (bnResult > bnLimit)
+            bnResult = bnLimit;
+    }
     return bnResult.GetCompact();
 }
 
@@ -1317,7 +1326,7 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         return nProofOfWorkLimit;
         
     if (pindexLast->nHeight+1 < nAveragingInterval) 
-        return nProofOfWorkLimit;
+        return nProofOfWorkLimit;       
 
     // Only change once per interval
     if ((pindexLast->nHeight+1) % nInterval != 0)
@@ -2434,7 +2443,7 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
         CBigNum bnNewBlock;
         bnNewBlock.SetCompact(pblock->nBits);
         CBigNum bnRequired;
-        bnRequired.SetCompact(ComputeMinWork(pcheckpoint->nBits, deltaTime));
+        bnRequired.SetCompact(ComputeMinWork(pcheckpoint->nBits, deltaTime, pcheckpoint->nTime, pblock->GetBlockTime()));
         if (bnNewBlock > bnRequired)
         {
             return state.DoS(100, error("ProcessBlock() : block with too little proof-of-work"));
@@ -4598,7 +4607,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    printf("ZetacoinMiner:\n");
+    printf("ChaincoinMiner:\n");
     printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4607,7 +4616,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("ZetacoinMiner : generated block is stale");
+            return error("ChaincoinMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4621,7 +4630,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("ZetacoinMiner : ProcessBlock, block not accepted");
+            return error("ChaincoinMiner : ProcessBlock, block not accepted");
     }
 
     return true;
@@ -4629,7 +4638,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
 void static BitcoinMiner(CWallet *pwallet)
 {
-    printf("ZetacoinMiner started\n");
+    printf("ChaincoinMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("bitcoin-miner");
 
@@ -4657,12 +4666,13 @@ void static BitcoinMiner(CWallet *pwallet)
         CBlock *pblock = &pblocktemplate->block;
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        printf("Running ZetacoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running ChaincoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
         // Pre-build hash buffers
         //
+        /*
         char pmidstatebuf[32+16]; char* pmidstate = alignup<16>(pmidstatebuf);
         char pdatabuf[128+16];    char* pdata     = alignup<16>(pdatabuf);
         char phash1buf[64+16];    char* phash1    = alignup<16>(phash1buf);
@@ -4672,35 +4682,32 @@ void static BitcoinMiner(CWallet *pwallet)
         unsigned int& nBlockTime = *(unsigned int*)(pdata + 64 + 4);
         unsigned int& nBlockBits = *(unsigned int*)(pdata + 64 + 8);
         unsigned int& nBlockNonce = *(unsigned int*)(pdata + 64 + 12);
-
+        */
 
         //
         // Search
         //
-        int64 nStart = GetTime();
-        uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
+        /*
         uint256 hashbuf[2];
         uint256& hash = *alignup<16>(hashbuf);
+        */
+        uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
+        int64 nStart = GetTime();
+        uint256 hash;
+        
         loop
         {
             unsigned int nHashesDone = 0;
-            unsigned int nNonceFound;
 
-            // Crypto++ SHA256
-            nNonceFound = ScanHash_CryptoPP(pmidstate, pdata + 64, phash1,
-                                            (char*)&hash, nHashesDone);
-
-            // Check if something found
-            if (nNonceFound != (unsigned int) -1)
+            for(int i = 0; i < 1000; i++)
             {
-                for (unsigned int i = 0; i < sizeof(hash)/4; i++)
-                    ((unsigned int*)&hash)[i] = ByteReverse(((unsigned int*)&hash)[i]);
-
+                hash = pblock->GetHash();
+                // Check if something found
                 if (hash <= hashTarget)
                 {
                     // Found a solution
-                    pblock->nNonce = ByteReverse(nNonceFound);
-                    assert(hash == pblock->GetHash());
+                    // pblock->nNonce = ByteReverse(nNonceFound);
+                    // assert(hash == pblock->GetHash());
 
                     SetThreadPriority(THREAD_PRIORITY_NORMAL);
                     CheckWork(pblock, *pwalletMain, reservekey);
@@ -4713,7 +4720,10 @@ void static BitcoinMiner(CWallet *pwallet)
 
                     break;
                 }
+                ++pblock->nNonce;
+                nHashesDone++;
             }
+            if (hash <= hashTarget){break;}
 
             // Meter hashes/sec
             static int64 nHashCounter;
@@ -4748,7 +4758,7 @@ void static BitcoinMiner(CWallet *pwallet)
             boost::this_thread::interruption_point();
             if (vNodes.empty() && Params().NetworkID() != CChainParams::REGTEST)
                 break;
-            if (nBlockNonce >= 0xffff0000)
+            if (pblock->nNonce >= 0xffff0000)
                 break;
             if (nTransactionsUpdated != nTransactionsUpdatedLast && GetTime() - nStart > 60)
                 break;
@@ -4757,18 +4767,18 @@ void static BitcoinMiner(CWallet *pwallet)
 
             // Update nTime every few seconds
             UpdateTime(*pblock, pindexPrev);
-            nBlockTime = ByteReverse(pblock->nTime);
+            // nBlockTime = ByteReverse(pblock->nTime);
             if (TestNet())
             {
                 // Changing pblock->nTime can change work required on testnet:
-                nBlockBits = ByteReverse(pblock->nBits);
+                // nBlockBits = ByteReverse(pblock->nBits);
                 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
             }
         }
     } }
     catch (boost::thread_interrupted)
     {
-        printf("ZetacoinMiner terminated\n");
+        printf("ChaincoinMiner terminated\n");
         throw;
     }
 }

@@ -23,33 +23,33 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         // The message start string is designed to be unlikely to occur in normal data.
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xb5;
-        pchMessageStart[2] = 0x03;
-        pchMessageStart[3] = 0xdf;
-        vAlertPubKey = ParseHex("045337216002ca6a71d63edf062895417610a723d453e722bf4728996c58661cdac3d4dec5cecd449b9086e9602b35cc726a9e0163e1a4d40f521fbdaebb674658");
-        nDefaultPort = 17333;
-        nRPCPort = 8332;
+        pchMessageStart[0] = 0xa3;
+        pchMessageStart[1] = 0xd2;
+        pchMessageStart[2] = 0x7a;
+        pchMessageStart[3] = 0x03;
+        vAlertPubKey = ParseHex("04c5788ca1e268a7474763fa965210b6fa6b04a45f52d21056c62fb19a2de991aa15aa1d1c516f34d2a0016f51a87959c89f51a148db30c839f71bc525dde8c480");
+        nDefaultPort = 11994;
+        nRPCPort = 11995;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
-        nSubsidyHalvingInterval = 80640;
+        nSubsidyHalvingInterval = 700800; // 2 years
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
   
-        const char* pszTimestamp = "3 Aug 2013 - M&G - Mugabe wins Zim election with more than 60% of votes";
+        const char* pszTimestamp = "18-01-14 - Anti-fracking campaigners chain themselves to petrol pumps";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 1000 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
+        txNew.vout[0].nValue = 16 * COIN;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04becedf6ebadd4596964d890f677f8d2e74fdcc313c6416434384a66d6d8758d1c92de272dc6713e4a81d98841dfdfdc95e204ba915447d2fe9313435c78af3e8") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1375548986;
+        genesis.nTime    = 1390078220;
         genesis.nBits    = 0x1e0fffff;
-        genesis.nNonce   = 2089928209;
+        genesis.nNonce   = 2099366979;
         
         //// debug print
         hashGenesisBlock = genesis.GetHash();
@@ -63,22 +63,15 @@ public:
         printf("%x\n", bnProofOfWorkLimit.GetCompact());
         genesis.print();
         
-        
-        assert(hashGenesisBlock == uint256("0x000006cab7aa2be2da91015902aa4458dd5fbb8778d175c36d429dc986f2bff4"));
-        assert(genesis.hashMerkleRoot == uint256("0xd0227b8c3e3d07bce9656b3d9e474f050d23458aaead93357dcfdac9ab9b79f9"));
+        assert(hashGenesisBlock == uint256("0x00000f639db5734b2b861ef8dbccc33aebd7de44d13de000a12d093bcc866c64"));
+        assert(genesis.hashMerkleRoot == uint256("0xfa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88"));
 
-        vSeeds.push_back(CDNSSeedData("zetacoin.zapto.org", "zetacoin.zapto.org"));
-        vSeeds.push_back(CDNSSeedData("zetacoin.no-ip.org", "zetacoin.no-ip.org"));
-        vSeeds.push_back(CDNSSeedData("zetacoin.strangled.net", "zetacoin.strangled.net"));
-        vSeeds.push_back(CDNSSeedData("zetacoin.ignorelist.com", "zetacoin.ignorelist.com"));
-        vSeeds.push_back(CDNSSeedData("seed1.zeta-coin.org", "seed1.zeta-coin.org"));
-        vSeeds.push_back(CDNSSeedData("seed2.zeta-coin.org", "seed2.zeta-coin.org"));
-        vSeeds.push_back(CDNSSeedData("seed3.zeta-coin.org", "seed3.zeta-coin.org"));
-        vSeeds.push_back(CDNSSeedData("seed4.zeta-coin.org", "seed4.zeta-coin.org"));
+        vSeeds.push_back(CDNSSeedData("chaincoin.no-ip.biz", "chaincoin.no-ip.biz"));
+        vSeeds.push_back(CDNSSeedData("chaincoin.zapto.org", "chaincoin.zapto.org"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = 80;
-        base58Prefixes[SCRIPT_ADDRESS] = 9;
-        base58Prefixes[SECRET_KEY] = 224;
+        base58Prefixes[PUBKEY_ADDRESS] = 28;
+        base58Prefixes[SCRIPT_ADDRESS] = 4;
+        base58Prefixes[SECRET_KEY] = 28 + 128;
 
         // Convert the pnSeeds array into usable address objects.
         for (unsigned int i = 0; i < ARRAYLEN(pnSeed); i++)
@@ -115,18 +108,18 @@ class CTestNetParams : public CMainParams {
 public:
     CTestNetParams() {
         // The message start string is designed to be unlikely to occur in normal data.
-        pchMessageStart[0] = 0x05;
-        pchMessageStart[1] = 0xfe;
-        pchMessageStart[2] = 0xa9;
-        pchMessageStart[3] = 0x01;
-        vAlertPubKey = ParseHex("04deffaef5b9552d1635013708eff25f2fac734cd6720d86fe83f9618572eb095b738efd752128b885c40ca0a37535df5a4b2b2cae5c80cea9bf315fb67ce9fcb2");
-        nDefaultPort = 27333;
-        nRPCPort = 18332;
+        pchMessageStart[0] = 0xfb;
+        pchMessageStart[1] = 0xc2;
+        pchMessageStart[2] = 0x11;
+        pchMessageStart[3] = 0x02;
+        vAlertPubKey = ParseHex("040d3090a194381599d0f53f89ec60b9ec77f0e7b61978ef445142c8a4f1e154ca3441a5e46e12910540352edbd8af43fc1ee1da9a935c1c252fe7426c323d3d32");
+        nDefaultPort = 21994;
+        nRPCPort = 21995;
         strDataDir = "testnet";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1374901773;
-        genesis.nNonce = 414708675;
+        genesis.nTime = 1388868139;
+        genesis.nNonce = 423087994;
         
         
         //// debug print
@@ -140,15 +133,15 @@ public:
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         genesis.print();
         
-        assert(hashGenesisBlock == uint256("0x000007717e2e2df52a9ff29b0771901c9c12f5cbb4914cdf0c8047b459bb21d8"));
+        assert(hashGenesisBlock == uint256("0x0000082f5939c2154dbcba35f784530d12e9d72472fcfaf29674ea312cdf4c83"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        // vSeeds.push_back(CDNSSeedData("zetacoin.test", "test.zetacoin.org"));
+        // vSeeds.push_back(CDNSSeedData("testseed1.chaincoin.org", "testseed1.chaincoin.org"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = 88;
-        base58Prefixes[SCRIPT_ADDRESS] = 188;
-        base58Prefixes[SECRET_KEY] = 239;
+        base58Prefixes[PUBKEY_ADDRESS] = 80;
+        base58Prefixes[SCRIPT_ADDRESS] = 44;
+        base58Prefixes[SECRET_KEY] = 80 + 128;
 
     }
     virtual Network NetworkID() const { return CChainParams::TESTNET; }
@@ -162,10 +155,10 @@ static CTestNetParams testNetParams;
 class CRegTestParams : public CTestNetParams {
 public:
     CRegTestParams() {
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0x0f;
-        pchMessageStart[2] = 0xa5;
-        pchMessageStart[3] = 0x5a;
+        pchMessageStart[0] = 0xfc;
+        pchMessageStart[1] = 0x1f;
+        pchMessageStart[2] = 0xc3;
+        pchMessageStart[3] = 0x56;
         nSubsidyHalvingInterval = 150;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
         genesis.nTime = 1296688602;
@@ -180,11 +173,11 @@ public:
         //while (hashGenesisBlock > bnProofOfWorkLimit.getuint256()){
         //    if (++genesis.nNonce==0) break;
         //    hashGenesisBlock = genesis.GetHash();
-        //}
+        // }
 
-        printf("%s\n", hashGenesisBlock.ToString().c_str());
-        printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
-        genesis.print();
+        // printf("%s\n", hashGenesisBlock.ToString().c_str());
+        // printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
+        // genesis.print();
 
         // assert(hashGenesisBlock == uint256("0x13d8d31dde96874006da503dd2b63fa68c698dc823334359e417aa3a92f80433"));
 

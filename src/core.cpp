@@ -5,6 +5,7 @@
 
 #include "core.h"
 #include "util.h"
+#include "hashblock.h"
 
 std::string COutPoint::ToString() const
 {
@@ -110,12 +111,13 @@ bool CTransaction::IsNewerThan(const CTransaction& old) const
 std::string CTransaction::ToString() const
 {
     std::string str;
-    str += strprintf("CTransaction(hash=%s, ver=%d, vin.size=%"PRIszu", vout.size=%"PRIszu", nLockTime=%u)\n",
+    str += strprintf("CTransaction(hash=%s, ver=%d, vin.size=%"PRIszu", vout.size=%"PRIszu", nLockTime=%u, strTxComment=%s)\n",
         GetHash().ToString().substr(0,10).c_str(),
         nVersion,
         vin.size(),
         vout.size(),
-        nLockTime);
+        nLockTime,
+        strTxComment.substr(0,30).c_str());
     for (unsigned int i = 0; i < vin.size(); i++)
         str += "    " + vin[i].ToString() + "\n";
     for (unsigned int i = 0; i < vout.size(); i++)
@@ -227,7 +229,7 @@ bool CCoins::Spend(int nPos) {
 
 uint256 CBlockHeader::GetHash() const
 {
-    return Hash(BEGIN(nVersion), END(nNonce));
+    return Hash11(BEGIN(nVersion), END(nNonce));
 }
 
 uint256 CBlock::BuildMerkleTree() const

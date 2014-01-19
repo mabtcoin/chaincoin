@@ -37,34 +37,25 @@ namespace Checkpoints
     // + Contains no strange transactions
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 0,     uint256("0x000006cab7aa2be2da91015902aa4458dd5fbb8778d175c36d429dc986f2bff4"))
-        ( 30350, uint256("0x000000000032d087f157871fbc41541a43ac30291f99ce5225d69fd132f8ecdf"))
-        ( 66438, uint256("0x00000000000970ae1d1fddcdf363dfc49505caa2884367ad460839d0621d1f56"))
-        (103010, uint256("0x000000000007204260b891b9aa8eb476132e74eb7539dc3e9ac2fb7bc7104ab8"))
-        (252509, uint256("0x0000000000090c2b77a3247303784289fb6a18752d54e38e96d2b48eac245016"))
-        (470201, uint256("0x00000000000102bdfdfc228ee34304f64650825fd1639a1f57a397af854b9df1"))
-        (523001, uint256("0x00000000000076412e07ded5bcdf11c0ea6bfcada9e339cb31d312d8e60c3ef8"))
-        (569410, uint256("0x000000000000085bbed51c9196314ee52281428ff5b1d8cade9140efe4b33381"))
-        (587317, uint256("0x000000000000b81d6626e9fd0c869764dd992d5429442876a75894e24c0c15e2"))
-        (636469, uint256("0x0000000000038394fe569fbd5a42484c69f15dae9f10982a7a7ed96bff4a359e"))
+        ( 0,     uint256("0x00000f639db5734b2b861ef8dbccc33aebd7de44d13de000a12d093bcc866c64"))
         ;
     static const CCheckpointData data = {
         &mapCheckpoints,
-        1389301831, // * UNIX timestamp of last checkpoint block
-        919702,     // * total number of transactions between genesis and last checkpoint
+        1390078220, // * UNIX timestamp of last checkpoint block
+        0,          // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
-        2880        // * estimated number of transactions per day after checkpoint
+        960         // * estimated number of transactions per day after checkpoint
     };
 
     static MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        ( 0, uint256("0x000007717e2e2df52a9ff29b0771901c9c12f5cbb4914cdf0c8047b459bb21d8"))
+        ( 0, uint256("0x0000082f5939c2154dbcba35f784530d12e9d72472fcfaf29674ea312cdf4c83"))
         ;
     static const CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
-        1374901773,
+        1388868139,
         0,
-        2880
+        960
     };
 
     const CCheckpointData &Checkpoints() {
