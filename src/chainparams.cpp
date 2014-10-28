@@ -68,6 +68,10 @@ public:
 
         vSeeds.push_back(CDNSSeedData("chaincoin.no-ip.biz", "chaincoin.no-ip.biz"));
         vSeeds.push_back(CDNSSeedData("chaincoin.zapto.org", "chaincoin.zapto.org"));
+        vSeeds.push_back(CDNSSeedData("seed1.chaincoin.org", "seed1.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed2.chaincoin.org", "seed2.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed3.chaincoin.org", "seed3.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed4.chaincoin.org", "seed4.chaincoin.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = 28;
         base58Prefixes[SCRIPT_ADDRESS] = 4;
