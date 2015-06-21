@@ -66,8 +66,6 @@ public:
         assert(hashGenesisBlock == uint256("0x00000f639db5734b2b861ef8dbccc33aebd7de44d13de000a12d093bcc866c64"));
         assert(genesis.hashMerkleRoot == uint256("0xfa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88"));
 
-        vSeeds.push_back(CDNSSeedData("chaincoin.no-ip.biz", "chaincoin.no-ip.biz"));
-        vSeeds.push_back(CDNSSeedData("chaincoin.zapto.org", "chaincoin.zapto.org"));
         vSeeds.push_back(CDNSSeedData("seed1.chaincoin.org", "seed1.chaincoin.org"));
         vSeeds.push_back(CDNSSeedData("seed2.chaincoin.org", "seed2.chaincoin.org"));
         vSeeds.push_back(CDNSSeedData("seed3.chaincoin.org", "seed3.chaincoin.org"));
