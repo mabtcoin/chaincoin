@@ -1,3 +1,8 @@
+// Copyright (c) 2011-2014 The Bitcoin developers
+// Copyright (c) 2014-2015 The Dash developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 #include "bitcoinunits.h"
 
 #include <QStringList>
@@ -11,9 +16,10 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BTC);
-    unitlist.append(mBTC);
-    unitlist.append(uBTC);
+    unitlist.append(CHAINCOIN);
+    unitlist.append(mCHAINCOIN);
+    unitlist.append(uCHAINCOIN);
+    unitlist.append(chuffs);
     return unitlist;
 }
 
@@ -21,9 +27,10 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case BTC:
-    case mBTC:
-    case uBTC:
+    case CHAINCOIN:
+    case mCHAINCOIN:
+    case uCHAINCOIN:
+    case chuffs:
         return true;
     default:
         return false;
@@ -32,23 +39,53 @@ bool BitcoinUnits::valid(int unit)
 
 QString BitcoinUnits::name(int unit)
 {
-    switch(unit)
+    if(!TestNet() && !RegTest())
     {
-    case BTC: return QString("CHC");
-    case mBTC: return QString("mCHC");
-    case uBTC: return QString::fromUtf8("μCHC");
-    default: return QString("???");
+        switch(unit)
+        {
+            case CHAINCOIN: return QString("CHC");
+            case mCHAINCOIN: return QString("mCHC");
+            case uCHAINCOIN: return QString::fromUtf8("μCHC");
+            case chuffs: return QString::fromUtf8("chuffs");
+            default: return QString("???");
+        }
+    }
+    else
+    {
+        switch(unit)
+        {
+            case CHAINCOIN: return QString("tCHC");
+            case mCHAINCOIN: return QString("mtCHC");
+            case uCHAINCOIN: return QString::fromUtf8("μtCHC");
+            case chuffs: return QString::fromUtf8("tchuffs");
+            default: return QString("???");
+        }
     }
 }
 
 QString BitcoinUnits::description(int unit)
 {
-    switch(unit)
+    if(!TestNet() && !RegTest())
     {
-    case BTC: return QString("Chaincoins");
-    case mBTC: return QString("Milli-Chaincoins (1 / 1,000)");
-    case uBTC: return QString("Micro-Chaincoins (1 / 1,000,000)");
-    default: return QString("???");
+        switch(unit)
+        {
+            case CHAINCOIN: return QString("Chaincoin");
+            case mCHAINCOIN: return QString("Milli-Chaincoin (1 / 1,000)");
+            case uCHAINCOIN: return QString("Micro-Chaincoin (1 / 1,000,000)");
+            case chuffs: return QString("Ten Nano-Chaincoin (1 / 100,000,000)");
+            default: return QString("???");
+        }
+    }
+    else
+    {
+        switch(unit)
+        {
+            case CHAINCOIN: return QString("TestChaincoins");
+            case mCHAINCOIN: return QString("Milli-TestChaincoin (1 / 1,000)");
+            case uCHAINCOIN: return QString("Micro-TestChaincoin (1 / 1,000,000)");
+            case chuffs: return QString("Ten Nano-TestChaincoin (1 / 100,000,000)");
+            default: return QString("???");
+        }
     }
 }
 
@@ -56,9 +93,10 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
+    case CHAINCOIN:  return 100000000;
+    case mCHAINCOIN: return 100000;
+    case uCHAINCOIN: return 100;
+    case chuffs: return 1;
     default:   return 100000000;
     }
 }
@@ -67,9 +105,10 @@ qint64 BitcoinUnits::maxAmount(int unit)
 {
     switch(unit)
     {
-    case BTC:  return Q_INT64_C(21000000);
-    case mBTC: return Q_INT64_C(21000000000);
-    case uBTC: return Q_INT64_C(21000000000000);
+    case CHAINCOIN:  return Q_INT64_C(21000000);
+    case mCHAINCOIN: return Q_INT64_C(21000000000);
+    case uCHAINCOIN: return Q_INT64_C(21000000000000);
+    case chuffs: return Q_INT64_C(2100000000000000);
     default:   return 0;
     }
 }
@@ -78,9 +117,10 @@ int BitcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8; // 21,000,000 (# digits, without commas)
-    case mBTC: return 11; // 21,000,000,000
-    case uBTC: return 14; // 21,000,000,000,000
+    case CHAINCOIN: return 8; // 21,000,000 (# digits, without commas)
+    case mCHAINCOIN: return 11; // 21,000,000,000
+    case uCHAINCOIN: return 14; // 21,000,000,000,000
+    case chuffs: return 16; // 2,100,000,000,000,000
     default: return 0;
     }
 }
@@ -89,9 +129,10 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case CHAINCOIN: return 8;
+    case mCHAINCOIN: return 5;
+    case uCHAINCOIN: return 2;
+    case chuffs: return 0;
     default: return 0;
     }
 }
@@ -120,6 +161,10 @@ QString BitcoinUnits::format(int unit, qint64 n, bool fPlus)
         quotient_str.insert(0, '-');
     else if (fPlus && n > 0)
         quotient_str.insert(0, '+');
+
+    if (num_decimals <= 0)
+        return quotient_str;
+
     return quotient_str + QString(".") + remainder_str;
 }
 
