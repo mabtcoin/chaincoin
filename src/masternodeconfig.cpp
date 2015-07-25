@@ -51,6 +51,7 @@ bool CMasternodeConfig::read(std::string& strErr) {
             }
         }
 
+        /*
         if(Params().NetworkID() == CChainParams::MAIN){
             if(CService(ip).GetPort() != 9999) {
                 strErr = "Invalid port detected in masternode.conf: " + line + " (must be 9999 for mainnet)";
@@ -62,7 +63,7 @@ bool CMasternodeConfig::read(std::string& strErr) {
             streamConfig.close();
             return false;
         }
-
+        */
 
         add(alias, ip, privKey, txHash, outputIndex, donationAddress, donationPercent);
     }
