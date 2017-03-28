@@ -27,8 +27,8 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui->setupUi(this);
 
     // Set current copyright year
-    ui->copyrightLabel->setText(tr("Copyright") + QString(" &copy; 2009-2014 ") + tr("The Bitcoin Core developers") + QString("<br />")
-                              + tr("Copyright") + QString(" &copy; 2014-%1 ").arg(COPYRIGHT_YEAR) + tr("The Dash Core developers") + QString("<br />")
+    ui->copyrightLabel->setText(tr("Copyright") + QString(" &copy; 2009-2015 ") + tr("The Bitcoin Core developers") + QString("<br />")
+                              + tr("Copyright") + QString(" &copy; 2014-2015 ").arg(COPYRIGHT_YEAR) + tr("The Dash Core developers") + QString("<br />")
                               + tr("Copyright") + QString(" &copy; 2014-%1 ").arg(COPYRIGHT_YEAR) + tr("The Chaincoin Core developers"));
 }
 

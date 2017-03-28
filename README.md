@@ -7,7 +7,7 @@ Copyright (c) 2009-2015 Bitcoin Core Developers
 
 Copyright (c) 2014-2015 Dash Core Developers
 
-Copyright (c) 2014-2015 Chaincoin Core Developers
+Copyright (c) 2014-2017 Chaincoin Core Developers
 
 
 
