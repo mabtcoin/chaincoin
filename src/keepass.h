@@ -1,4 +1,4 @@
-// Copyright (c) 2014 The Chaincoin developers
+// Copyright (c) 2014 The Dash developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +15,6 @@
 #include <map>
 
 #include "json/json_spirit_value.h"
-#include "crypter.h"
 #include "allocators.h"
 
 class CKeePassIntegrator {
