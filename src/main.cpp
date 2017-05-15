@@ -39,7 +39,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Dash cannot be compiled without assertions."
+# error "Chaincoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -875,7 +875,7 @@ int GetInputAge(CTxIn& vin)
 }
 
 int GetInputAgeIX(uint256 nTXHash, CTxIn& vin)
-{    
+{
     int sigs = 0;
     int nResult = GetInputAge(vin);
     if(nResult < 0) nResult = 0;
@@ -894,7 +894,7 @@ int GetInputAgeIX(uint256 nTXHash, CTxIn& vin)
 }
 
 int GetIXConfirmations(uint256 nTXHash)
-{    
+{
     int sigs = 0;
 
     std::map<uint256, CTransactionLock>::iterator i = mapTxLocks.find(nTXHash);
@@ -1570,9 +1570,9 @@ int64_t GetBlockValue(int nBits, int nHeight, const CAmount& nFees)
     }
 
     /*
-        
+
         Hard fork will activate on block 328008, reducing the block reward by 10 extra percent (allowing budget super-blocks)
-    
+
     */
 
     if(Params().NetworkID() == CBaseChainParams::TESTNET){
@@ -1580,7 +1580,7 @@ int64_t GetBlockValue(int nBits, int nHeight, const CAmount& nFees)
     } else {
         if(nHeight > 309759+(553*33)) nSubsidy -= nSubsidy/10; // 328008 - 10.0% - September 6, 2015
     }
-    
+
     return nSubsidy + nFees;
 }
 
@@ -1609,7 +1609,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
     if(nHeight > 158000+((576*30)* 7)) ret += blockValue / 40; // 278960 - 47.5% - 2015-06-01
     if(nHeight > 158000+((576*30)* 9)) ret += blockValue / 40; // 313520 - 50.0% - 2015-08-03
 
-    /* 
+    /*
         Hard for will activate on block 348080 separating the two networks (v11 and earier and v12)
 
         if(nHeight > 158000+((576*30)*11)) ret += blockValue / 40; // 348080 - 52.5% - 2015-10-05
@@ -2013,7 +2013,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("dash-scriptch");
+    RenameThread("chaincoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -4259,7 +4259,7 @@ void static ProcessGetData(CNode* pfrom)
                     }
                 }
 
-                if (!pushed && inv.type == MSG_DSTX) {       
+                if (!pushed && inv.type == MSG_DSTX) {
                     if(mapDarksendBroadcastTxes.count(inv.hash)){
                         CDataStream ss(SER_NETWORK, PROTOCOL_VERSION);
                         ss.reserve(1000);

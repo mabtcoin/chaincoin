@@ -1,4 +1,4 @@
-Dash Core 0.12.0
+Chaincoin Core 0.12.0
 =====================
 
 Setup
@@ -7,11 +7,11 @@ Setup
 
 Running
 ---------------------
-The following are some helpful notes on how to run Dash on your native platform.
+The following are some helpful notes on how to run Chaincoin on your native platform.
 
 ### Unix
 
-You need the Qt4 run-time libraries to run Dash-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run Chaincoin-Qt. On Debian or Ubuntu:
 
 	sudo apt-get install libqtgui4
 
@@ -28,25 +28,25 @@ Unpack the files into a directory, and then run dash-qt.exe.
 
 ### OSX
 
-Drag Dash-Qt to your applications folder, and then run Dash-Qt.
+Drag Chaincoin-Qt to your applications folder, and then run Chaincoin-Qt.
 
 ### Need Help?
 
-* See the documentation at the [Dash Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [Chaincoin Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
 * Ask for help on [#dashpay](http://webchat.freenode.net?channels=dashpay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=dashpay).
 * Ask for help on the [DashTalk](https://dashtalk.org/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Dash on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Chaincoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 
 Development
 ---------------------
-The Dash repo's [root README](https://github.com/dashpay/dash/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Chaincoin repo's [root README](https://github.com/chaincoin/chaincoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Coding Guidelines](coding.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

@@ -30,7 +30,7 @@ QT_TRANSLATE_NOOP("dash-core", ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
 QT_TRANSLATE_NOOP("dash-core", ""
-"Cannot obtain a lock on data directory %s. Dash Core is probably already "
+"Cannot obtain a lock on data directory %s. Chaincoin Core is probably already "
 "running."),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Change automatic finalized budget voting behavior. mode=auto: Vote for only "
@@ -48,7 +48,7 @@ QT_TRANSLATE_NOOP("dash-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("dash-core", ""
-"Disable all Dash specific functionality (Masternodes, Darksend, InstantX, "
+"Disable all Chaincoin specific functionality (Masternodes, Darksend, InstantX, "
 "Budgeting) (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Distributed under the MIT software license, see the accompanying file "
@@ -77,10 +77,10 @@ QT_TRANSLATE_NOOP("dash-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("dash-core", ""
-"Fees (in DASH/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in CHC/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("dash-core", ""
-"Fees (in DASH/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in CHC/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -149,28 +149,28 @@ QT_TRANSLATE_NOOP("dash-core", ""
 "the OpenSSL Toolkit <https://www.openssl.org/> and cryptographic software "
 "written by Eric Young and UPnP software written by Thomas Bernard."),
 QT_TRANSLATE_NOOP("dash-core", ""
-"To use dashd, or the -server option to dash-qt, you must set an rpcpassword "
+"To use chaincoind, or the -server option to chaincoin-qt, you must set an rpcpassword "
 "in the configuration file:\n"
 "%s\n"
 "It is recommended you use the following random password:\n"
-"rpcuser=dashrpc\n"
+"rpcuser=chaincoinrpc\n"
 "rpcpassword=%s\n"
 "(you do not need to remember this password)\n"
 "The username and password MUST NOT be the same.\n"
 "If the file does not exist, create it with owner-readable-only file "
 "permissions.\n"
 "It is also recommended to set alertnotify so you are notified of problems;\n"
-"for example: alertnotify=echo %%s | mail -s \"Dash Alert\" admin@foo.com\n"),
+"for example: alertnotify=echo %%s | mail -s \"Chaincoin Alert\" admin@foo.com\n"),
 QT_TRANSLATE_NOOP("dash-core", ""
-"Unable to bind to %s on this computer. Dash Core is probably already running."),
+"Unable to bind to %s on this computer. Chaincoin Core is probably already running."),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Unable to locate enough Darksend denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Unable to locate enough Darksend non-denominated funds for this transaction "
-"that are not equal 1000 DASH."),
+"that are not equal 1000 CHC."),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000 "
-"DASH."),
+"CHC."),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -182,7 +182,7 @@ QT_TRANSLATE_NOOP("dash-core", ""
 "pay if you send a transaction."),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
-"your clock is wrong Dash Core will not work properly."),
+"your clock is wrong Chaincoin Core will not work properly."),
 QT_TRANSLATE_NOOP("dash-core", ""
 "Warning: The network does not appear to fully agree! Some miners appear to "
 "be experiencing issues."),
@@ -236,6 +236,7 @@ QT_TRANSLATE_NOOP("dash-core", "Connect to a node to retrieve peer addresses, an
 QT_TRANSLATE_NOOP("dash-core", "Connection options:"),
 QT_TRANSLATE_NOOP("dash-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
 QT_TRANSLATE_NOOP("dash-core", "Copyright (C) 2014-%i The Dash Core Developers"),
+QT_TRANSLATE_NOOP("dash-core", "Copyright (C) 2014-%i The Chaincoin Core Developers"),
 QT_TRANSLATE_NOOP("dash-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("dash-core", "Could not parse -rpcbind value %s as network address"),
 QT_TRANSLATE_NOOP("dash-core", "Could not parse masternode.conf"),
@@ -257,7 +258,7 @@ QT_TRANSLATE_NOOP("dash-core", "Error initializing wallet database environment %
 QT_TRANSLATE_NOOP("dash-core", "Error loading block database"),
 QT_TRANSLATE_NOOP("dash-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("dash-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("dash-core", "Error loading wallet.dat: Wallet requires newer version of Dash Core"),
+QT_TRANSLATE_NOOP("dash-core", "Error loading wallet.dat: Wallet requires newer version of Chaincoin Core"),
 QT_TRANSLATE_NOOP("dash-core", "Error opening block database"),
 QT_TRANSLATE_NOOP("dash-core", "Error reading from database, shutting down."),
 QT_TRANSLATE_NOOP("dash-core", "Error recovering public key."),
@@ -270,7 +271,7 @@ QT_TRANSLATE_NOOP("dash-core", "Error: Wallet locked, unable to create transacti
 QT_TRANSLATE_NOOP("dash-core", "Error: You already have pending entries in the Darksend pool"),
 QT_TRANSLATE_NOOP("dash-core", "Failed to listen on any port. Use -listen=0 if you want this."),
 QT_TRANSLATE_NOOP("dash-core", "Failed to read block"),
-QT_TRANSLATE_NOOP("dash-core", "Fee (in DASH/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("dash-core", "Fee (in CHC/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("dash-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("dash-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("dash-core", "Found enough users, signing ( waiting %s )"),
@@ -285,7 +286,7 @@ QT_TRANSLATE_NOOP("dash-core", "Incompatible mode."),
 QT_TRANSLATE_NOOP("dash-core", "Incompatible version."),
 QT_TRANSLATE_NOOP("dash-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
 QT_TRANSLATE_NOOP("dash-core", "Information"),
-QT_TRANSLATE_NOOP("dash-core", "Initialization sanity check failed. Dash Core is shutting down."),
+QT_TRANSLATE_NOOP("dash-core", "Initialization sanity check failed. Chaincoin Core is shutting down."),
 QT_TRANSLATE_NOOP("dash-core", "Input is not valid."),
 QT_TRANSLATE_NOOP("dash-core", "InstantX options:"),
 QT_TRANSLATE_NOOP("dash-core", "Insufficient funds."),
@@ -303,7 +304,7 @@ QT_TRANSLATE_NOOP("dash-core", "Invalid private key."),
 QT_TRANSLATE_NOOP("dash-core", "Invalid script detected."),
 QT_TRANSLATE_NOOP("dash-core", "KeePassHttp id for the established association"),
 QT_TRANSLATE_NOOP("dash-core", "KeePassHttp key for AES encrypted communication with KeePass"),
-QT_TRANSLATE_NOOP("dash-core", "Keep N DASH anonymized (default: %u)"),
+QT_TRANSLATE_NOOP("dash-core", "Keep N CHC anonymized (default: %u)"),
 QT_TRANSLATE_NOOP("dash-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("dash-core", "Last Darksend was too recent."),
 QT_TRANSLATE_NOOP("dash-core", "Last successful Darksend action was too recent."),
@@ -425,7 +426,7 @@ QT_TRANSLATE_NOOP("dash-core", "Verifying blocks..."),
 QT_TRANSLATE_NOOP("dash-core", "Verifying wallet..."),
 QT_TRANSLATE_NOOP("dash-core", "Wallet %s resides outside data directory %s"),
 QT_TRANSLATE_NOOP("dash-core", "Wallet is locked."),
-QT_TRANSLATE_NOOP("dash-core", "Wallet needed to be rewritten: restart Dash Core to complete"),
+QT_TRANSLATE_NOOP("dash-core", "Wallet needed to be rewritten: restart Chaincoin Core to complete"),
 QT_TRANSLATE_NOOP("dash-core", "Wallet options:"),
 QT_TRANSLATE_NOOP("dash-core", "Wallet window title"),
 QT_TRANSLATE_NOOP("dash-core", "Warning"),

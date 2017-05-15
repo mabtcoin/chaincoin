@@ -184,7 +184,7 @@ std::string CKeePassIntegrator::constructHTTPPost(const std::string& strMsg, con
 {
     std::ostringstream s;
     s << "POST / HTTP/1.1\r\n"
-      << "User-Agent: dash-json-rpc/" << FormatFullVersion() << "\r\n"
+      << "User-Agent: chaincoin-json-rpc/" << FormatFullVersion() << "\r\n"
       << "Host: localhost\r\n"
       << "Content-Type: application/json\r\n"
       << "Content-Length: " << strMsg.size() << "\r\n"
@@ -343,7 +343,7 @@ void CKeePassIntegrator::rpcSetLogin(const SecureString& strWalletPass, const Se
     LogPrint("keepass", "CKeePassIntegrator::rpcSetLogin - send Url: %s\n", sUrl);
 
     //request.addStrParameter("SubmitUrl", sSubmitUrl); // Is used to construct the entry title
-    request.addStrParameter("Login", SecureString("dash"));
+    request.addStrParameter("Login", SecureString("chaincoin"));
     request.addStrParameter("Password", strWalletPass);
     if(sEntryId.size() != 0)
     {

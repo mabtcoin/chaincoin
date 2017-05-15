@@ -59,7 +59,7 @@ private slots:
 
 public slots:
     void clear();
-    
+
     /** Wallet repair options */
     void walletSalvage();
     void walletRescan();
@@ -67,7 +67,7 @@ public slots:
     void walletZaptxes2();
     void walletUpgrade();
     void walletReindex();
-    
+
     void reject();
     void message(int category, const QString &message, bool html = false);
     /** Set number of connections shown in the UI */
@@ -90,8 +90,8 @@ public slots:
     void showPeers();
     /** Switch to wallet-repair tab and show */
     void showRepair();
-    /** Open external (default) editor with dash.conf */
-    void showConfEditor();	
+    /** Open external (default) editor with chaincoin.conf */
+    void showConfEditor();
     /** Handle selection of peer in peers list */
     void peerSelected(const QItemSelection &selected, const QItemSelection &deselected);
     /** Handle updated peer information */
