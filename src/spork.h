@@ -75,7 +75,7 @@ public:
     int64_t nTimeSigned;
 
     uint256 GetHash(){
-        uint256 n = HashX11(BEGIN(nSporkID), END(nTimeSigned));
+        uint256 n = HashC11(BEGIN(nSporkID), END(nTimeSigned));
         return n;
     }
 
