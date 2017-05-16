@@ -58,7 +58,7 @@ bool CMasternodeSync::IsBlockchainSynced()
 }
 
 void CMasternodeSync::Reset()
-{   
+{
     lastMasternodeList = 0;
     lastMasternodeWinner = 0;
     lastBudgetItem = 0;
@@ -146,7 +146,8 @@ void CMasternodeSync::GetNextAsset()
             RequestedMasternodeAssets = MASTERNODE_SYNC_MNW;
             break;
         case(MASTERNODE_SYNC_MNW):
-            RequestedMasternodeAssets = MASTERNODE_SYNC_BUDGET;
+            RequestedMasternodeAssets = MASTERNODE_SYNC_FINISHED;
+            // RequestedMasternodeAssets = MASTERNODE_SYNC_BUDGET;
             break;
         case(MASTERNODE_SYNC_BUDGET):
             LogPrintf("CMasternodeSync::GetNextAsset - Sync has finished\n");
@@ -204,7 +205,7 @@ void CMasternodeSync::ProcessMessage(CNode* pfrom, std::string& strCommand, CDat
                 countBudgetItemFin++;
                 break;
         }
-        
+
         LogPrintf("CMasternodeSync:ProcessMessage - ssc - got inventory count %d %d\n", nItemID, nCount);
     }
 }
@@ -230,7 +231,7 @@ void CMasternodeSync::Process()
     if(tick++ % MASTERNODE_SYNC_TIMEOUT != 0) return;
 
     if(IsSynced()) {
-        /* 
+        /*
             Resync if we lose all masternodes from sleep/wake or failure to sync originally
         */
         if(mnodeman.CountEnabled() == 0) {
@@ -263,7 +264,7 @@ void CMasternodeSync::Process()
             if(RequestedMasternodeAttempt <= 2) {
                 pnode->PushMessage("getsporks"); //get current network sporks
             } else if(RequestedMasternodeAttempt < 4) {
-                mnodeman.DsegUpdate(pnode); 
+                mnodeman.DsegUpdate(pnode);
             } else if(RequestedMasternodeAttempt < 6) {
                 int nMnCount = mnodeman.CountEnabled();
                 pnode->PushMessage("mnget", nMnCount); //sync payees
@@ -284,7 +285,7 @@ void CMasternodeSync::Process()
             pnode->PushMessage("getsporks"); //get current network sporks
             if(RequestedMasternodeAttempt >= 2) GetNextAsset();
             RequestedMasternodeAttempt++;
-            
+
             return;
         }
 
@@ -397,7 +398,7 @@ void CMasternodeSync::Process()
                 uint256 n = 0;
                 pnode->PushMessage("mnvs", n); //sync masternode votes
                 RequestedMasternodeAttempt++;
-                
+
                 return;
             }
 
