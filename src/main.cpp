@@ -2933,28 +2933,41 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 
     // ----------- masternode payments / budgets -----------
 
-    CBlockIndex* pindexPrev = chainActive.Tip();
-    if(pindexPrev != NULL)
-    {
-        int nHeight = 0;
-        if(pindexPrev->GetBlockHash() == block.hashPrevBlock)
-        {
-            nHeight = pindexPrev->nHeight+1;
-        } else { //out of order
-            BlockMap::iterator mi = mapBlockIndex.find(block.hashPrevBlock);
-            if (mi != mapBlockIndex.end() && (*mi).second)
-                nHeight = (*mi).second->nHeight+1;
-        }
+    bool MasternodePayments = false;
 
-        if(nHeight != 0){
-            if(!IsBlockPayeeValid(block.vtx[0], nHeight))
+    if(Params().NetworkID() == CBaseChainParams::TESTNET){
+        if(block.nTime > START_MASTERNODE_PAYMENTS_TESTNET) MasternodePayments = true;
+    } else {
+        if(block.nTime > START_MASTERNODE_PAYMENTS) MasternodePayments = true;
+    }
+
+    if (MasternodePayments)
+    {
+        CBlockIndex* pindexPrev = chainActive.Tip();
+        if(pindexPrev != NULL)
+        {
+            int nHeight = 0;
+            if(pindexPrev->GetBlockHash() == block.hashPrevBlock)
             {
-                mapRejectedBlocks.insert(make_pair(block.GetHash(), GetTime()));
-                return state.DoS(100, error("CheckBlock() : Couldn't find masternode/budget payment"));
+                nHeight = pindexPrev->nHeight+1;
+            } else { //out of order
+                BlockMap::iterator mi = mapBlockIndex.find(block.hashPrevBlock);
+                if (mi != mapBlockIndex.end() && (*mi).second)
+                    nHeight = (*mi).second->nHeight+1;
             }
-        } else {
-            LogPrintf("CheckBlock() : WARNING: Couldn't find previous block, skipping IsBlockPayeeValid()\n");
+
+            if(nHeight != 0){
+                if(!IsBlockPayeeValid(block.vtx[0], nHeight))
+                {
+                    mapRejectedBlocks.insert(make_pair(block.GetHash(), GetTime()));
+                    return state.DoS(100, error("CheckBlock() : Couldn't find masternode/budget payment"));
+                }
+            } else {
+                LogPrintf("CheckBlock() : WARNING: Couldn't find previous block, skipping IsBlockPayeeValid()\n");
+            }
         }
+    } else {
+        LogPrintf("CheckBlock() : skipping masternode payment checks\n");
     }
 
     // -------------------------------------------

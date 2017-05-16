@@ -33,7 +33,7 @@ static const int MIN_MNW_PEER_PROTO_VERSION = 70103;
 //! minimum peer version that can receive masternode payments
 // V1 - Last protocol version before update
 // V2 - Newest protocol version
-static const int MIN_MASTERNODE_PAYMENT_PROTO_VERSION_1 = 70066;
+static const int MIN_MASTERNODE_PAYMENT_PROTO_VERSION_1 = 70002;
 static const int MIN_MASTERNODE_PAYMENT_PROTO_VERSION_2 = 70103;
 
 //! nTime field added to CAddress, starting with this version;
