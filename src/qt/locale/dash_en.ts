@@ -4785,8 +4785,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+6"/>
-        <source>(9999 could be used only on mainnet)</source>
-        <translation>(9999 could be used only on mainnet)</translation>
+        <source>(11994 could be used only on mainnet)</source>
+        <translation>(11994 could be used only on mainnet)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5307,8 +5307,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="-88"/>
-        <source>(must be 9999 for mainnet)</source>
-        <translation>(must be 9999 for mainnet)</translation>
+        <source>(must be 11994 for mainnet)</source>
+        <translation>(must be 11994 for mainnet)</translation>
     </message>
     <message>
         <location line="+13"/>

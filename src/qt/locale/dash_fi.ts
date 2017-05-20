@@ -3707,8 +3707,8 @@ Näillä toiminnoilla voit korjata korruptoituneen lohkoketjun tai puuttuvat/van
         <translation>Aseta prosessorin ytimien määrä louhintaan, jos päällä (-1 = kaikki ytimet, oletus: %d)</translation>
     </message>
     <message>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: %u)</source>
-        <translation>Näytä N vahvistusta onnistuneesti lukitulle siirtotapahtumalle (0-9999, oletus: %u)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-11994, default: %u)</source>
+        <translation>Näytä N vahvistusta onnistuneesti lukitulle siirtotapahtumalle (0-11994, oletus: %u)</translation>
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit &lt;https://www.openssl.org/&gt; and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
@@ -3765,8 +3765,8 @@ esimerkiksi: alertnotify=echo %%s | mail -s "Chaincoin Hälytys" admin@foo.com
         <translation>Luotettaviksi merkittyjä peers:ejä ei voida DoS estää, ja niiden siirtotapahtumat välitetään aina, vaikka ne olisvatkin jo muistivarannossa, käyttökelpoinen esim. yhdyskäytävään</translation>
     </message>
     <message>
-        <source>(9999 could be used only on mainnet)</source>
-        <translation>(9999 voidaan käyttää vain pääverkossa)</translation>
+        <source>(11994 could be used only on mainnet)</source>
+        <translation>(11994 voidaan käyttää vain pääverkossa)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4183,8 +4183,8 @@ esimerkiksi: alertnotify=echo %%s | mail -s "Chaincoin Hälytys" admin@foo.com
         <translation>Virheellinen masternoden yksityisavain (masternodeprivkey). Katso lisätietoja dokumentaatiosta.</translation>
     </message>
     <message>
-        <source>(must be 9999 for mainnet)</source>
-        <translation>(oltava 9999 pääverkossa)</translation>
+        <source>(must be 11994 for mainnet)</source>
+        <translation>(oltava 11994 pääverkossa)</translation>
     </message>
     <message>
         <source>Can't find random Masternode.</source>

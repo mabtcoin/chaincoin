@@ -205,10 +205,10 @@ QT_TRANSLATE_NOOP("dash-core", ""
 QT_TRANSLATE_NOOP("dash-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("dash-core", "(9999 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("dash-core", "(11994 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("dash-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("dash-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("dash-core", "(must be 9999 for mainnet)"),
+QT_TRANSLATE_NOOP("dash-core", "(must be 11994 for mainnet)"),
 QT_TRANSLATE_NOOP("dash-core", "<category> can be:\n"),
 QT_TRANSLATE_NOOP("dash-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("dash-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
