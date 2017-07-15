@@ -457,10 +457,11 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool darkSendMaste
         CNode* pnode = FindNode((CService)addrConnect);
         if (pnode)
         {
+            pnode->AddRef();
+
             if(darkSendMaster)
                 pnode->fDarkSendMaster = true;
 
-            pnode->AddRef();
             return pnode;
         }
     }
@@ -491,14 +492,14 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool darkSendMaste
 
         // Add node
         CNode* pnode = new CNode(hSocket, addrConnect, pszDest ? pszDest : "", false);
-        pnode->AddRef();
-
-        {
+        
+        // {
             LOCK(cs_vNodes);
             vNodes.push_back(pnode);
-        }
+        // }
 
         pnode->nTimeConnected = GetTime();
+        pnode->AddRef();
         if(darkSendMaster) pnode->fDarkSendMaster = true;
         return pnode;
     }
