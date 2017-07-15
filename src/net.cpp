@@ -769,7 +769,7 @@ void ThreadSocketHandler()
                 {
 
                     LogPrintf("removing node: peer=%d addr=%s nRefCount=%d fNetworkNode=%d fInbound=%d fDarkSendMaster=%d\n",
-                               pnode->id, pnode->addr.ToString(), pnode->GetRefCount(), pnode->fNetworkNode, pnode->fInbound, pnode->fDarkSendMaster);
+                               pnode->id, pnode->addr.ToString().c_str(), pnode->GetRefCount(), pnode->fNetworkNode, pnode->fInbound, pnode->fDarkSendMaster);
 
                     // remove from vNodes
                     vNodes.erase(remove(vNodes.begin(), vNodes.end(), pnode), vNodes.end());
