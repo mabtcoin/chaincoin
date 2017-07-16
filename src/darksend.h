@@ -262,7 +262,7 @@ public:
 
     std::vector<CDarkSendEntry> myEntries; // clients entries
     std::vector<CDarkSendEntry> entries; // Masternode entries
-    CMutableTransaction finalTransaction; // the finalized transaction ready for signing
+    CTransaction finalTransaction; // the finalized transaction ready for signing
 
     int64_t lastTimeChanged; // last time the 'state' changed, in UTC milliseconds
     int64_t lastAutoDenomination; // TODO; not used - Delete?
