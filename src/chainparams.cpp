@@ -57,7 +57,7 @@ public:
         genesis.nNonce   = 2099366979;
 
         hashGenesisBlock = genesis.GetHash();
-		
+
         assert(hashGenesisBlock == uint256("0x00000f639db5734b2b861ef8dbccc33aebd7de44d13de000a12d093bcc866c64"));
         assert(genesis.hashMerkleRoot == uint256("0xfa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88"));
 
@@ -65,6 +65,14 @@ public:
         vSeeds.push_back(CDNSSeedData("seed2.chaincoin.org", "seed2.chaincoin.org"));
         vSeeds.push_back(CDNSSeedData("seed3.chaincoin.org", "seed3.chaincoin.org"));
         vSeeds.push_back(CDNSSeedData("seed4.chaincoin.org", "seed4.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed5.chaincoin.org", "seed5.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed6.chaincoin.org", "seed6.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed7.chaincoin.org", "seed7.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed8.chaincoin.org", "seed8.chaincoin.org"));
+        vSeeds.push_back(CDNSSeedData("chc1.ignorelist.com", "chc1.ignorelist.com"));
+        vSeeds.push_back(CDNSSeedData("chc2.ignorelist.com", "chc2.ignorelist.com"));
+        vSeeds.push_back(CDNSSeedData("chc3.ignorelist.com", "chc3.ignorelist.com"));
+        vSeeds.push_back(CDNSSeedData("chc4.ignorelist.com", "chc4.ignorelist.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of( 28);                    // Chaincoin addresses start with 'X'
         base58Prefixes[SCRIPT_ADDRESS] = list_of(  4);                    // Chaincoin script addresses start with '7'
@@ -115,9 +123,9 @@ public:
         pchMessageStart[1] = 0xc2;
         pchMessageStart[2] = 0x11;
         pchMessageStart[3] = 0x02;
-		
+
         vAlertPubKey = ParseHex("040d3090a194381599d0f53f89ec60b9ec77f0e7b61978ef445142c8a4f1e154ca3441a5e46e12910540352edbd8af43fc1ee1da9a935c1c252fe7426c323d3d32");
-		
+
         nDefaultPort = 21994;
         nRPCPort = 21995;
         strDataDir = "testnet3";
