@@ -457,10 +457,11 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool darkSendMaste
         CNode* pnode = FindNode((CService)addrConnect);
         if (pnode)
         {
+            pnode->AddRef();
+
             if(darkSendMaster)
                 pnode->fDarkSendMaster = true;
 
-            pnode->AddRef();
             return pnode;
         }
     }
@@ -491,14 +492,14 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest, bool darkSendMaste
 
         // Add node
         CNode* pnode = new CNode(hSocket, addrConnect, pszDest ? pszDest : "", false);
-        pnode->AddRef();
-
-        {
+        
+        // {
             LOCK(cs_vNodes);
             vNodes.push_back(pnode);
-        }
+        // }
 
         pnode->nTimeConnected = GetTime();
+        pnode->AddRef();
         if(darkSendMaster) pnode->fDarkSendMaster = true;
         return pnode;
     }
@@ -766,6 +767,10 @@ void ThreadSocketHandler()
                 if (pnode->fDisconnect ||
                     (pnode->GetRefCount() <= 0 && pnode->vRecvMsg.empty() && pnode->nSendSize == 0 && pnode->ssSend.empty()))
                 {
+
+                    LogPrintf("removing node: peer=%d addr=%s nRefCount=%d fNetworkNode=%d fInbound=%d fDarkSendMaster=%d\n",
+                               pnode->id, pnode->addr.ToString().c_str(), pnode->GetRefCount(), pnode->fNetworkNode, pnode->fInbound, pnode->fDarkSendMaster);
+
                     // remove from vNodes
                     vNodes.erase(remove(vNodes.begin(), vNodes.end(), pnode), vNodes.end());
 
