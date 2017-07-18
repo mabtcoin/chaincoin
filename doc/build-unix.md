@@ -102,7 +102,7 @@ To build with Qt 4 you need the following:
 
 For Qt 5 you need the following:
 
-    sudo apt-get install libqt5gui5 libqt5core5 libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev
+    sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev
 
 libqrencode (optional) can be installed with:
 
@@ -131,10 +131,10 @@ Berkeley DB
 It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
 
 ```bash
-DASH_ROOT=$(pwd)
+CHC_ROOT=$(pwd)
 
 # Pick some path to install BDB to, here we create a directory within the dash directory
-BDB_PREFIX="${DASH_ROOT}/db4"
+BDB_PREFIX="${CHC_ROOT}/db4"
 mkdir -p $BDB_PREFIX
 
 # Fetch the source and verify that it is not tampered with
@@ -150,11 +150,13 @@ cd db-4.8.30.NC/build_unix/
 make install
 
 # Configure Chaincoin Core to use our own-built instance of BDB
-cd $DASH_ROOT
+cd $CHC_ROOT
 ./configure (other args...) LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/"
 ```
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
+
+**Note 2**: You'll almost certainly run into `'__atomic_compare_exchange' definition error` when trying to compile BDB with clang. This is because a function with the same name already exists in *db-4.8.30.NC/dbinc/atomic.h*. The most simple way is to rename `__atomic_compare_exchange` to `__atomic_compare_exchange_db` on lines **147** and **179** and try to comile again. 
 
 Boost
 -----
