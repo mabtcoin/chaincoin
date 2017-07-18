@@ -156,6 +156,8 @@ cd $CHC_ROOT
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
+**Note 2**: You'll almost certaily run into `'__atomic_compare_exchange' definition error` when trying to compile BDB with clang. This is because a function with the same name already exists in *db-4.8.30.NC/dbinc/atomic.h*. The most simple way is to rename `__atomic_compare_exchange` to `__atomic_compare_exchange_db` on lines **147** and **179** and try to comile again. 
+
 Boost
 -----
 If you need to build Boost yourself:
