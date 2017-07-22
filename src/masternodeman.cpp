@@ -873,7 +873,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
 
         BOOST_FOREACH(CMasternode& mn, vMasternodes) {
 
-            if(mn.addr.IsRFC1918()) continue; //local network
+            if(mn.addr.IsRFC1918() || mn.addr.IsLocal()) continue; //local network
 
             if(mn.IsEnabled())
             {
