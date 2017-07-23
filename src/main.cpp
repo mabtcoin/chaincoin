@@ -1490,7 +1490,7 @@ static const int64_t nAveragingTargetTimespan = nAveragingInterval * nTargetSpac
 static const int64_t nMaxAdjustDown = 3; // 3% adjustment down
 static const int64_t nMaxAdjustUp = 1; // 1% adjustment up
 
-static const int64_t nTargetTimespanAdjDown = nTargetTimespan * (100 + nMaxAdjustDown) / 100;
+// static const int64_t nTargetTimespanAdjDown = nTargetTimespan * (100 + nMaxAdjustDown) / 100;
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -4066,13 +4066,16 @@ void static ProcessGetData(CNode* pfrom)
             {
                 // Send stream from relay memory
                 bool pushed = false;
+                map<CInv, CDataStream>::iterator mi;
                 {
                     LOCK(cs_mapRelay);
-                    map<CInv, CDataStream>::iterator mi = mapRelay.find(inv);
+                    mi = mapRelay.find(inv);
                     if (mi != mapRelay.end()) {
-                        pfrom->PushMessage(inv.GetCommand(), (*mi).second);
                         pushed = true;
                     }
+                }
+                if (pushed) {
+                    pfrom->PushMessage(inv.GetCommand(), (*mi).second);
                 }
 
                 if (!pushed && inv.type == MSG_TX) {

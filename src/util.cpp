@@ -7,6 +7,7 @@
 #include "util.h"
 
 #include "chainparams.h"
+#include "random.h"
 #include "netbase.h"
 #include "sync.h"
 #include "ui_interface.h"
