@@ -27,6 +27,7 @@ class DomainName(str):
 
 DOMAN_NAME = 'dnsseed1.chaincoin.org'
 IP = '52.89.51.214'
+NS = "ns1.chaincoin.org"
 D = DomainName(DOMAN_NAME)
 
 TTL = 60 * 5
@@ -69,8 +70,8 @@ def dns_response(data):
     qt = QTYPE[qtype]
 
     if qt == "NS":
-        reply.add_answer(*RR.fromZone(DOMAN_NAME + " 3600 NS ns1.chaincoin.org"))
-        reply.add_ar(*RR.fromZone("ns1.chaincoin.org A " + IP))
+        reply.add_answer(*RR.fromZone(DOMAN_NAME + " 3600 NS " + NS))
+        reply.add_ar(*RR.fromZone(NS + " A " + IP))
     else:
         domain_name_a = DOMAN_NAME + " A "
         for ip in mn_rand_ips.get_random_x_ips( ips_per_req ):
@@ -133,7 +134,19 @@ def main():
     parser.add_argument('--port', default=53, type=int, help='The port to listen on.')
     parser.add_argument('--tcp', action='store_true', help='Listen to TCP connections.')
     parser.add_argument('--udp', action='store_true', help='Listen to UDP datagrams.')
-    
+
+    parser.add_argument('--DNS', type=str, help='DNS address for the server.')
+    if not args.DNS: parser.error("Please add a DNS")
+    DOMAN_NAME = args.DNS
+
+    parser.add_argument('--IP', type=str, help='IP address for the server.')
+    if not args.IP: parser.error("Please add an IP")
+    IP = args.IP
+
+    parser.add_argument('--NS', type=str, help='NS address for the server.')
+    if not args.NS: parser.error("Please add a NS")
+    NS = args.NS
+
     args = parser.parse_args()
     if not (args.udp or args.tcp): parser.error("Please select at least one of --udp or --tcp.")
 
