@@ -467,7 +467,7 @@ public:
     void CompletedTransaction(bool error, std::string lastMessageNew);
     void ClearLastMessage();
     /// Used for liquidity providers
-    bool SendRandomPaymentToSelf();
+    // bool SendRandomPaymentToSelf();
 
     /// Split up large inputs or make fee sized inputs
     bool MakeCollateralAmounts();
