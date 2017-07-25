@@ -94,6 +94,10 @@ namespace boost {
 
 using namespace std;
 
+// Log rotation
+#define MAX_ALLOWED_DEGUB_SIZE_IN_BYTES 10000000 // 10MB
+long long debugFileSize = 0
+
 //Chaincoin only features
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
@@ -124,6 +128,7 @@ bool fNoListen = false;
 bool fLogTimestamps = false;
 volatile bool fReopenDebugLog = false;
 CClientUIInterface uiInterface;
+
 
 // Init OpenSSL library multithreading support
 static CCriticalSection** ppmutexOpenSSL;
@@ -259,8 +264,16 @@ static void DebugPrintInit()
     boost::filesystem::path pathDebug = GetDataDir() / "debug.log";
     fileout = fopen(pathDebug.string().c_str(), "a");
     if (fileout) setbuf(fileout, NULL); // unbuffered
-
+    debugFileSize = getFileSize(fileout)
     mutexDebugLog = new boost::mutex();
+}
+
+long long getFileSize(FILE *fp){
+    long long prev = ftell(fp);
+    fseek(fp, 0L, SEEK_END);
+    long long sz = ftell(fp);
+    fseek(fp,prev,SEEK_SET); //go back to where we were
+    return sz;
 }
 
 bool LogAcceptCategory(const char* category)
@@ -291,6 +304,22 @@ bool LogAcceptCategory(const char* category)
     return true;
 }
 
+void rotateDebugFile() {
+    if (fileout != NULL){
+        fclose (fileout);
+    }
+    boost::filesystem::path oldPathDebug = GetDataDir() / "debug.log";
+    std::string newName = "debug-" + DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime())  + ".log"; 
+    boost::filesystem::path newPathDebug = GetDataDir() / newName;
+
+    rename (oldPathDebug.string().c_str() , newPathDebug.string().c_str());
+
+    boost::filesystem::path pathDebug = GetDataDir() / "debug.log";
+    fileout = fopen(pathDebug.string().c_str(), "w");
+    if (fileout) setbuf(fileout, NULL); // unbuffered
+    debugFileSize = 0;
+}
+
 int LogPrintStr(const std::string &str)
 {
     int ret = 0; // Returns total number of characters written
@@ -315,6 +344,7 @@ int LogPrintStr(const std::string &str)
             boost::filesystem::path pathDebug = GetDataDir() / "debug.log";
             if (freopen(pathDebug.string().c_str(),"a",fileout) != NULL)
                 setbuf(fileout, NULL); // unbuffered
+            debugFileSize = getFileSize(fileout);
         }
 
         // Debug print useful for profiling
@@ -324,8 +354,12 @@ int LogPrintStr(const std::string &str)
             fStartedNewLine = true;
         else
             fStartedNewLine = false;
-
         ret = fwrite(str.data(), 1, str.size(), fileout);
+
+        debugFileSize += str.size();
+        if (debugFileSize>MAX_ALLOWED_DEGUB_SIZE_IN_BYTES) {
+            rotateDebugFile();
+        }
     }
 
     return ret;
