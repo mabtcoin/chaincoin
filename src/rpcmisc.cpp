@@ -384,7 +384,7 @@ Value makekeypair(const Array& params, bool fHelp)
             "makekeypair [prefix]\n"
             "Make a public/private key pair.\n"
             "[prefix] is optional preferred prefix for the public key.\n");
- 
+
     string strPrefix = "";
     if (params.size() > 0)
         strPrefix = params[0].get_str();
@@ -408,4 +408,4 @@ Value makekeypair(const Array& params, bool fHelp)
     result.push_back(Pair("PublicKey", pubkeyhex));
     result.push_back(Pair("PrivateKey", CBitcoinSecret(key).ToString()));
     return result;
-} 
+}
