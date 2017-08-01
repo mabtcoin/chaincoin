@@ -47,7 +47,7 @@ bool DecodeBase58(const char *psz, std::vector<unsigned char>& vch) {
             carry /= 256;
         }
         assert(carry == 0);
-	length = 0;
+	length = i;
         psz++;
     }
     // Skip trailing spaces.
