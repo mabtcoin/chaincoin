@@ -1323,7 +1323,7 @@ void ThreadOpenConnections()
         {
             LOCK(cs_vNodes);
             BOOST_FOREACH(CNode* pnode, vNodes) {
-                if (!pnode->fInbound) {
+                if (!pnode->fInbound && !pnode->fDarkSendMaster) {
                     setConnected.insert(pnode->addr.GetGroup());
                     nOutbound++;
                 }
