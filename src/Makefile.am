@@ -83,6 +83,12 @@ BITCOIN_CORE_H = \
   sync.h \
   threadsafety.h \
   tinyformat.h \
+  compat/byteswap.h \
+  compat/endian.h \
+  torcontrol.h \
+  hmac_sha256.h \
+  sha256.h \
+  common.h \
   txdb.h \
   txmempool.h \
   ui_interface.h \
@@ -158,6 +164,9 @@ libchaincoin_common_a_SOURCES = \
   masternode-pos.cpp \
   masternodeman.cpp \
   masternodeconfig.cpp \
+  torcontrol.cpp \
+  hmac_sha256.cpp \
+  sha256.cpp \
   instantx.cpp \
   hash.cpp \
   key.cpp \
@@ -167,6 +176,7 @@ libchaincoin_common_a_SOURCES = \
   script.cpp \
   sync.cpp \
   util.cpp \
+  random.cpp \
   version.cpp \
   aes_helper.c \
   luffa.c \
@@ -213,7 +223,7 @@ chaincoind_SOURCES += chaincoind-res.rc
 endif
 
 AM_CPPFLAGS += $(BDB_CPPFLAGS)
-chaincoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
+chaincoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
 # chaincoin-cli binary #
 chaincoin_cli_LDADD = \

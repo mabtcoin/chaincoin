@@ -29,7 +29,7 @@ test_chaincoin_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMO
 if ENABLE_WALLET
 test_chaincoin_LDADD += $(LIBBITCOIN_WALLET)
 endif
-test_chaincoin_LDADD += $(BDB_LIBS)
+test_chaincoin_LDADD += $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
 test_chaincoin_SOURCES = \
   alert_tests.cpp \
