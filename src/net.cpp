@@ -422,7 +422,7 @@ CNode* FindNode(const CNetAddr& ip)
     return NULL;
 }
 
-CNode* FindNode(std::string addrName)
+CNode* FindNode(const std::string& addrName)
 {
     LOCK(cs_vNodes);
     BOOST_FOREACH(CNode* pnode, vNodes)
@@ -444,6 +444,17 @@ CNode* FindNode(const CService& addr)
                 return (pnode);
         }
     }
+    return NULL;
+}
+
+
+//TODO: This is used in only one place in main, and should be removed
+CNode* FindNode(const NodeId nodeid)
+{
+    LOCK(cs_vNodes);
+    BOOST_FOREACH(CNode* pnode, vNodes)
+        if (pnode->GetId() == nodeid)
+            return (pnode);
     return NULL;
 }
 
@@ -552,7 +563,7 @@ void CNode::PushVersion()
 
 
 
-std::map<CNetAddr, int64_t> CNode::setBanned;
+banmap_t CNode::setBanned;
 CCriticalSection CNode::cs_setBanned;
 
 void CNode::ClearBanned()
@@ -560,12 +571,16 @@ void CNode::ClearBanned()
     setBanned.clear();
 }
 
+banmap_t& CNode::GetBanned(){
+    return setBanned;
+}
+
 bool CNode::IsBanned(CNetAddr ip)
 {
     bool fResult = false;
     {
         LOCK(cs_setBanned);
-        std::map<CNetAddr, int64_t>::iterator i = setBanned.find(ip);
+        banmap_t::iterator i = setBanned.find(ip);
         if (i != setBanned.end())
         {
             int64_t t = (*i).second;
@@ -576,13 +591,19 @@ bool CNode::IsBanned(CNetAddr ip)
     return fResult;
 }
 
-bool CNode::Ban(const CNetAddr &addr) {
-    int64_t banTime = GetTime()+GetArg("-bantime", 60*60*24);  // Default 24-hour ban
+bool CNode::Ban(const CNetAddr &addr, uint64_t banTime) {
+    banTime = GetTime()+(!banTime)?GetArg("-bantime", 60*60*24):0;  // Default 24-hour ban
     {
         LOCK(cs_setBanned);
         if (setBanned[addr] < banTime)
             setBanned[addr] = banTime;
     }
+    return true;
+}
+bool CNode::Unban(const CNetAddr &ip) {
+    LOCK(cs_setBanned);
+    if (!setBanned.erase(ip))
+        return false;
     return true;
 }
 
