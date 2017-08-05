@@ -59,7 +59,8 @@ QT_FORMS_UI = \
   forms/sendcoinsdialog.ui \
   forms/sendcoinsentry.ui \
   forms/signverifymessagedialog.ui \
-  forms/transactiondescdialog.ui
+  forms/transactiondescdialog.ui \
+  forms/masternodelist.ui 
 
 QT_MOC_CPP = \
   moc_addressbookpage.cpp \
@@ -105,7 +106,8 @@ QT_MOC_CPP = \
   moc_utilitydialog.cpp \
   moc_walletframe.cpp \
   moc_walletmodel.cpp \
-  moc_walletview.cpp
+  moc_walletview.cpp \
+  moc_masternodelist.cpp
 
 BITCOIN_MM = \
   macdockiconhandler.mm \
@@ -173,7 +175,8 @@ BITCOIN_QT_H = \
   walletmodel.h \
   walletmodeltransaction.h \
   walletview.h \
-  winshutdownmonitor.h
+  winshutdownmonitor.h \
+  masternodelist.h 
 
 RES_ICONS = \
   res/icons/add.png \
@@ -277,7 +280,8 @@ BITCOIN_QT_CPP += \
   walletframe.cpp \
   walletmodel.cpp \
   walletmodeltransaction.cpp \
-  walletview.cpp
+  walletview.cpp \
+  masternodelist.cpp 
 endif
 
 RES_IMAGES = \
