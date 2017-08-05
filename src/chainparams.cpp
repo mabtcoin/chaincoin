@@ -39,6 +39,8 @@ public:
         nRPCPort = 11995;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
         nSubsidyHalvingInterval = 700800; // 2 years
+        nRewardForkHeight1 = 1246400; // ~end sep 2017
+        nRewardForkHeight2 = 1275200; // ~end oct 2017
 
         // Genesis block
         const char* pszTimestamp = "18-01-14 - Anti-fracking campaigners chain themselves to petrol pumps";
@@ -128,6 +130,9 @@ public:
         nDefaultPort = 21994;
         nRPCPort = 21995;
         strDataDir = "testnet3";
+
+        nRewardForkHeight1 = 500;
+        nRewardForkHeight2 = 1000;
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1388868139;
