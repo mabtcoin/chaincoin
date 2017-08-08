@@ -619,11 +619,27 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
             return;
         }
 
-        /*
-        if(Params().NetworkID() == CChainParams::MAIN){
-            if(addr.GetPort() != 9999) return;
-        } else if(addr.GetPort() == 9999) return;
-        */
+        if(chainActive.Height() >= Params().MasternodePortForkHeight())
+        {
+            if(Params().NetworkID() == CChainParams::MAIN)
+            {
+                if(addr.GetPort() != 11994)
+                {
+                    LogPrintf("dsee - Got bad Masternode port\n");
+                    Misbehaving(pfrom->GetId(), 100);
+                    return;
+                }
+            }
+            else
+            {
+                if(addr.GetPort() == 11994)
+                {
+                    LogPrintf("dsee - Got bad Masternode port\n");
+                    Misbehaving(pfrom->GetId(), 100);
+                    return;
+                }
+            }
+        }
 
         //search existing Masternode list, this is where we update existing Masternodes with new dsee broadcasts
         CMasternode* pmn = this->Find(vin);
