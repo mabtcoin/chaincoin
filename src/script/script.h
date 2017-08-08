@@ -6,6 +6,7 @@
 #ifndef H_BITCOIN_SCRIPT
 #define H_BITCOIN_SCRIPT
 
+#include "prevector.h"
 #include "key.h"
 #include "util.h"
 
@@ -396,10 +397,10 @@ inline std::string StackString(const std::vector<std::vector<unsigned char> >& v
 
 
 
-
+typedef prevector<28, unsigned char> CScriptBase;
 
 /** Serialized script, used inside transaction inputs and outputs */
-class CScript : public std::vector<unsigned char>
+class CScript : public CScriptBase
 {
 protected:
     CScript& push_int64(int64_t n)
@@ -416,11 +417,10 @@ protected:
     }
 public:
     CScript() { }
-    CScript(const CScript& b) : std::vector<unsigned char>(b.begin(), b.end()) { }
-    CScript(const_iterator pbegin, const_iterator pend) : std::vector<unsigned char>(pbegin, pend) { }
-#ifndef _MSC_VER
-    CScript(const unsigned char* pbegin, const unsigned char* pend) : std::vector<unsigned char>(pbegin, pend) { }
-#endif
+    CScript(const CScript& b) : CScriptBase(b.begin(), b.end()) { }
+    CScript(const_iterator pbegin, const_iterator pend) : CScriptBase(pbegin, pend) { }
+    CScript(std::vector<unsigned char>::const_iterator pbegin, std::vector<unsigned char>::const_iterator pend) : CScriptBase(pbegin, pend) { }
+    CScript(const unsigned char* pbegin, const unsigned char* pend) : CScriptBase(pbegin, pend) { }
 
     CScript& operator+=(const CScript& b)
     {
@@ -677,6 +677,12 @@ public:
     bool IsUnspendable() const
     {
         return (size() > 0 && *begin() == OP_RETURN);
+    }
+    
+    void clear()
+    {
+        // The default std::vector::clear() does not release memory.
+        CScriptBase().swap(*this);
     }
 
     void SetDestination(const CTxDestination& address);
