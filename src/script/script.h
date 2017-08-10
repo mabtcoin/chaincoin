@@ -12,6 +12,7 @@
 
 #include <stdexcept>
 #include <stdint.h>
+#include <string.h>
 #include <string>
 #include <vector>
 
@@ -409,6 +410,10 @@ protected:
         {
             push_back(n + (OP_1 - 1));
         }
+        else if (n == 0)
+        {
+            push_back(OP_0);
+        }
         else
         {
             *this << CScriptNum::serialize(n);
@@ -417,7 +422,6 @@ protected:
     }
 public:
     CScript() { }
-    CScript(const CScript& b) : CScriptBase(b.begin(), b.end()) { }
     CScript(const_iterator pbegin, const_iterator pend) : CScriptBase(pbegin, pend) { }
     CScript(std::vector<unsigned char>::const_iterator pbegin, std::vector<unsigned char>::const_iterator pend) : CScriptBase(pbegin, pend) { }
     CScript(const unsigned char* pbegin, const unsigned char* pend) : CScriptBase(pbegin, pend) { }
@@ -682,7 +686,8 @@ public:
     void clear()
     {
         // The default std::vector::clear() does not release memory.
-        CScriptBase().swap(*this);
+        CScriptBase::clear();
+        shrink_to_fit();
     }
 
     void SetDestination(const CTxDestination& address);
