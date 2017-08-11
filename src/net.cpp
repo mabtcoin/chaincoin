@@ -132,9 +132,9 @@ CAddress GetLocalAddress(const CNetAddr *paddrPeer)
     if (GetLocal(addr, paddrPeer))
     {
         ret = CAddress(addr);
-        ret.nServices = nLocalServices;
-        ret.nTime = GetAdjustedTime();
     }
+    ret.nServices = nLocalServices;
+    ret.nTime = GetAdjustedTime();
     return ret;
 }
 
