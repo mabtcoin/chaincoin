@@ -166,7 +166,7 @@ static inline bool error(const char* format)
     return false;
 }
 
-
+void rotateDebugFile();
 void LogException(std::exception* pex, const char* pszThread);
 void PrintExceptionContinue(std::exception* pex, const char* pszThread);
 std::string FormatMoney(int64_t n, bool fPlus=false);
