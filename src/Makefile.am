@@ -29,8 +29,7 @@ BITCOIN_CORE_H = \
   addrman.h \
   alert.h \
   allocators.h \
-  base58.h \
-  bignum.h \
+  base58.h bignum.h \
   bloom.h \
   chainparams.h \
   checkpoints.h \
@@ -66,22 +65,20 @@ BITCOIN_CORE_H = \
   rpcclient.h \
   rpcprotocol.h \
   rpcserver.h \
-  script/script.h \
+  script.h \
   serialize.h \
-  crypto/sha256.h \
-  crypto/hmac_sha256.h \
-  crypto/sph_blake.h \
-  crypto/sph_bmw.h \
-  crypto/sph_cubehash.h \
-  crypto/sph_echo.h \
-  crypto/sph_groestl.h \
-  crypto/sph_jh.h \
-  crypto/sph_keccak.h \
-  crypto/sph_luffa.h \
-  crypto/sph_shavite.h \
-  crypto/sph_simd.h \
-  crypto/sph_skein.h \
-  crypto/sph_types.h \
+  sph_blake.h \
+  sph_bmw.h \
+  sph_cubehash.h \
+  sph_echo.h \
+  sph_groestl.h \
+  sph_jh.h \
+  sph_keccak.h \
+  sph_luffa.h \
+  sph_shavite.h \
+  sph_simd.h \
+  sph_skein.h \
+  sph_types.h \
   spork.h \
   sync.h \
   threadsafety.h \
@@ -89,9 +86,9 @@ BITCOIN_CORE_H = \
   compat/byteswap.h \
   compat/endian.h \
   torcontrol.h \
-  crypto/hmac_sha256.h \
-  crypto/sha256.h \
-  crypto/common.h \
+  hmac_sha256.h \
+  sha256.h \
+  common.h \
   txdb.h \
   txmempool.h \
   ui_interface.h \
@@ -168,32 +165,32 @@ libchaincoin_common_a_SOURCES = \
   masternodeman.cpp \
   masternodeconfig.cpp \
   torcontrol.cpp \
-  crypto/hmac_sha256.cpp \
-  crypto/sha256.cpp \
+  hmac_sha256.cpp \
+  sha256.cpp \
   instantx.cpp \
   hash.cpp \
   key.cpp \
   netbase.cpp \
   protocol.cpp \
   rpcprotocol.cpp \
-  script/script.cpp \
+  script.cpp \
   sync.cpp \
   util.cpp \
   random.cpp \
   version.cpp \
-  crypto/aes_helper.c \
-  crypto/luffa.c \
-  crypto/groestl.c \
-  crypto/jh.c \
-  crypto/echo.c \
-  crypto/shavite.c \
-  crypto/keccak.c \
-  crypto/skein.c \
+  aes_helper.c \
+  luffa.c \
+  groestl.c \
+  jh.c \
+  echo.c \
+  shavite.c \
+  keccak.c \
+  skein.c \
   spork.cpp \
-  crypto/bmw.c \
-  crypto/simd.c \
-  crypto/cubehash.c \
-  crypto/blake.c \
+  bmw.c \
+  simd.c \
+  cubehash.c \
+  blake.c \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
