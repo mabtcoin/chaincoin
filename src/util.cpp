@@ -311,24 +311,24 @@ void rotateDebugFile() {
     if (fileout != NULL){
         fclose (fileout);
     }
-    if(!is_directory(oldLogsDir.parent_path())  || exists(oldLogsDir)) {
-		assert(!create_directory(oldLogsDir, err));
+    if(!is_directory(oldLogsDir.parent_path()) || exists(oldLogsDir)) {
+        assert(!create_directory(oldLogsDir, err));
 		
-		if(is_directory(oldLogsDir)) {
-			assert(!err.value());
-		} else {
-			assert(err.value());
-		}
-	}
-	try {
-		if (create_directories(oldLogsDir)) {
-			assert(!create_directory(oldLogsDir));
-		}
-	} catch (std::exception& exc) {
-		std::stringstream ss; 
-		ss << "Could not create directory for rotated logs! Exception info: " << exc.what() << '\n';
-		LogPrintStr(ss.str());
-	}
+        if(is_directory(oldLogsDir)) {
+          assert(!err.value());
+        } else {
+          assert(err.value());
+        }
+    }
+    try {
+        if (create_directories(oldLogsDir)) {
+            assert(!create_directory(oldLogsDir));
+        }
+    } catch (std::exception& exc) {
+        std::stringstream ss; 
+        ss << "Could not create directory for rotated logs! Exception info: " << exc.what() << '\n';
+        LogPrintStr(ss.str());
+    }
     boost::filesystem::path oldPathDebug = GetDataDir() / "debug.log";
     std::string newName = "debug-" + DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime())  + ".log"; 
     boost::filesystem::path newPathDebug = oldLogsDir / newName;

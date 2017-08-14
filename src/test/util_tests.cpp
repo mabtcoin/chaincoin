@@ -10,6 +10,8 @@
 #include <vector>
 
 #include <boost/test/unit_test.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <fstream>
 
 using namespace std;
 
@@ -338,6 +340,25 @@ BOOST_AUTO_TEST_CASE(strprintf_numbers)
 BOOST_AUTO_TEST_CASE(gettime)
 {
     BOOST_CHECK((GetTime() & ~0xFFFFFFFFLL) == 0);
+}
+
+BOOST_AUTO_TEST_CASE(test_logrotate)
+{
+	boost::system::error_code error;
+	boost::filesystem::path oldLogsDir = GetDataDir() / "logs"; 
+	boost::filesystem::path logFile = GetDataDir() / "debug.log";
+	// create a file with size > 10MB
+	std::ofstream ofs(logFile.string().c_str(), std::ios::binary | std::ios::out);
+	ofs.seekp((15<<20) - 1);
+	ofs.write("",1);
+	// rotate the file (move it to logs dir)
+	rotateDebugFile();
+	
+	boost::filesystem::directory_iterator end_it;
+    boost::filesystem::directory_iterator it(oldLogsDir);
+	// logs dir must not be empty
+	BOOST_CHECK(!(it == end_it));
+	
 }
 
 BOOST_AUTO_TEST_SUITE_END()
