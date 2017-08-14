@@ -105,7 +105,9 @@ QT_MOC_CPP = \
   moc_utilitydialog.cpp \
   moc_walletframe.cpp \
   moc_walletmodel.cpp \
-  moc_walletview.cpp
+  moc_walletview.cpp \
+  moc_bantablemodel.cpp \
+  moc_peertablemodel.cpp
 
 BITCOIN_MM = \
   macdockiconhandler.mm \
@@ -173,7 +175,9 @@ BITCOIN_QT_H = \
   walletmodel.h \
   walletmodeltransaction.h \
   walletview.h \
-  winshutdownmonitor.h
+  winshutdownmonitor.h \
+  bantablemodel.h \
+  peertablemodel.h
 
 RES_ICONS = \
   res/icons/add.png \
@@ -277,7 +281,9 @@ BITCOIN_QT_CPP += \
   walletframe.cpp \
   walletmodel.cpp \
   walletmodeltransaction.cpp \
-  walletview.cpp
+  walletview.cpp \
+  bantablemodel.cpp \
+  peertablemodel.cpp
 endif
 
 RES_IMAGES = \
