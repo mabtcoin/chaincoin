@@ -102,7 +102,6 @@ enum BindFlags {
 //
 
 volatile bool fRequestShutdown = false;
-bool fRestartRequested = false;  // true: restart false: shutdown
 
 void StartShutdown()
 {
@@ -136,33 +135,26 @@ public:
 static CCoinsViewDB *pcoinsdbview;
 static CCoinsViewErrorCatcher *pcoinscatcher = NULL;
 
-void Interrupt(boost::thread_group& threadGroup)
+void Shutdown()
 {
-    InterruptRPC();
-    InterruptTorControl();
-    threadGroup.interrupt_all();
-}
-
-void PrepareShutdown() {
-    fRequestShutdown = true;
-    fRestartRequested = true;
-    LogPrintf("%s: In progress...\n", __func__);
+    LogPrintf("Shutdown : In progress...\n");
     static CCriticalSection cs_Shutdown;
     TRY_LOCK(cs_Shutdown, lockShutdown);
-    if (!lockShutdown)
-        return;
-    
+    if (!lockShutdown) return;
+
     RenameThread("chaincoin-shutoff");
     mempool.AddTransactionsUpdated(1);
-    void StopRPCThreads();
+    InterruptTorControl();
+    StopRPCThreads();
     ShutdownRPCMining();
 #ifdef ENABLE_WALLET
     if (pwalletMain)
         bitdb.Flush(false);
-#endif
     GenerateBitcoins(false, NULL, 0);
+#endif
     StopNode();
     DumpMasternodes();
+    StopTorControl();
     UnregisterNodeSignals(GetNodeSignals());
     {
         LOCK(cs_main);
@@ -185,26 +177,6 @@ void PrepareShutdown() {
 #endif
     boost::filesystem::remove(GetPidFile());
     UnregisterAllWallets();
-}
-
-/**
-* Shutdown is split into 2 parts:
-* Part 1: shut down everything but the main wallet instance (done in PrepareShutdown() )
-* Part 2: delete wallet instance
-*
-* In case of a restart PrepareShutdown() was already called before, but this method here gets
-* called implicitly when the parent object is deleted. In this case we have to skip the
-* PrepareShutdown() part because it was already executed and just delete the wallet instance.
-*/
-void Shutdown()
-{
-	
-	// Shutdown part 1: prepare shutdown
-    if(!fRestartRequested){
-        PrepareShutdown();
-    }
-    // Shutdown part 2: Stop TOR thread and delete wallet instance
-	StopTorControl();
 #ifdef ENABLE_WALLET
     if (pwalletMain)
         delete pwalletMain;

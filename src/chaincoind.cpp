@@ -45,7 +45,7 @@ void DetectShutdownThread(boost::thread_group* threadGroup)
     }
     if (threadGroup)
     {
-        Interrupt(*threadGroup);
+        threadGroup->interrupt_all();
         threadGroup->join_all();
     }
 }
@@ -166,14 +166,20 @@ bool AppInit(int argc, char* argv[])
 
     if (!fRet)
     {
-        Interrupt(threadGroup);
+        if (detectShutdownThread)
+            detectShutdownThread->interrupt();
+
+        threadGroup.interrupt_all();
         // threadGroup.join_all(); was left out intentionally here, because we didn't re-test all of
         // the startup-failure cases to make sure they don't result in a hang due to some
         // thread-blocking-waiting-for-another-thread-during-startup case
-    } else {
+    }
+
+    if (detectShutdownThread)
+    {
         detectShutdownThread->join();
         delete detectShutdownThread;
-        detectShutdownThread = NULL;	
+        detectShutdownThread = NULL;
     }
     Shutdown();
 
