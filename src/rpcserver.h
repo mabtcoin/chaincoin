@@ -29,6 +29,9 @@ void StartRPCThreads();
 void StartDummyRPCThread();
 /* Stop RPC threads */
 void StopRPCThreads();
+void InterruptRPC();
+/** Query whether RPC is running */
+bool IsRPCRunning();
 
 /*
   Type-check arguments; throws JSONRPCError if wrong type given. Does not check that

@@ -40,6 +40,7 @@ static ssl::context* rpc_ssl_context = NULL;
 static boost::thread_group* rpc_worker_group = NULL;
 static boost::asio::io_service::work *rpc_dummy_work = NULL;
 static std::vector< boost::shared_ptr<ip::tcp::acceptor> > rpc_acceptors;
+static bool fRPCRunning = false;
 
 void RPCTypeCheck(const Array& params,
                   const list<Value_type>& typesExpected,
@@ -589,6 +590,7 @@ void StartRPCThreads()
 
         rpc_acceptors.push_back(acceptor);
         fListening = true;
+        fRPCRunning = true;
     }
     catch(boost::system::system_error &e)
     {
@@ -640,6 +642,18 @@ void StartDummyRPCThread()
         rpc_worker_group = new boost::thread_group();
         rpc_worker_group->create_thread(boost::bind(&asio::io_service::run, rpc_io_service));
     }
+}
+
+void InterruptRPC()
+{
+    LogPrint("rpc", "Interrupting RPC\n");
+    // Interrupt e.g. running longpolls
+    fRPCRunning = false;
+}
+
+bool IsRPCRunning()
+{
+    return fRPCRunning;
 }
 
 void StopRPCThreads()
