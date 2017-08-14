@@ -107,7 +107,9 @@ QT_MOC_CPP = \
   moc_walletframe.cpp \
   moc_walletmodel.cpp \
   moc_walletview.cpp \
-  moc_masternodelist.cpp
+  moc_masternodelist.cpp \
+  moc_bantablemodel.cpp \
+  moc_peertablemodel.cpp
 
 BITCOIN_MM = \
   macdockiconhandler.mm \
@@ -176,7 +178,9 @@ BITCOIN_QT_H = \
   walletmodeltransaction.h \
   walletview.h \
   winshutdownmonitor.h \
-  masternodelist.h 
+  masternodelist.h \
+  bantablemodel.h \
+  peertablemodel.h
 
 RES_ICONS = \
   res/icons/add.png \
@@ -281,7 +285,9 @@ BITCOIN_QT_CPP += \
   walletmodel.cpp \
   walletmodeltransaction.cpp \
   walletview.cpp \
-  masternodelist.cpp 
+  masternodelist.cpp \
+  bantablemodel.cpp \
+  peertablemodel.cpp
 endif
 
 RES_IMAGES = \
@@ -335,7 +341,7 @@ if ENABLE_WALLET
 chaincoin_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
 chaincoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
-  $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
+  $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 chaincoin_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
