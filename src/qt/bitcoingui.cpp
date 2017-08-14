@@ -271,8 +271,8 @@ void BitcoinGUI::createActions(bool fIsTestnet)
 #endif
     tabGroup->addAction(historyAction);
 
-    masternodeList = new QAction(QIcon(":/icons/history"), tr("&masternodeList"), this);
-    masternodeList->setStatusTip(tr("masternodeList"));
+    masternodeList = new QAction(QIcon(":/icons/history"), tr("&Masternodes"), this);
+    masternodeList->setStatusTip(tr("Masternodes"));
     masternodeList->setToolTip(masternodeList->statusTip());
     masternodeList->setCheckable(true);
 #ifdef Q_OS_MAC
