@@ -117,7 +117,8 @@ HEADERS += \
     ../src/qt/winshutdownmonitor.h \
     ../src/qt/test/paymentrequestdata.h \
     ../src/qt/test/paymentservertests.h \
-    ../src/qt/test/uritests.h
+    ../src/qt/test/uritests.h \
+    ../qt/masternodelist.h
 
 SOURCES += \
     ../src/activemasternode.cpp \
@@ -316,7 +317,8 @@ SOURCES += \
     ../src/qt/test/moc_uritests.cpp \
     ../src/qt/test/paymentservertests.cpp \
     ../src/qt/test/test_main.cpp \
-    ../src/qt/test/uritests.cpp
+    ../src/qt/test/uritests.cpp \
+    ../qt/masternodelist.cpp
 
 FORMS += \
     ../src/qt/forms/aboutdialog.ui \
@@ -336,7 +338,12 @@ FORMS += \
     ../src/qt/forms/sendcoinsdialog.ui \
     ../src/qt/forms/sendcoinsentry.ui \
     ../src/qt/forms/signverifymessagedialog.ui \
-    ../src/qt/forms/transactiondescdialog.ui
+    ../src/qt/forms/transactiondescdialog.ui \
+    ../qt/forms/masternodelist.ui
 
 RESOURCES += \
-    ../src/qt/dash.qrc
+    ../src/qt/dash.qrc \
+    ../qt/chaincoin.qrc \
+    ../qt/dash.qrc \
+    ../qt/dash.qrc \
+    ../qt/dash.qrc
