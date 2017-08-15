@@ -88,21 +88,35 @@ Optional:
 
 	sudo apt-get install libminiupnpc-dev (see --with-miniupnpc and --enable-upnp-default)
 
-Dependencies for the GUI: Ubuntu & Debian
------------------------------------------
+Dependencies for the GUI: Ubuntu & Debian (QT compilation)
+----------------------------------------------------------
 
 If you want to build Chaincoin-Qt, make sure that the required packages for Qt development
 are installed. Either Qt 4 or Qt 5 are necessary to build the GUI.
 If both Qt 4 and Qt 5 are installed, Qt 4 will be used. Pass `--with-gui=qt5` to configure to choose Qt5.
 To build without GUI pass `--without-gui`.
 
-To build with Qt 4 you need the following:
+To build with **Qt 4** you need the following:
 
     sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler
 
-For Qt 5 you need the following:
+For **Qt 5** you need the following:
 
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev
+
+-----
+
+*Note*: Under some Linux configurations you may experience a **QT compile errors** like this one:
+
+`
+error: #error "You must build your code with position independent code if Qt was built with -reduce-relocations. " "Compile your code with -fPIC (-fPIE is not enough)."
+`
+
+A quick remedy for this problem is to add the flag **-fPIE** on line [163](https://github.com/chaincoin/chaincoin/blob/master/configure.ac#L163) in *configure.ac*
+
+`CPPFLAGS="$CPPFLAGS -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -fPIE"`
+
+------
 
 libqrencode (optional) can be installed with:
 
@@ -156,7 +170,7 @@ cd $CHC_ROOT
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-**Note 2**: You'll almost certainly run into `'__atomic_compare_exchange' definition error` when trying to compile BDB with clang. This is because a function with the same name already exists in *db-4.8.30.NC/dbinc/atomic.h*. The most simple way is to rename `__atomic_compare_exchange` to `__atomic_compare_exchange_db` on lines **147** and **179** and try to comile again. 
+**Note 2**: You'll almost certainly run into `'__atomic_compare_exchange' definition error` when trying to compile BDB with clang. This is because a function with the same name already exists in *db-4.8.30.NC/dbinc/atomic.h*. The most simple way is to rename `__atomic_compare_exchange` to `__atomic_compare_exchange_db` on lines **147** and **179** and try to compile again. 
 
 Boost
 -----
