@@ -184,7 +184,7 @@ libchaincoin_common_a_SOURCES = \
   crypto/groestl.c \
   crypto/jh.c \
   crypto/echo.c \
-  shavite.c \
+  crypto/shavite.c \
   crypto/keccak.c \
   crypto/skein.c \
   spork.cpp \
