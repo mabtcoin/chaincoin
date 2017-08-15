@@ -57,6 +57,7 @@ MasternodeList::MasternodeList(QWidget *parent) :
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updateNodeList()));
     connect(timer, SIGNAL(timeout()), this, SLOT(updateMyNodeList()));
+
     timer->start(1000);
 
     fFilterUpdated = false;
@@ -262,6 +263,10 @@ void MasternodeList::updateMyNodeList(bool fForce)
         CTxIn txin = CTxIn(uint256(mne.getTxHash()), nOutputIndex);
 
         CMasternode *infoMn = mnodeman.Find(txin);
+        if (!infoMn && bAutostartMissing) {
+            StartAll("start-missing");
+            return;
+        }
 
         updateMyMasternodeInfo(QString::fromStdString(mne.getAlias()), QString::fromStdString(mne.getIp()), infoMn);
     }
@@ -443,4 +448,9 @@ void MasternodeList::on_tableWidgetMyMasternodes_itemSelectionChanged()
 void MasternodeList::on_UpdateButton_clicked()
 {
     updateMyNodeList(true);
+}
+
+void MasternodeList::on_cbxAutoStartMissingMNs_stateChanged(int arg1)
+{
+    this->bAutostartMissing = ui->cbxAutoStartMissingMNs->isChecked();
 }
