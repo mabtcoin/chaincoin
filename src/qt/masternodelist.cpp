@@ -203,12 +203,29 @@ void MasternodeList::updateMyMasternodeInfo(QString strAlias, QString strAddr,CM
 
     QTableWidgetItem *aliasItem = new QTableWidgetItem(strAlias);
     QTableWidgetItem *addrItem = new QTableWidgetItem(strAddr);
-    QTableWidgetItem *protocolItem = new QTableWidgetItem(QString::number(infoMn->protocolVersion));
-    QTableWidgetItem *statusItem = new QTableWidgetItem(QString::fromStdString(infoMn->Status()));
-    QTableWidgetItem *activeSecondsItem = new QTableWidgetItem(QString::fromStdString(DurationToDHMS(infoMn->lastTimeSeen - infoMn->sigTime)));
-    QTableWidgetItem *lastSeenItem = new QTableWidgetItem(QString::fromStdString(DateTimeStrFormat("%Y-%m-%d %H:%M",
-                                                                                                   infoMn->sigTime + QDateTime::currentDateTime().utcOffset())));
-    QTableWidgetItem *pubkeyItem = new QTableWidgetItem(QString::fromStdString(CBitcoinAddress(infoMn->pubkey.GetID()).ToString()));
+    QTableWidgetItem *protocolItem;
+    QTableWidgetItem *statusItem;
+    QTableWidgetItem *activeSecondsItem;
+    QTableWidgetItem *lastSeenItem;
+    QTableWidgetItem *pubkeyItem;
+
+    if (infoMn == NULL)
+    {
+        protocolItem = new QTableWidgetItem(QString::number(0));
+        statusItem = new QTableWidgetItem(QString(""));
+        activeSecondsItem = new QTableWidgetItem(QString(""));
+        lastSeenItem = new QTableWidgetItem(QString(""));
+        pubkeyItem = new QTableWidgetItem(QString(""));
+    }
+    else
+    {
+        protocolItem = new QTableWidgetItem(QString::number(infoMn->protocolVersion));
+        statusItem = new QTableWidgetItem(QString::fromStdString(infoMn->Status()));
+        activeSecondsItem = new QTableWidgetItem(QString::fromStdString(DurationToDHMS(infoMn->lastTimeSeen - infoMn->sigTime)));
+        lastSeenItem = new QTableWidgetItem(QString::fromStdString(DateTimeStrFormat("%Y-%m-%d %H:%M",
+                infoMn->sigTime + QDateTime::currentDateTime().utcOffset())));
+        pubkeyItem = new QTableWidgetItem(QString::fromStdString(CBitcoinAddress(infoMn->pubkey.GetID()).ToString()));
+    }
 
     ui->tableWidgetMyMasternodes->setItem(nNewRow, 0, aliasItem);
     ui->tableWidgetMyMasternodes->setItem(nNewRow, 1, addrItem);
