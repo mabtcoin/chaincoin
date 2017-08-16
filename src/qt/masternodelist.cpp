@@ -16,6 +16,27 @@
 #include <QTimer>
 #include <QMessageBox>
 
+const std::string GetEnumStr(MnCommand cmd) {
+    switch (cmd){
+    case MnCommand::Unknown:
+        return "Unknown";
+    case MnCommand::StartAlias:
+        return "StartAlias";
+    case MnCommand::StartAll:
+        return "StartAll";
+    case MnCommand::StartMissing:
+        return "StartMissing";
+    case MnCommand::StopAlias:
+        return "StopAlias";
+    case MnCommand::StopAll:
+        return "StopAll";
+    case MnCommand::AutostartMissing:
+        return "AutostartMissing";
+    default:
+        return "Unknown";
+    }
+}
+
 MasternodeList::MasternodeList(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MasternodeList),
@@ -146,7 +167,7 @@ void MasternodeList::StartAlias(std::string strAlias)
     updateMyNodeList(true);
 }
 
-void MasternodeList::StartAll(std::string strCommand)
+void MasternodeList::StartMasternodes(MnCommand mnCmd)
 {
     int nCountSuccessful = 0;
     int nCountFailed = 0;
@@ -158,7 +179,7 @@ void MasternodeList::StartAll(std::string strCommand)
         std::string strDonationPercentage = mne.getDonationPercentage();
 
         CTxIn txin = CTxIn(uint256(ParseHex(mne.getTxHash())), QString::fromStdString(mne.getOutputIndex()).toInt());
-        if(strCommand == "start-missing" && mnodeman.Find(txin)) continue;
+        if(mnCmd == MnCommand::StartMissing && mnodeman.Find(txin)) continue;
 
         bool result = activeMasternode.Register(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), strDonateAddress, strDonationPercentage, strError);
 
@@ -184,7 +205,7 @@ void MasternodeList::StartAll(std::string strCommand)
     updateMyNodeList(true);
 }
 
-void MasternodeList::updateMyMasternodeInfo(QString strAlias, QString strAddr,CMasternode* infoMn)
+void MasternodeList::updateMyMasternodeInfo(QString strAlias, QString strAddr, CMasternode* infoMn)
 {
     bool fOldRowFound = false;
     int nNewRow = 0;
@@ -264,7 +285,7 @@ void MasternodeList::updateMyNodeList(bool fForce)
 
         CMasternode *infoMn = mnodeman.Find(txin);
         if (!infoMn && bAutostartMissing) {
-            StartAll("start-missing");
+            StartMasternodes(MnCommand::StartMissing);
             return;
         }
 
@@ -400,11 +421,11 @@ void MasternodeList::on_startAllButton_clicked()
 
         if(!ctx.isValid()) return; // Unlock wallet was cancelled
 
-        StartAll();
+        StartMasternodes();
         return;
     }
 
-    StartAll();
+    StartMasternodes();
 }
 
 void MasternodeList::on_startMissingButton_clicked()
@@ -431,11 +452,11 @@ void MasternodeList::on_startMissingButton_clicked()
 
         if(!ctx.isValid()) return; // Unlock wallet was cancelled
 
-        StartAll("start-missing");
+        StartMasternodes(MnCommand::StartMissing);
         return;
     }
 
-    StartAll("start-missing");
+    StartMasternodes(MnCommand::StartMissing);
 }
 
 void MasternodeList::on_tableWidgetMyMasternodes_itemSelectionChanged()
