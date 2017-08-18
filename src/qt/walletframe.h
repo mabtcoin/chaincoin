@@ -48,6 +48,8 @@ private:
     WalletView *currentWalletView();
 
 public slots:
+    /** Switch to logger Page */
+    void gotoLoggerPage();
     /** Switch to master node list Page */
     void gotomasternodeList();
     /** Switch to overview (home) page */

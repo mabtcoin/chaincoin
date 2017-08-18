@@ -18,6 +18,7 @@
 #include "transactionview.h"
 #include "walletmodel.h"
 #include "masternodelist.h"
+#include "loggerpage.h"
 
 #include "ui_interface.h"
 
@@ -68,11 +69,13 @@ WalletView::WalletView(QWidget *parent):
     sendCoinsPage = new SendCoinsDialog();
 
     masternodeList= new MasternodeList();
+    loggerPage = new LoggerPage();
     addWidget(overviewPage);
     addWidget(transactionsPage);
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
     addWidget(masternodeList);
+    addWidget(loggerPage);
 
     // Clicking on a transaction on the overview pre-selects the transaction on the transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), transactionView, SLOT(focusTransaction(QModelIndex)));
@@ -172,7 +175,13 @@ void WalletView::processNewTransaction(const QModelIndex& parent, int start, int
     emit incomingTransaction(date, walletModel->getOptionsModel()->getDisplayUnit(), amount, type, address);
 }
 
-void WalletView::gotomasternodeList(){
+void WalletView::gotoLoggerPage()
+{
+    setCurrentWidget(loggerPage);
+}
+
+void WalletView::gotomasternodeList()
+{
     setCurrentWidget(masternodeList);
 }
 void WalletView::gotoOverviewPage()
