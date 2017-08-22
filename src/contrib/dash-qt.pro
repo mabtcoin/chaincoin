@@ -1,5 +1,7 @@
 # lupdate-qt4 ./dash-qt.pro -ts ../src/qt/locale/dash_en.ts
 
+QT += core gui widgets
+
 HEADERS += \
     ../src/activemasternode.h \
     ../src/addrman.h \
@@ -40,20 +42,20 @@ HEADERS += \
     ../src/rpcclient.h \
     ../src/rpcprotocol.h \
     ../src/rpcserver.h \
-    ../src/script.h \
+    ../src/script/script.h \
     ../src/serialize.h \
-    ../src/sph_blake.h \
-    ../src/sph_bmw.h \
-    ../src/sph_cubehash.h \
-    ../src/sph_echo.h \
-    ../src/sph_groestl.h \
-    ../src/sph_jh.h \
-    ../src/sph_keccak.h \
-    ../src/sph_luffa.h \
+    ../src/crypto/sph_blake.h \
+    ../src/crypto/sph_bmw.h \
+    ../src/crypto/sph_cubehash.h \
+    ../src/crypto/sph_echo.h \
+    ../src/crypto/sph_groestl.h \
+    ../src/crypto/sph_jh.h \
+    ../src/crypto/sph_keccak.h \
+    ../src/crypto/sph_luffa.h \
     ../src/sph_shavite.h \
-    ../src/sph_simd.h \
-    ../src/sph_skein.h \
-    ../src/sph_types.h \
+    ../src/crypto/sph_simd.h \
+    ../src/crypto/sph_skein.h \
+    ../src/crypto/sph_types.h \
     ../src/sync.h \
     ../src/threadsafety.h \
     ../src/tinyformat.h \
@@ -118,40 +120,41 @@ HEADERS += \
     ../src/qt/test/paymentrequestdata.h \
     ../src/qt/test/paymentservertests.h \
     ../src/qt/test/uritests.h \
-    ../qt/masternodelist.h
+    ../src/qt/masternodelist.h \
+    ../src/qt/loggerpage.h
 
 SOURCES += \
     ../src/activemasternode.cpp \
     ../src/addrman.cpp \
-    ../src/aes_helper.c \
+    ../src/crypto/aes_helper.c \
     ../src/alert.cpp \
     ../src/allocators.cpp \
     ../src/base58.cpp \
-    ../src/blake.c \
+    ../src/crypto/blake.c \
     ../src/bloom.cpp \
-    ../src/bmw.c \
+    ../src/crypto/bmw.c \
     ../src/chainparams.cpp \
     ../src/checkpoints.cpp \
     ../src/coins.cpp \
     ../src/core.cpp \
     ../src/crypter.cpp \
-    ../src/cubehash.c \
-    ../src/dash-cli.cpp \
-    ../src/dashd.cpp \
+    ../src/crypto/cubehash.c \
+    ../src/chaincoin-cli.cpp \
+    ../src/chaincoind.cpp \
     ../src/darksend.cpp \
     ../src/db.cpp \
-    ../src/echo.c \
-    ../src/groestl.c \
+    ../src/crypto/echo.c \
+    ../src/crypto/groestl.c \
     ../src/hash.cpp \
     ../src/init.cpp \
     ../src/instantx.cpp \
-    ../src/jh.c \
-    ../src/keccak.c \
-    ../src/keepass.cpp \
+    ../src/crypto/jh.c \
+    ../src/crypto/keccak.c \
+    ../src/crypto/keepass.cpp \
     ../src/key.cpp \
     ../src/keystore.cpp \
     ../src/leveldbwrapper.cpp \
-    ../src/luffa.c \
+    ../src/crypto/luffa.c \
     ../src/main.cpp \
     ../src/masternode.cpp \
     ../src/masternodeconfig.cpp \
@@ -171,10 +174,10 @@ SOURCES += \
     ../src/rpcrawtransaction.cpp \
     ../src/rpcserver.cpp \
     ../src/rpcwallet.cpp \
-    ../src/script.cpp \
-    ../src/shavite.c \
-    ../src/simd.c \
-    ../src/skein.c \
+    ../src/script/script.cpp \
+    ../src/crypto/shavite.c \
+    ../src/crypto/simd.c \
+    ../src/crypto/skein.c \
     ../src/sync.cpp \
     ../src/txdb.cpp \
     ../src/txmempool.cpp \
@@ -231,7 +234,7 @@ SOURCES += \
     ../src/qt/coincontroldialog.cpp \
     ../src/qt/coincontroltreewidget.cpp \
     ../src/qt/csvmodelwriter.cpp \
-    ../src/qt/dash.cpp \
+    ../src/qt/chaincoin.cpp \
     ../src/qt/darksendconfig.cpp \
     ../src/qt/editaddressdialog.cpp \
     ../src/qt/guiutil.cpp \
@@ -254,6 +257,8 @@ SOURCES += \
     ../src/qt/moc_macdockiconhandler.cpp \
     ../src/qt/moc_macnotificationhandler.cpp \
     ../src/qt/moc_monitoreddatamapper.cpp \
+    ../src/qt/moc_masternodelist.cpp \
+    ../src/qt/moc_loggerpage.cpp \
     ../src/qt/moc_notificator.cpp \
     ../src/qt/moc_openuridialog.cpp \
     ../src/qt/moc_optionsdialog.cpp \
@@ -318,7 +323,8 @@ SOURCES += \
     ../src/qt/test/paymentservertests.cpp \
     ../src/qt/test/test_main.cpp \
     ../src/qt/test/uritests.cpp \
-    ../qt/masternodelist.cpp
+    ../src/qt/masternodelist.cpp \
+    ../src/qt/loggerpage.cpp
 
 FORMS += \
     ../src/qt/forms/aboutdialog.ui \
@@ -339,11 +345,9 @@ FORMS += \
     ../src/qt/forms/sendcoinsentry.ui \
     ../src/qt/forms/signverifymessagedialog.ui \
     ../src/qt/forms/transactiondescdialog.ui \
-    ../qt/forms/masternodelist.ui
+    ../src/qt/forms/masternodelist.ui \
+    ../src/qt/forms/loggerpage.ui
 
 RESOURCES += \
     ../src/qt/dash.qrc \
-    ../qt/chaincoin.qrc \
-    ../qt/dash.qrc \
-    ../qt/dash.qrc \
-    ../qt/dash.qrc
+    ../src/qt/chaincoin.qrc

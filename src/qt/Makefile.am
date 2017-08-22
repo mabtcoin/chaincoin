@@ -60,7 +60,8 @@ QT_FORMS_UI = \
   forms/sendcoinsentry.ui \
   forms/signverifymessagedialog.ui \
   forms/transactiondescdialog.ui \
-  forms/masternodelist.ui 
+  forms/masternodelist.ui \
+  forms/loggerpage.ui
 
 QT_MOC_CPP = \
   moc_addressbookpage.cpp \
@@ -108,6 +109,7 @@ QT_MOC_CPP = \
   moc_walletmodel.cpp \
   moc_walletview.cpp \
   moc_masternodelist.cpp \
+  moc_loggerpage.cpp \
   moc_bantablemodel.cpp \
   moc_peertablemodel.cpp
 
@@ -179,6 +181,7 @@ BITCOIN_QT_H = \
   walletview.h \
   winshutdownmonitor.h \
   masternodelist.h \
+  loggerpage.h \
   bantablemodel.h \
   peertablemodel.h
 
@@ -286,6 +289,7 @@ BITCOIN_QT_CPP += \
   walletmodeltransaction.cpp \
   walletview.cpp \
   masternodelist.cpp \
+  loggerpage.cpp \
   bantablemodel.cpp \
   peertablemodel.cpp
 endif

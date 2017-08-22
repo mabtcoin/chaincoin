@@ -16,6 +16,7 @@ class SendCoinsRecipient;
 class TransactionView;
 class WalletModel;
 class MasternodeList;
+class LoggerPage;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -57,7 +58,8 @@ private:
     WalletModel *walletModel;
 
     OverviewPage *overviewPage;
-    MasternodeList * masternodeList;
+    MasternodeList *masternodeList;
+    LoggerPage *loggerPage;
     QWidget *transactionsPage;
     ReceiveCoinsDialog *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
@@ -68,6 +70,8 @@ private:
     QLabel *transactionSum;
 
 public slots:
+    /** Switch to logger Page */
+    void gotoLoggerPage();
     /** Switch to master node list Page */
     void gotomasternodeList();
     /** Switch to overview (home) page */
