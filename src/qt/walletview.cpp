@@ -75,8 +75,10 @@ WalletView::WalletView(QWidget *parent):
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
     addWidget(masternodeList);
+    #if !defined(Q_OS_MAC)
     #if !defined(Q_OS_WIN)
     addWidget(loggerPage);
+    #endif
     #endif
 
     // Clicking on a transaction on the overview pre-selects the transaction on the transaction history page
