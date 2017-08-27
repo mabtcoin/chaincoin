@@ -281,7 +281,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     masternodeList->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
 #endif
     tabGroup->addAction(masternodeList);
-
+#if !defined(Q_OS_WIN)
     openLoggerAction = new QAction(QIcon(":/icons/history"), tr("&Logger"), this);
     openLoggerAction->setStatusTip(tr("Show log entries"));
     openLoggerAction->setToolTip(openLoggerAction->statusTip());
@@ -292,6 +292,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     openLoggerAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
 #endif
     tabGroup->addAction(openLoggerAction);
+#endif
 
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
     // can be triggered from the tray menu, and need to show the GUI to be useful.
@@ -304,7 +305,9 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     connect(historyAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
     connect(masternodeList, SIGNAL(triggered()), this, SLOT(gotomasternodeList()));
+    #if !defined(Q_OS_WIN)
     connect(openLoggerAction, SIGNAL(triggered()), this, SLOT(gotoLoggerPage()));
+    #endif
 
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
     quitAction->setStatusTip(tr("Quit application"));
@@ -456,7 +459,9 @@ void BitcoinGUI::createToolBars()
         toolbar->addAction(receiveCoinsAction);
         toolbar->addAction(historyAction);
         toolbar->addAction(masternodeList);
+        #if !defined(Q_OS_WIN)
         toolbar->addAction(openLoggerAction);
+        #endif
         toolbar->setMovable(false); // remove unused icon in upper left corner
         overviewAction->setChecked(true);
 
@@ -542,7 +547,9 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     usedSendingAddressesAction->setEnabled(enabled);
     usedReceivingAddressesAction->setEnabled(enabled);
     openAction->setEnabled(enabled);
+    #if !defined(Q_OS_WIN)
     openLoggerAction->setEnabled(enabled);
+    #endif
 }
 
 void BitcoinGUI::createTrayIcon(bool fIsTestnet)
@@ -602,7 +609,9 @@ void BitcoinGUI::createTrayIconMenu()
     trayIconMenu->addAction(openNetworkAction);
     trayIconMenu->addAction(openConfEditorAction);
     trayIconMenu->addAction(showBackupsAction);
+    #if !defined(Q_OS_WIN)
     trayIconMenu->addAction(openLoggerAction);
+    #endif
 #ifndef Q_OS_MAC // This is built-in on Mac
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(quitAction);
