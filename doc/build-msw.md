@@ -76,7 +76,7 @@ Chaincoin
 -------
 MSYS shell:
 
-	cd \dash
+	cd \chaincoin
 	sh autogen.sh
 	sh configure
 	mingw32-make
