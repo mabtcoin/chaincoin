@@ -28,7 +28,6 @@
         <file alias="edit">res/icons/edit.png</file>
         <file alias="history">res/icons/history.png</file>
         <file alias="overview">res/icons/overview.png</file>
-        <file alias="export">res/icons/export.png</file>
         <file alias="synced">res/icons/synced.png</file>
         <file alias="remove">res/icons/remove.png</file>
         <file alias="tx_mined">res/icons/tx_mined.png</file>
@@ -56,6 +55,7 @@
         <file alias="drkblue_editcopy">res/icons/drkblue_editcopy.png</file>
         <file alias="drkblue_editpaste">res/icons/drkblue_editpaste.png</file>
         <file alias="drkblue_remove">res/icons/drkblue_remove.png</file>
+        <file alias="export">res/icons/export.png</file>
     </qresource>
     <qresource prefix="/css">
         <file alias="drkblue">res/css/drkblue.css</file>
