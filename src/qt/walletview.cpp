@@ -18,7 +18,6 @@
 #include "transactionview.h"
 #include "walletmodel.h"
 #include "masternodelist.h"
-#include "loggerpage.h"
 
 #include "ui_interface.h"
 
@@ -69,7 +68,7 @@ WalletView::WalletView(QWidget *parent):
     sendCoinsPage = new SendCoinsDialog();
 
     masternodeList= new MasternodeList();
-    loggerPage = new LoggerPage();
+    // loggerPage = new LoggerPage();
     addWidget(overviewPage);
     addWidget(transactionsPage);
     addWidget(receiveCoinsPage);
@@ -77,7 +76,7 @@ WalletView::WalletView(QWidget *parent):
     addWidget(masternodeList);
     #if !defined(Q_OS_MAC)
     #if !defined(Q_OS_WIN)
-    addWidget(loggerPage);
+    // addWidget(loggerPage);
     #endif
     #endif
 
@@ -181,7 +180,7 @@ void WalletView::processNewTransaction(const QModelIndex& parent, int start, int
 
 void WalletView::gotoLoggerPage()
 {
-    setCurrentWidget(loggerPage);
+//    setCurrentWidget(loggerPage);
 }
 
 void WalletView::gotomasternodeList()
