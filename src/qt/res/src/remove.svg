@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="remove.svg"
-   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/add.png"
+   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/remove.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="164.58325"
-     inkscape:cy="25.350135"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="-234.68126"
+     inkscape:cy="253.89205"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,11 +58,11 @@
      id="layer1"
      transform="translate(0,-796.36216)">
     <g
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:310.47143555px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:310.47143555px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text3649">
       <path
          d="m 249.97092,907.72981 c 0,-9.18247 -7.44993,-16.6324 -16.6324,-16.6324 l -210.677043,0 c -9.18247,0 -16.632398,7.44993 -16.632398,16.6324 l 0,33.2648 c 0,9.18247 7.449928,16.6324 16.632398,16.6324 l 210.677043,0 c 9.18247,0 16.6324,-7.44993 16.6324,-16.6324 l 0,-33.2648 z"
-         style=""
+         style="fill:#333333;fill-opacity:1"
          id="path3336" />
     </g>
   </g>

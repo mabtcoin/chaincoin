@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="-180.14756"
-     inkscape:cy="22.521708"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="-883.54995"
+     inkscape:cy="207.41513"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,11 +58,11 @@
      id="layer1"
      transform="translate(0,-796.36216)">
     <g
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:367.31558228px;line-height:125%;font-family:RaphaelIcons;-inkscape-font-specification:'RaphaelIcons, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:367.31558228px;line-height:125%;font-family:RaphaelIcons;-inkscape-font-specification:'RaphaelIcons, Medium';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text3649">
       <path
          d="m 167.99579,910.73131 0,111.55779 -158.1896226,0 0,-111.55779 119.8080126,0 0,-26.18558 q 0,-24.39205 16.85921,-41.25126 17.21792,-16.85921 41.25126,-16.85921 24.03335,0 41.25126,16.85921 17.21792,16.85921 17.21792,41.25126 l 0,26.18558 -18.65274,0 0,-26.18558 q 0,-16.50051 -11.83732,-27.97912 -11.47861,-11.83732 -27.97912,-11.83732 -16.1418,0 -27.97911,11.83732 -11.83732,11.47861 -11.83732,27.97912 l 0,26.18558 20.08757,0 z"
-         style=""
+         style="fill:#333333;fill-opacity:1"
          id="path3336" />
     </g>
   </g>

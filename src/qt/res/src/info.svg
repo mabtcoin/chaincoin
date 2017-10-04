@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="23.18729"
+     inkscape:cx="-231.81271"
      inkscape:cy="155.30819"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -58,11 +58,11 @@
      id="layer1"
      transform="translate(0,-796.36216)">
     <g
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:287.37716675px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:287.37716675px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text3649">
       <path
          d="m 169.0542,1001.3388 c 0,2.8866 -2.24515,5.1318 -5.13178,5.1318 l -71.844844,0 c -2.886624,0 -5.131775,-2.2452 -5.131775,-5.1318 l 0,-25.65887 c 0,-2.88662 2.245151,-5.13177 5.131775,-5.13177 l 15.395324,0 0,-51.31775 -15.395324,0 c -2.886624,0 -5.131775,-2.24515 -5.131775,-5.13178 l 0,-25.65887 c 0,-2.88663 2.245151,-5.13178 5.131775,-5.13178 l 51.317744,0 c 2.88663,0 5.13178,2.24515 5.13178,5.13178 l 0,82.1084 15.39532,0 c 2.88663,0 5.13178,2.24515 5.13178,5.13177 l 0,25.65887 z M 148.5271,857.64911 c 0,2.88662 -2.24515,5.13177 -5.13178,5.13177 l -30.79064,0 c -2.88663,0 -5.13178,-2.24515 -5.13178,-5.13177 l 0,-25.65888 c 0,-2.88662 2.24515,-5.13177 5.13178,-5.13177 l 30.79064,0 c 2.88663,0 5.13178,2.24515 5.13178,5.13177 l 0,25.65888 z m 102.6355,66.71307 c 0,-67.99601 -55.16658,-123.1626 -123.1626,-123.1626 -67.996017,0 -123.1625977,55.16659 -123.1625977,123.1626 0,67.99602 55.1665807,123.16262 123.1625977,123.16262 67.99602,0 123.1626,-55.1666 123.1626,-123.16262 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:287.37939453px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:287.37939453px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1"
          id="path3336" />
     </g>
   </g>
