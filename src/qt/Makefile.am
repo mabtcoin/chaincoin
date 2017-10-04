@@ -188,21 +188,24 @@ BITCOIN_QT_H = \
 RES_ICONS = \
   res/icons/add.png \
   res/icons/address-book.png \
+  res/icons/address-book2.png \
   res/icons/bitcoin.ico \
   res/icons/bitcoin.png \
   res/icons/bitcoin_testnet.ico \
   res/icons/bitcoin_testnet.png \
+  res/icons/browse.png \
   res/icons/clock1.png \
   res/icons/clock2.png \
   res/icons/clock3.png \
   res/icons/clock4.png \
   res/icons/clock5.png \
+  res/icons/configfile.png \
   res/icons/configure.png \
-  res/icons/connect0_16.png \
-  res/icons/connect1_16.png \
-  res/icons/connect2_16.png \
-  res/icons/connect3_16.png \
-  res/icons/connect4_16.png \
+  res/icons/connect0.png \
+  res/icons/connect1.png \
+  res/icons/connect2.png \
+  res/icons/connect3.png \
+  res/icons/connect4.png \
   res/icons/debugwindow.png \
   res/icons/edit.png \
   res/icons/editcopy.png \
@@ -210,18 +213,24 @@ RES_ICONS = \
   res/icons/export.png \
   res/icons/filesave.png \
   res/icons/history.png \
+  res/icons/info.png \
   res/icons/key.png \
   res/icons/lock_closed.png \
   res/icons/lock_open.png \
+  res/icons/masternode.png \
+  res/icons/network.png \
+  res/icons/open.png \
   res/icons/overview.png \
   res/icons/qrcode.png \
   res/icons/quit.png \
   res/icons/receive.png \
   res/icons/remove.png \
   res/icons/send.png \
+  res/icons/sign.png \
   res/icons/synced.png \
   res/icons/toolbar.png \
   res/icons/toolbar_testnet.png \
+  res/icons/transactions.png \
   res/icons/transaction0.png \
   res/icons/transaction2.png \
   res/icons/transaction_conflicted.png \
@@ -229,11 +238,8 @@ RES_ICONS = \
   res/icons/tx_input.png \
   res/icons/tx_output.png \
   res/icons/tx_mined.png \
-  res/icons/drkblue_editpaste.png \
-  res/icons/drkblue_address-book.png \
-  res/icons/drkblue_editcopy.png \
-  res/icons/drkblue_remove.png \
-  res/icons/browse.png
+  res/icons/verify.png \
+  res/icons/websearch.png
 
 
 BITCOIN_QT_CPP = \
@@ -295,7 +301,7 @@ BITCOIN_QT_CPP += \
 endif
 
 RES_IMAGES = \
-  res/images/about.png \
+  res/images/chaincoinimg.png \
   res/images/splash.png \
   res/images/splash_testnet.png \
   res/images/dash_logo_horizontal.png \
@@ -311,7 +317,7 @@ RES_IMAGES = \
 RES_CSS = \
   res/css/drkblue.css
   
-RES_MOVIES = $(wildcard res/movies/spinner-*.png)
+RES_MOVIES = res/movies/spinner.gif 
 
 CHAINCOIN_RC = res/chaincoin-qt-res.rc
 
