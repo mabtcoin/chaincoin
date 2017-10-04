@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="editcopy.svg"
-   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/edit.png"
+   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/editcopy.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="23.18729"
+     inkscape:cx="-231.81271"
      inkscape:cy="155.30819"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -58,11 +58,11 @@
      id="layer1"
      transform="translate(0,-796.36216)">
     <g
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:245.97305298px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:245.97305298px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text3649">
       <path
          d="m 237.81026,854.08361 -57.10133,0 c -5.35325,0 -12.2164,2.33347 -17.56965,5.49051 l 0,-45.02221 c 0,-7.27493 -5.9023,-13.17723 -13.17723,-13.17723 l -57.101334,0 c -7.27493,0 -17.43238,4.25515 -22.511104,9.33387 l -56.003235,56.00324 c -5.0787247,5.07872 -9.3338724,15.23617 -9.3338724,22.5111 l 0,92.24062 c 0,7.27493 5.9023014,13.17724 13.1772314,13.17724 l 74.67098,0 0,39.53165 c 0,7.275 5.902301,13.1773 13.177234,13.1773 l 131.77231,0 c 7.27493,0 13.17724,-5.9023 13.17724,-13.1773 l 0,-166.91156 c 0,-7.27493 -5.90231,-13.17723 -13.17724,-13.17723 z m -74.67098,29.23698 0,41.04159 -41.04158,0 41.04158,-41.04159 z m -87.848207,-52.70893 0,41.04159 -41.041586,0 41.041586,-41.04159 z m 26.903517,88.80906 c -5.078727,5.07872 -9.333874,15.23617 -9.333874,22.5111 l 0,35.13928 -70.278569,0 0,-87.84821 57.101337,0 c 7.27493,0 13.177232,-5.9023 13.177232,-13.17723 l 0,-57.10134 52.708924,0 0,57.10134 -43.37505,43.37506 z m 131.22326,110.35928 -122.98749,0 0,-87.84818 57.10133,0 c 7.27493,0 13.17724,-5.9023 13.17724,-13.17723 l 0,-57.10134 52.70892,0 0,158.12675 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:245.97499084px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:245.97499084px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1"
          id="path3336" />
     </g>
   </g>

@@ -36,6 +36,7 @@
 #include <QIcon>
 #include <QLabel>
 #include <QListWidget>
+#include <QMovie>
 #include <QMenu>
 #include <QMenuBar>
 #include <QMessageBox>
@@ -68,8 +69,7 @@ BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
     trayIcon(0),
     notificator(0),
     rpcConsole(0),
-    prevBlocks(0),
-    spinnerFrame(0)
+    prevBlocks(0)
 {
     /* Open CSS when configured */
     this->setStyleSheet(GUIUtil::loadStyleSheet());
@@ -131,6 +131,10 @@ BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
          */
         setCentralWidget(rpcConsole);
     }
+
+    m_spinner = new QMovie(":/movies/spinner");
+    m_spinner->setCacheMode(QMovie::CacheAll);
+    m_spinner->setScaledSize(QSize(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
 
     // Accept D&D of URIs
     setAcceptDrops(true);
@@ -776,6 +780,7 @@ void BitcoinGUI::setNumBlocks(int count)
     // Set icon state: spinning if catching up, tick otherwise
     if(secs < 25*60) // 90*60 for bitcoin but we are 4x times faster
     {
+        m_spinner->stop();
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
         labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
 
@@ -821,13 +826,16 @@ void BitcoinGUI::setNumBlocks(int count)
         progressBar->setVisible(true);
 
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;
+
+        labelBlocksIcon->setMovie(m_spinner);
+
         if(count != prevBlocks)
         {
-            labelBlocksIcon->setPixmap(QIcon(QString(
-                ":/movies/spinner-%1").arg(spinnerFrame, 3, 10, QChar('0')))
-                .pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
-            spinnerFrame = (spinnerFrame + 1) % SPINNER_FRAMES;
+            m_spinner->start();
+        } else {
+            m_spinner->stop();
         }
+
         prevBlocks = count;
 
 #ifdef ENABLE_WALLET

@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="synced.svg"
-   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/notsynced.png"
+   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/synced.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="-168.71"
-     inkscape:cy="22.521708"
+     inkscape:zoom="0.1767767"
+     inkscape:cx="-1820.7609"
+     inkscape:cy="615.30963"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,11 +58,11 @@
      id="layer1"
      transform="translate(0,-796.36216)">
     <g
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:265.20709229px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:265.20709229px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text3649">
       <path
          d="m 245.57843,873.0003 c 0,-3.69987 -1.47995,-7.39975 -4.14386,-10.06366 l -20.12733,-20.12732 c -2.66391,-2.66391 -6.36378,-4.14386 -10.06366,-4.14386 -3.69988,0 -7.39975,1.47995 -10.06366,4.14386 l -97.08474,97.23273 -43.51054,-43.65853 c -2.663911,-2.66391 -6.363787,-4.14386 -10.063662,-4.14386 -3.699876,0 -7.399752,1.47995 -10.063662,4.14386 l -20.127324,20.12732 c -2.663911,2.66391 -4.143861,6.36379 -4.143861,10.06366 0,3.69988 1.47995,7.39975 4.143861,10.06367 l 53.5742,53.5742 20.127324,20.12733 c 2.663911,2.6639 6.363784,4.1439 10.063664,4.1439 3.69987,0 7.39975,-1.48 10.06366,-4.1439 l 20.12732,-20.12733 107.14841,-107.14841 c 2.66391,-2.66391 4.14386,-6.36378 4.14386,-10.06366 z"
-         style=""
+         style="fill:#333333;fill-opacity:1"
          id="path3336" />
     </g>
   </g>

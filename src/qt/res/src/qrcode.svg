@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="qrcode.svg"
-   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/editcopy.png"
+   inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/qrcode.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="146.68729"
+     inkscape:cx="-108.31271"
      inkscape:cy="155.30819"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -58,11 +58,11 @@
      id="layer1"
      transform="translate(0,-796.36216)">
     <g
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:309.60891724px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:309.60891724px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="text3649">
       <path
          d="m 72.712257,979.64995 -22.115097,0 0,22.11505 22.115097,0 0,-22.11505 z m 0,-132.69058 -22.115097,0 0,22.11509 22.115097,0 0,-22.11509 z m 132.690583,0 -22.1151,0 0,22.11509 22.1151,0 0,-22.11509 z m -176.920777,176.74803 0,-66.17255 66.345291,0 0,66.17255 -66.345291,0 z m 0,-132.51784 0,-66.34529 66.345291,0 0,66.34529 -66.345291,0 z m 132.690587,0 0,-66.34529 66.34529,0 0,66.34529 -66.34529,0 z m -44.2302,44.23019 -110.5754838,0 0,110.57545 110.5754838,0 0,-110.57545 z m 88.46039,88.46035 -22.1151,0 0,22.1151 22.1151,0 0,-22.1151 z m 44.23019,0 -22.11509,0 0,22.1151 22.11509,0 0,-22.1151 z m 0,-88.46035 -22.11509,0 0,22.1151 -22.1151,0 0,-22.1151 -66.34529,0 0,110.57545 22.1151,0 0,-66.34525 22.11509,0 0,22.11505 66.34529,0 0,-66.34525 z m -132.69058,-132.69058 -110.5754838,0 0,110.57549 110.5754838,0 0,-110.57549 z m 132.69058,0 -110.57548,0 0,110.57549 110.57548,0 0,-110.57549 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:309.61135864px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:309.61135864px;line-height:125%;font-family:FontAwesome;-inkscape-font-specification:'FontAwesome, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#333333;fill-opacity:1"
          id="path3336" />
     </g>
   </g>
