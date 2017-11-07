@@ -313,7 +313,7 @@ RES_IMAGES = \
 RES_CSS = \
   res/css/drkblue.css
   
-RES_MOVIES = res/movies/spinner.gif 
+RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
 CHAINCOIN_RC = res/chaincoin-qt-res.rc
 

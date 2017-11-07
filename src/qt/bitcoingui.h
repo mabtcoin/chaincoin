@@ -73,7 +73,6 @@ private:
     QLabel *labelBlocksIcon;
     QLabel *progressBarLabel;
     QProgressBar *progressBar;
-    QMovie *m_spinner;
 
     QMenuBar *appMenuBar;
     QAction *overviewAction;
@@ -110,6 +109,7 @@ private:
 
     /** Keep track of previous number of blocks, to detect progress */
     int prevBlocks;
+    int spinnerFrame;
 
     /** Create the main UI actions. */
     void createActions(bool fIsTestnet);
