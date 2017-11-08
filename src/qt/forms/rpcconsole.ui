@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_info">
       <attribute name="title">
@@ -91,6 +91,10 @@
          </property>
          <property name="text">
           <string>&amp;Open</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../chaincoin.qrc">
+           <normaloff>:/icons/open</normaloff>:/icons/open</iconset>
          </property>
          <property name="autoDefault">
           <bool>false</bool>
