@@ -16,22 +16,22 @@ if [ -f wallet.dat -a -f peers.dat -a -f chainstate/CURRENT -a -f blocks/index/C
 
 case $LEVEL in
   0)
-    echo "Error: no Dash datadir detected."
+    echo "Error: no Chaincoin datadir detected."
     exit 1
     ;;
   1)
-    echo "Detected old Dash datadir (before 0.7)."
+    echo "Detected old Chaincoin datadir (before 0.7)."
     echo "Nothing to do."
     exit 0
     ;;
   2)
-    echo "Detected Dash 0.7 datadir."
+    echo "Detected Chaincoin 0.7 datadir."
     ;;
   3)
-    echo "Detected Dash pre-0.8 datadir."
+    echo "Detected Chaincoin pre-0.8 datadir."
     ;;
   4)
-    echo "Detected Dash 0.8 datadir."
+    echo "Detected Chaincoin 0.8 datadir."
     ;;
 esac
 
