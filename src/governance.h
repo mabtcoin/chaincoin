@@ -5,7 +5,7 @@
 #ifndef GOVERNANCE_H
 #define GOVERNANCE_H
 
-//#define ENABLE_CHAincoin_DEBUG
+//#define ENABLE_CHAINCOIN_DEBUG
 
 #include "bloom.h"
 #include "cachemap.h"

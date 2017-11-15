@@ -142,10 +142,10 @@ Berkeley DB
 It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
 
 ```bash
-CHAincoin_ROOT=$(pwd)
+CHAINCOIN_ROOT=$(pwd)
 
 # Pick some path to install BDB to, here we create a directory within the chaincoin directory
-BDB_PREFIX="${CHAincoin_ROOT}/db4"
+BDB_PREFIX="${CHAINCOIN_ROOT}/db4"
 mkdir -p $BDB_PREFIX
 
 # Fetch the source and verify that it is not tampered with
@@ -161,7 +161,7 @@ cd db-4.8.30.NC/build_unix/
 make install
 
 # Configure Dash Core to use our own-built instance of BDB
-cd $CHAincoin_ROOT
+cd $CHAINCOIN_ROOT
 ./autogen.sh
 ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" # (other args...)
 ```

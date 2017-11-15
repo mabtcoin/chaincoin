@@ -4,7 +4,7 @@
 
 	* means the category has an associated class
 	
-	CDashNetwork: CHAincoin NETWORK (ROOT)
+	CDashNetwork: CHAINCOIN NETWORK (ROOT)
 	has:
 		vector<CNetworkVariable> vecNetworkVariables;
 		vector<CDashProject> vecProjects;
@@ -19,7 +19,7 @@
 
 */
 
-	// CHAincoin NETWORK (ROOT)
+	// CHAINCOIN NETWORK (ROOT)
 	// 	-> NETWORK VARIABLE
 	// 		-> switch, setting
 	// 	-> CATEGORIES
@@ -49,7 +49,7 @@
 	// 			-> USER1 (only users are allowed here in this scope)
 	// 			-> USER2
 	// 		-> GROUP2 (EVO)
-	// 			-> VALUEOVERRIDE (STORE=CHAincoinDRIVE)
+	// 			-> VALUEOVERRIDE (STORE=CHAINCOINDRIVE)
 	// 			-> USER1
 
 	// 	-> COMPANIES

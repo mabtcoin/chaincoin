@@ -1,4 +1,4 @@
-TOR SUPPORT IN CHAincoin CORE
+TOR SUPPORT IN CHAINCOIN CORE
 =======================
 
 It is possible to run Dash Core as a Tor hidden service, and connect to such services.

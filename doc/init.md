@@ -104,7 +104,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy chaincoind.init to /etc/init.d/chaincoind. Test by running `service chaincoind start`.
 
 Using this script, you can adjust the path and flags to the chaincoind program by
-setting the CHAincoinD and FLAGS environment variables in the file
+setting the CHAINCOIND and FLAGS environment variables in the file
 /etc/sysconfig/chaincoind. You can also use the DAEMONOPTS environment variable here.
 
 4e) Mac OS X

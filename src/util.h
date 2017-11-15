@@ -34,8 +34,8 @@
 
 // Uncomment the following line to enable debugging messages
 // or enable on a per file basis prior to inclusion of util.h
-//#define ENABLE_CHAincoin_DEBUG
-#ifdef ENABLE_CHAincoin_DEBUG
+//#define ENABLE_CHAINCOIN_DEBUG
+#ifdef ENABLE_CHAINCOIN_DEBUG
 #define DBG( x ) x
 #else
 #define DBG( x ) 

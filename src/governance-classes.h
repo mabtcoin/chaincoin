@@ -4,7 +4,7 @@
 #ifndef GOVERNANCE_CLASSES_H
 #define GOVERNANCE_CLASSES_H
 
-//#define ENABLE_CHAincoin_DEBUG
+//#define ENABLE_CHAINCOIN_DEBUG
 
 #include "base58.h"
 #include "governance.h"

@@ -217,7 +217,7 @@ void CActiveMasternode::ManageStateInitial(CConnman& connman)
     }
 
     if(pwalletMain->GetBalance() < 1000*COIN) {
-        LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 1000 DASH\n", GetStateString());
+        LogPrintf("CActiveMasternode::ManageStateInitial -- %s: Wallet balance is < 1000 CHC\n", GetStateString());
         return;
     }
 

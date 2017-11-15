@@ -62,10 +62,10 @@ for arg in sys.argv[1:]:
 
 #Set env vars
 buildDir = BUILDDIR
-if "CHAincoinD" not in os.environ:
-    os.environ["CHAincoinD"] = buildDir + '/src/chaincoind' + EXEEXT
-if "CHAincoinCLI" not in os.environ:
-    os.environ["CHAincoinCLI"] = buildDir + '/src/chaincoin-cli' + EXEEXT
+if "CHAINCOIND" not in os.environ:
+    os.environ["CHAINCOIND"] = buildDir + '/src/chaincoind' + EXEEXT
+if "CHAINCOINCLI" not in os.environ:
+    os.environ["CHAINCOINCLI"] = buildDir + '/src/chaincoin-cli' + EXEEXT
 
 if EXEEXT == ".exe" and "-win" not in opts:
     # https://github.com/bitcoin/bitcoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
