@@ -176,7 +176,7 @@
         <translation>确认加密钱包</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DASH&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CHC&lt;/b&gt;!</source>
         <translation>警告:如果把钱包加​​密后又忘记密码，你就会从此&lt;b&gt;失去所有的达世币了&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -188,7 +188,7 @@
         <translation>钱包已加密</translation>
     </message>
     <message>
-        <source>Dash will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dashs from being stolen by malware infecting your computer.</source>
+        <source>Dash will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your chaincoins from being stolen by malware infecting your computer.</source>
         <translation>达世币软体现在要关闭，以完成加密过程。请注意，加密钱包不能完全防止恶意软件入侵你的电脑盗取你的达世币。</translation>
     </message>
     <message>
@@ -263,7 +263,7 @@
         <translation>接收(&amp;R)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and dash: URIs)</source>
+        <source>Request payments (generates QR codes and chaincoin: URIs)</source>
         <translation>请求付款(生成二维码和达世币付款协议的URI)</translation>
     </message>
     <message>
@@ -443,7 +443,7 @@
         <translation>打开 &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a dash: URI or payment request</source>
+        <source>Open a chaincoin: URI or payment request</source>
         <translation>打开达世币：网页或付款请求</translation>
     </message>
     <message>
@@ -864,11 +864,11 @@ Address: %4
         <translation>请选择隐私等级。</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 DASH</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 CHC</source>
         <translation>使用2个独立的主节点混合资金最多1000达世币</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 DASH</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 CHC</source>
         <translation>使用8个独立的主节点混合资金最多1000达世币</translation>
     </message>
     <message>
@@ -876,15 +876,15 @@ Address: %4
         <translation>使用16个独立主节点</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 DASH to anonymize 1000 DASH</source>
+        <source>This option is the quickest and will cost about ~0.025 CHC to anonymize 1000 CHC</source>
         <translation>此选项为最快速度，需要支付0.025达世币/1000达世币的匿名处理费用。</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 DASH to anonymize 1000 DASH</source>
+        <source>This option is moderately fast and will cost about 0.05 CHC to anonymize 1000 CHC</source>
         <translation>此选项为一般速度，需要支付0.05达世币/1000达世币的匿名处理费用。</translation>
     </message>
     <message>
-        <source>0.1 DASH per 1000 DASH you anonymize.</source>
+        <source>0.1 CHC per 1000 CHC you anonymize.</source>
         <translation>0.1达世币/1000达世币的匿名处理费用。</translation>
     </message>
     <message>
@@ -1264,9 +1264,9 @@ Address: %4
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/dash/</source>
+https://www.transifex.com/projects/p/chaincoin/</source>
         <translation>缺少相关语言或翻译不完整? 请到这里协助翻译:
-https://www.transifex.com/projects/p/dash/</translation>
+https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <source>User Interface Theme:</source>
@@ -1432,7 +1432,7 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>数量与循环次数:</translation>
     </message>
     <message>
-        <source>0 DASH / 0 Rounds</source>
+        <source>0 CHC / 0 Rounds</source>
         <translation>0 达世币 / 0 循环数</translation>
     </message>
     <message>
@@ -1457,7 +1457,7 @@ https://www.transifex.com/projects/p/dash/</translation>
     </message>
     <message>
         <source>The denominations you submitted to the Masternode.&lt;br&gt;To mix, other users must submit the exact same denominations.</source>
-        <translation>您向主节点所提交的用以面额化混合的DASH,&lt;br&gt;当其他用户提交相同的面额化DASH数量时,将开始混合.</translation>
+        <translation>您向主节点所提交的用以面额化混合的CHC,&lt;br&gt;当其他用户提交相同的面额化CHC数量时,将开始混合.</translation>
     </message>
     <message>
         <source>(Last Message)</source>
@@ -1561,7 +1561,7 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>支付请求出错</translation>
     </message>
     <message>
-        <source>Cannot start dash: click-to-pay handler</source>
+        <source>Cannot start chaincoin: click-to-pay handler</source>
         <translation>无法启动达世币程序：click-to-pay handler</translation>
     </message>
     <message>
@@ -2289,7 +2289,7 @@ https://www.transifex.com/projects/p/dash/</translation>
 但如果交易信息大于一千字节,那么两者都要支付千字节费用.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for dash transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for chaincoin transactions than the network can process.</source>
         <translation>当交易量少于区块可容纳的空间时,只需支付最低手续费.&lt;br /&gt;但当交易量的需求增长到超过总体网络可处理的量时,可能会造成一笔一直不被确认的交易.</translation>
     </message>
     <message>
@@ -2552,7 +2552,7 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>消息：</translation>
     </message>
     <message>
-        <source>A message that was attached to the dash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</source>
+        <source>A message that was attached to the chaincoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dash network.</source>
         <translation>附加在达世币付款协议URI中的信息,会和交易内容一并存储,可供您参考.提示:此信息不会发送到达世币网络上.</translation>
     </message>
     <message>
@@ -3257,7 +3257,7 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>发送达世币</translation>
     </message>
     <message>
-        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 DASH.</source>
+        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 CHC.</source>
         <translation>即时支付功能目前还不支持发送如此高的金额.目前限制在%1 达世币.</translation>
     </message>
 </context>
@@ -3301,7 +3301,7 @@ https://www.transifex.com/projects/p/dash/</translation>
     </message>
 </context>
 <context>
-    <name>dash-core</name>
+    <name>chaincoin-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>与提供地址绑定，持续监听。使用[host]:标记IPv6端口</translation>
@@ -3344,11 +3344,11 @@ https://www.transifex.com/projects/p/dash/</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
-        <translation>无法找到足够的已匿名化资金来完成交易,不足1000 DASH.</translation>
+        <translation>无法找到足够的已匿名化资金来完成交易,不足1000 CHC.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
-        <translation>无法找到足够的未匿名化资金来完成交易,不足1000 DASH.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 CHC.</source>
+        <translation>无法找到足够的未匿名化资金来完成交易,不足1000 CHC.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -3543,11 +3543,11 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>允许存储在这个钱包内的资金自动使用匿名发送(0-1, 默认: %u)</translation>
     </message>
     <message>
-        <source>Fees (in DASH/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in CHC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation>如果手续费比这个值低,就视为没有付手续费(当产生交易时)(默认: %s)</translation>
     </message>
     <message>
-        <source>Fees (in DASH/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in CHC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation>如果手续费比这个值低,就视为没有付手续费(当产生交易时)(默认: %s)</translation>
     </message>
     <message>
@@ -3591,8 +3591,8 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>此产品包括了由OpenSSL Project所开发的OpenSSL Toolkit 软件&lt;https://www.openssl.org/&gt;, 和由Eric Young 编写的加密软件, 以及由Thomas Bernard 编写的UPnP软件.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 DASH.</source>
-        <translation>无法找到足够的资金完成交易,不足1000 DASH.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 CHC.</source>
+        <translation>无法找到足够的资金完成交易,不足1000 CHC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3987,7 +3987,7 @@ https://www.transifex.com/projects/p/dash/</translation>
         <translation>检测到无效脚本。</translation>
     </message>
     <message>
-        <source>Keep N DASH anonymized (default: %u)</source>
+        <source>Keep N CHC anonymized (default: %u)</source>
         <translation>保持定量达世币匿名化(默认: %u)</translation>
     </message>
     <message>

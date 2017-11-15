@@ -303,10 +303,10 @@ int CPrivateSend::GetDenominations(const std::vector<CTxOut>& vecTxOut, bool fSi
 bool CPrivateSend::GetDenominationsBits(int nDenom, std::vector<int> &vecBitsRet)
 {
     // ( bit on if present, 4 denominations example )
-    // bit 0 - 100DASH+1
-    // bit 1 - 10DASH+1
-    // bit 2 - 1DASH+1
-    // bit 3 - .1DASH+1
+    // bit 0 - 100CHC+1
+    // bit 1 - 10CHC+1
+    // bit 2 - 1CHC+1
+    // bit 3 - .1CHC+1
 
     int nMaxDenoms = vecStandardDenominations.size();
 
@@ -427,7 +427,7 @@ void ThreadCheckPrivateSend(CConnman& connman)
     fOneThread = true;
 
     // Make this thread recognisable as the PrivateSend thread
-    RenameThread("dash-ps");
+    RenameThread("chaincoin-ps");
 
     unsigned int nTick = 0;
 
