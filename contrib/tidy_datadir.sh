@@ -4,7 +4,7 @@ if [ -d "$1" ]; then
   cd "$1"
 else
   echo "Usage: $0 <datadir>" >&2
-  echo "Removes obsolete Dash database files" >&2
+  echo "Removes obsolete Chaincoin database files" >&2
   exit 1
 fi
 
