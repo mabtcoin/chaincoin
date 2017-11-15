@@ -68,9 +68,9 @@ can then be controlled by group membership.
 3b) Mac OS X
 
 Binary:              `/usr/local/bin/chaincoind`  
-Configuration file:  `~/Library/Application Support/DashCore/chaincoin.conf`  
-Data directory:      `~/Library/Application Support/DashCore`
-Lock file:           `~/Library/Application Support/DashCore/.lock`
+Configuration file:  `~/Library/Application Support/Chaincoin/chaincoin.conf`  
+Data directory:      `~/Library/Application Support/Chaincoin`
+Lock file:           `~/Library/Application Support/Chaincoin/.lock`
 
 4. Installing Service Configuration
 -----------------------------------
