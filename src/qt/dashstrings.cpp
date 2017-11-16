@@ -42,7 +42,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
-"Cannot obtain a lock on data directory %s. Dash Core is probably already "
+"Cannot obtain a lock on data directory %s. Chaincoin Core is probably already "
 "running."),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
 "Create new files with system default permissions, instead of umask 077 (only "
@@ -158,7 +158,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", ""
 "Output debugging information (default: %u, supplying <category> is optional)"),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
 "Please check that your computer's date and time are correct! If your clock "
-"is wrong Dash Core will not work properly."),
+"is wrong Chaincoin Core will not work properly."),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
 "PrivateSend uses exact denominated amounts to send funds, you might simply "
 "need to anonymize some more coins."),
@@ -221,7 +221,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", ""
 "Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = "
 "no limit (default: %d)"),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
-"Unable to bind to %s on this computer. Dash Core is probably already running."),
+"Unable to bind to %s on this computer. Chaincoin Core is probably already running."),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
 "Unable to locate enough PrivateSend denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
@@ -358,7 +358,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", "Error loading %s: You can't disable HD on a
 QT_TRANSLATE_NOOP("chaincoin-core", "Error loading block database"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("chaincoin-core", "Error loading wallet.dat: Wallet requires newer version of Dash Core"),
+QT_TRANSLATE_NOOP("chaincoin-core", "Error loading wallet.dat: Wallet requires newer version of Chaincoin Core"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Error opening block database"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Error reading from database, shutting down."),
 QT_TRANSLATE_NOOP("chaincoin-core", "Error"),
@@ -385,7 +385,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", "Incompatible mode."),
 QT_TRANSLATE_NOOP("chaincoin-core", "Incompatible version."),
 QT_TRANSLATE_NOOP("chaincoin-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Information"),
-QT_TRANSLATE_NOOP("chaincoin-core", "Initialization sanity check failed. Dash Core is shutting down."),
+QT_TRANSLATE_NOOP("chaincoin-core", "Initialization sanity check failed. Chaincoin Core is shutting down."),
 QT_TRANSLATE_NOOP("chaincoin-core", "Input is not valid."),
 QT_TRANSLATE_NOOP("chaincoin-core", "InstantSend options:"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Insufficient funds."),
@@ -537,7 +537,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", "Verifying wallet..."),
 QT_TRANSLATE_NOOP("chaincoin-core", "Very low number of keys left: %d"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Wallet %s resides outside data directory %s"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Wallet is locked."),
-QT_TRANSLATE_NOOP("chaincoin-core", "Wallet needed to be rewritten: restart Dash Core to complete"),
+QT_TRANSLATE_NOOP("chaincoin-core", "Wallet needed to be rewritten: restart Chaincoin Core to complete"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Wallet options:"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Wallet window title"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Warning"),

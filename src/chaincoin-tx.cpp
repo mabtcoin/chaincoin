@@ -52,7 +52,7 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Dash Core chaincoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Chaincoin Core chaincoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
               "  chaincoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded chaincoin transaction") + "\n" +
               "  chaincoin-tx [options] -create [commands]   " + _("Create hex-encoded chaincoin transaction") + "\n" +

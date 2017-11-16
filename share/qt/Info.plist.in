@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.chaincoin.Dash-Qt</string>
+  <string>org.chaincoin.Chaincoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.chaincoin.DashPayment</string>
+      <string>org.chaincoin.ChaincoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>chaincoin</string>
