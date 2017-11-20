@@ -377,10 +377,8 @@ public:
         nDelayGetHeadersTime = 0; // never delay GETHEADERS in regtests
         nDefaultPort = 18444;
         nPruneAfterHeight = 1000;
-        genesis.nTime = 1296688602;
-        genesis.nNonce = 0x207fffff;
-        genesis.nBits = 3;
 
+        genesis = CreateGenesisBlock(1296688602, 3, 0x207fffff, 1, 16 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
