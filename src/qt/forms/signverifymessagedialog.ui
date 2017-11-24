@@ -60,6 +60,10 @@
            <property name="text">
             <string/>
            </property>
+           <property name="icon">
+            <iconset resource="../chaincoin.qrc">
+             <normaloff>:/icons/green/address-book2</normaloff>:/icons/green/address-book2</iconset>
+           </property>
            <property name="shortcut">
             <string>Alt+A</string>
            </property>
@@ -144,6 +148,10 @@
            </property>
            <property name="text">
             <string>Sign &amp;Message</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../chaincoin.qrc">
+             <normaloff>:/icons/green/sign</normaloff>:/icons/green/sign</iconset>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
@@ -250,6 +258,9 @@
            <property name="text">
             <string/>
            </property>
+           <property name="icon">
+            <iconset theme="address-book2"/>
+           </property>
            <property name="shortcut">
             <string>Alt+A</string>
            </property>
@@ -275,6 +286,10 @@
            </property>
            <property name="text">
             <string>Verify &amp;Message</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../chaincoin.qrc">
+             <normaloff>:/icons/green/verify</normaloff>:/icons/green/verify</iconset>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
