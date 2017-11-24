@@ -387,7 +387,67 @@ RES_ICONS = \
   qt/res/icons/trad/fontbigger.png \
   qt/res/icons/trad/fontsmaller.png \
   qt/res/icons/trad/transaction_abandoned.png \
-  qt/res/icons/trad/network_disabled.png
+  qt/res/icons/trad/network_disabled.png \
+  qt/res/icons/green/about.png \
+  qt/res/icons/green/about_qt.png \
+  qt/res/icons/green/add.png \
+  qt/res/icons/green/address-book2.png \
+  qt/res/icons/green/address-book.png \
+  qt/res/icons/green/browse.png \
+  qt/res/icons/green/clock1.png \
+  qt/res/icons/green/clock2.png \
+  qt/res/icons/green/clock3.png \
+  qt/res/icons/green/clock4.png \
+  qt/res/icons/green/clock5.png \
+  qt/res/icons/green/configfile.png \
+  qt/res/icons/green/configure.png \
+  qt/res/icons/green/connect0_16.png \
+  qt/res/icons/green/connect1_16.png \
+  qt/res/icons/green/connect2_16.png \
+  qt/res/icons/green/connect3_16.png \
+  qt/res/icons/green/connect4_16.png \
+  qt/res/icons/green/debugwindow.png \
+  qt/res/icons/green/editcopy.png \
+  qt/res/icons/green/editpaste.png \
+  qt/res/icons/green/edit.png \
+  qt/res/icons/green/export.png \
+  qt/res/icons/green/eye_minus.png \
+  qt/res/icons/green/eye_plus.png \
+  qt/res/icons/green/eye.png \
+  qt/res/icons/green/filesave.png \
+  qt/res/icons/green/fontbigger.png \
+  qt/res/icons/green/fontsmaller.png \
+  qt/res/icons/green/hd_disabled.png \
+  qt/res/icons/green/hd_enabled.png \
+  qt/res/icons/green/history.png \
+  qt/res/icons/green/info.png \
+  qt/res/icons/green/key.png \
+  qt/res/icons/green/lock_closed.png \
+  qt/res/icons/green/lock_open.png \
+  qt/res/icons/green/masternodes.png \
+  qt/res/icons/green/network.png \
+  qt/res/icons/green/new.png \
+  qt/res/icons/green/notsynced.png \
+  qt/res/icons/green/open.png \
+  qt/res/icons/green/overview.png \
+  qt/res/icons/green/qrcode.png \
+  qt/res/icons/green/questionmark.png \
+  qt/res/icons/green/quit.png \
+  qt/res/icons/green/receive.png \
+  qt/res/icons/green/remove.png \
+  qt/res/icons/green/send.png \
+  qt/res/icons/green/sign.png \
+  qt/res/icons/green/synced.png \
+  qt/res/icons/green/transaction0.png \
+  qt/res/icons/green/transaction_abandoned.png \
+  qt/res/icons/green/transaction_confirmed.png \
+  qt/res/icons/green/transaction_conflicted.png \
+  qt/res/icons/green/transactions.png \
+  qt/res/icons/green/tx_inout.png \
+  qt/res/icons/green/tx_input.png \
+  qt/res/icons/green/tx_mined.png \
+  qt/res/icons/green/tx_output.png \
+  qt/res/icons/green/verify.png
 
 BITCOIN_QT_CPP = \
   qt/bantablemodel.cpp \
@@ -500,13 +560,27 @@ RES_IMAGES = \
   qt/res/images/trad/drkblue_leftArrow_small.png \
   qt/res/images/trad/drkblue_rightArrow_small.png \
   qt/res/images/trad/drkblue_qtreeview_selected.png \
-  qt/res/images/trad/drkblue_walletFrame_bg.png
+  qt/res/images/trad/drkblue_walletFrame_bg.png \
+  qt/res/images/green/about.png \
+  qt/res/images/green/chaincoin_logo_horizontal.png \
+  qt/res/images/green/checked.png \
+  qt/res/images/green/downArrow.png \
+  qt/res/images/green/downArrow_small.png \
+  qt/res/images/green/leftArrow_small.png \
+  qt/res/images/green/qtreeview_selected.png \
+  qt/res/images/green/rightArrow_small.png \
+  qt/res/images/green/splash.png \
+  qt/res/images/green/splash_testnet.png \
+  qt/res/images/green/unchecked.png \
+  qt/res/images/green/upArrow_small.png \
+  qt/res/images/green/walletFrame_bg.png
 
 RES_CSS = \
   qt/res/css/drkblue.css \
   qt/res/css/crownium.css \
   qt/res/css/light.css \
-  qt/res/css/light-hires.css
+  qt/res/css/light-hires.css \
+  qt/res/css/green.css
 
 RES_MOVIES = $(wildcard qt/res/movies/spinner-*.png)
 

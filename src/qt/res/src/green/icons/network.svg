@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg2" inkscape:export-ydpi="90" inkscape:export-xdpi="90" inkscape:export-filename="/home/daniel/cc/chaincoin/src/qt/res/icons/network.png" sodipodi:docname="network.svg" inkscape:version="0.91 r13725" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+	 viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+<sodipodi:namedview  units="px" inkscape:window-maximized="1" inkscape:window-y="25" inkscape:window-x="0" inkscape:window-height="718" inkscape:window-width="1366" inkscape:pageshadow="2" inkscape:current-layer="layer1" inkscape:document-units="px" inkscape:pageopacity="0.0" showgrid="false" inkscape:cy="28.466197" inkscape:cx="-13.489354" inkscape:zoom="2" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base">
+	</sodipodi:namedview>
+<g id="layer1" transform="translate(0,-924.36216)" inkscape:groupmode="layer" inkscape:label="Ebene 1">
+	<g id="text3649" transform="matrix(0.47928198,0,0,0.47928198,2.6519062,545.33204)">
+		<path id="path3336" inkscape:connector-curvature="0" fill="#58595B" d="M81.913,924.362H51.187v61.451h30.725V924.362z
+			 M128,862.912H97.275v122.901H128V862.912z M250.901,1001.174H20.462V832.186H5.099v184.351h245.802V1001.174z M174.087,893.637
+			h-30.724v92.176h30.724V893.637z M220.175,847.55h-30.724v138.263h30.724V847.55z"/>
+	</g>
+</g>
+</svg>
