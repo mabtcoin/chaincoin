@@ -1284,8 +1284,8 @@ src/rpc/server.cpp
 src/rpc/server.h
 src/scheduler.cpp
 src/scheduler.h
-src/script/dashconsensus.cpp
-src/script/dashconsensus.h
+src/script/chaincoinconsensus.cpp
+src/script/chaincoinconsensus.h
 src/script/interpreter.cpp
 src/script/interpreter.h
 src/script/script.cpp
