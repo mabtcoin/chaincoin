@@ -368,7 +368,7 @@
         <file alias="lock_closed">res/icons/green/lock_closed.png</file>
         <file alias="lock_open">res/icons/green/lock_open.png</file>
         <file alias="masternodes">res/icons/green/masternodes.png</file>
-        <file>res/icons/green/network.png</file>
+        <file alias="network">res/icons/green/network.png</file>
         <file>res/icons/green/new.png</file>
         <file>res/icons/green/notsynced.png</file>
         <file alias="open">res/icons/green/open.png</file>
@@ -392,6 +392,7 @@
         <file alias="verify">res/icons/green/verify.png</file>
         <file alias="transaction_confirmed">res/icons/green/transaction_confirmed.png</file>
         <file alias="about">res/icons/green/about.png</file>
+        <file alias="peer">res/icons/green/peers.png</file>
     </qresource>
     <qresource prefix="/images/green">
         <file alias="about">res/images/green/about.png</file>
