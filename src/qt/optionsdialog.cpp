@@ -92,11 +92,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     /* Theme selector */
 
     ui->theme->addItem(QString("CHAINCOIN-green"), QVariant("green"));
-    ui->theme->addItem(QString("CHAINCOIN-light"), QVariant("light"));
-    ui->theme->addItem(QString("CHAINCOIN-light-hires"), QVariant("light-hires"));
-    ui->theme->addItem(QString("CHAINCOIN-blue"), QVariant("drkblue"));
-    ui->theme->addItem(QString("CHAINCOIN-Crownium"), QVariant("crownium"));
-    ui->theme->addItem(QString("CHAINCOIN-traditional"), QVariant("trad"));
+    /*ui->theme->addItem(QString("CHAINCOIN-light"), QVariant("light"));*/
     
     /* Language selector */
     QDir translations(":translations");
