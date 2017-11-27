@@ -430,6 +430,7 @@ RES_ICONS = \
   qt/res/icons/green/notsynced.png \
   qt/res/icons/green/open.png \
   qt/res/icons/green/overview.png \
+  qt/res/icons/green/peers.png \
   qt/res/icons/green/qrcode.png \
   qt/res/icons/green/questionmark.png \
   qt/res/icons/green/quit.png \
