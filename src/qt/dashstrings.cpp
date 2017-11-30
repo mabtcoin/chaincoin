@@ -51,7 +51,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
-"Disable all Dash specific functionality (Masternodes, PrivateSend, "
+"Disable all Chaincoin specific functionality (Masternodes, PrivateSend, "
 "InstantSend, Governance) (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("chaincoin-core", ""
 "Discover own IP addresses (default: 1 when listening and no -externalip or -"
@@ -333,7 +333,7 @@ QT_TRANSLATE_NOOP("chaincoin-core", "Connect to KeePassHttp on port <port> (defa
 QT_TRANSLATE_NOOP("chaincoin-core", "Connect to a node to retrieve peer addresses, and disconnect"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Connection options:"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
-QT_TRANSLATE_NOOP("chaincoin-core", "Copyright (C) 2014-%i The Dash Core Developers"),
+QT_TRANSLATE_NOOP("chaincoin-core", "Copyright (C) 2014-%i The Chaincoin Core Developers"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Could not parse masternode.conf"),
 QT_TRANSLATE_NOOP("chaincoin-core", "Debugging/Testing options:"),
