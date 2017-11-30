@@ -1899,7 +1899,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation>Fel: Plånboken låstes upp enbart för att anonymisera mynt.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Varning: Ogiltig Dash-adress</translation>
     </message>
     <message>

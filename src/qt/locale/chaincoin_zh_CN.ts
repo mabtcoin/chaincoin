@@ -2489,7 +2489,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation>只付最低手续费%1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>警告：无效的达世币地址</translation>
     </message>
     <message>

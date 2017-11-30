@@ -2708,7 +2708,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation><numerusform>Odhad pre začiatok potvrdzovania je %n blok.</numerusform><numerusform>Odhad pre začiatok potvrdzovania sú %n bloky.</numerusform><numerusform>Odhad pre začiatok potvrdzovania je %n blokov.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Upozornenie: Neplatná Dash adresa</translation>
     </message>
     <message>

@@ -2911,7 +2911,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation><numerusform>Potwierdzenia zaczną się za około %n blok</numerusform><numerusform>Potwierdzenia zaczną się za około %n bloki</numerusform><numerusform>Potwierdzenia zaczną się za około %n bloków</numerusform><numerusform>Potwierdzenia zaczną się za około %n bloków</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Ostrzeżenie: adres Dash jest nieprawidlowy </translation>
     </message>
     <message>

@@ -3796,8 +3796,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location line="+100"/>
-        <source>Warning: Invalid Dash address</source>
-        <translation>Warning: Invalid Dash address</translation>
+        <source>Warning: Invalid Chaincoin address</source>
+        <translation>Warning: Invalid Chaincoin address</translation>
     </message>
     <message>
         <location line="+8"/>

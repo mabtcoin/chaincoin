@@ -2930,7 +2930,7 @@ Dies kann passieren, wenn einige Dash aus ihrer Wallet bereits ausgegeben wurden
         <translation><numerusform>Geschätzter Beginn der Bestätigung in %n Block.</numerusform><numerusform>Geschätzter Beginn der Bestätigung in %n Blöcken.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Warnung: ungültige Dash-Adresse</translation>
     </message>
     <message>

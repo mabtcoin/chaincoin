@@ -31,3 +31,9 @@ src/univalue/include
 src/univalue/lib
 src/wallet
 src/zmq
+src/leveldb/doc/bench
+src/test/data
+src/wallet/test
+src/leveldb/issues
+src/univalue/test
+src/univalue/gen

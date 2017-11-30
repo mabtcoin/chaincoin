@@ -2927,7 +2927,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation><numerusform>Ước lượng để bắt đầu xác thực trong vòng %n khối.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Cảnh báo: Địa chỉ Dash không hợp lệ</translation>
     </message>
     <message>

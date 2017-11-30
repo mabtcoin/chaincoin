@@ -2338,7 +2338,7 @@ Più URL vengono separati da una barra verticale |.</translation>
         <translation>Pagare solo la minima commissione di %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>ATTENZIONE: Indirizzo Dash non valido</translation>
     </message>
     <message>

@@ -2496,7 +2496,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation>Pagar sólo la comisión mínima de %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Aviso: Dirección de Dash no válida</translation>
     </message>
     <message>

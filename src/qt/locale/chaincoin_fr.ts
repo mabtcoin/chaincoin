@@ -2927,7 +2927,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation><numerusform>Le début de confirmation est estimé dans %n bloc.</numerusform><numerusform>Le début de confirmation est estimé dans les %n blocs.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Attention : adresse Dash invalide</translation>
     </message>
     <message>

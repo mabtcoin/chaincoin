@@ -2903,7 +2903,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation><numerusform>預計可在 %n 個區塊內開始確認。</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>警告: 無效的達世幣位址</translation>
     </message>
     <message>

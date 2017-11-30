@@ -2927,7 +2927,7 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
         <translation><numerusform>Очаква се да започне потвърждение в %n блока.</numerusform><numerusform>Очаква се да започне потвърждение в %n блока.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Dash address</source>
+        <source>Warning: Invalid Chaincoin address</source>
         <translation>Внимание: Невалиден Dash адрес</translation>
     </message>
     <message>
