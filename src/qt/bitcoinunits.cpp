@@ -72,10 +72,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case CHC: return QString("Dash");
-            case mCHC: return QString("Milli-Dash (1 / 1" THIN_SP_UTF8 "000)");
-            case uCHC: return QString("Micro-Dash (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-Dash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case CHC: return QString("Chaincoin");
+            case mCHC: return QString("Milli-Chaincoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uCHC: return QString("Micro-Chaincoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-Chaincoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -83,10 +83,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case CHC: return QString("TestDashs");
-            case mCHC: return QString("Milli-TestDash (1 / 1" THIN_SP_UTF8 "000)");
-            case uCHC: return QString("Micro-TestDash (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestDash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case CHC: return QString("TestChaincoin");
+            case mCHC: return QString("Milli-TestChaincoin (1 / 1" THIN_SP_UTF8 "000)");
+            case uCHC: return QString("Micro-TestChaincoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-TestChaincoin (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
