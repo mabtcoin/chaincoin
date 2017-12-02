@@ -131,7 +131,6 @@ public:
         pchMessageStart[1] = 0xd2; // PM-Tech: ChainCoin
         pchMessageStart[2] = 0x7a; // PM-Tech: ChainCoin
         pchMessageStart[3] = 0x03; // PM-Tech: ChainCoin
-        vAlertPubKey = ParseHex("04c5788ca1e268a7474763fa965210b6fa6b04a45f52d21056c62fb19a2de991aa15aa1d1c516f34d2a0016f51a87959c89f51a148db30c839f71bc525dde8c480"); // PM-Tech: ChainCoin
         nDefaultPort = 11994; // PM-Tech: ChainCoin
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDelayGetHeadersTime = 24 * 60 * 60;
@@ -265,7 +264,6 @@ public:
         pchMessageStart[1] = 0xc2;
         pchMessageStart[2] = 0x11;
         pchMessageStart[3] = 0x02;
-        vAlertPubKey = ParseHex("040d3090a194381599d0f53f89ec60b9ec77f0e7b61978ef445142c8a4f1e154ca3441a5e46e12910540352edbd8af43fc1ee1da9a935c1c252fe7426c323d3d32");
         nDefaultPort = 21994;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nDelayGetHeadersTime = 24 * 60 * 60;
