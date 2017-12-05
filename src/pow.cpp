@@ -66,7 +66,7 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
     int64_t nMaxAdjustDown = 3; // 3% adjustment down
     int64_t nMaxAdjustUp = 1; // 1% adjustment up
 
-    LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
+    // LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
     if (nActualTimespan < params.AveragingTargetTimespan() * (100 - nMaxAdjustUp) / 100)
         nActualTimespan = params.AveragingTargetTimespan() * (100 - nMaxAdjustUp) / 100;
     if (nActualTimespan > params.AveragingTargetTimespan() * (100 + nMaxAdjustDown) / 100)
