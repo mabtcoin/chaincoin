@@ -1,20 +1,25 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Dash developers
-// Distributed under the MIT/X11 software license, see the accompanying
+// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Dash Core developers
+// Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "rpcserver.h"
-#include "rpcclient.h"
+#include "chainparams.h"
+#include "clientversion.h"
+#include "rpc/server.h"
 #include "init.h"
-#include "main.h"
 #include "noui.h"
-#include "ui_interface.h"
+#include "scheduler.h"
 #include "util.h"
 #include "masternodeconfig.h"
+#include "httpserver.h"
+#include "httprpc.h"
 
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/filesystem.hpp>
+#include <boost/thread.hpp>
+
+#include <stdio.h>
 
 /* Introduction text for doxygen: */
 
@@ -22,8 +27,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Chaincoin (http://www.chaincoinpay.io/),
- * which enables instant payments to anyone, anywhere in the world. Chaincoin uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Dash (https://www.chaincoin.org/),
+ * which enables instant payments to anyone, anywhere in the world. Dash uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -34,7 +39,7 @@
 
 static bool fDaemon;
 
-void DetectShutdownThread(boost::thread_group* threadGroup)
+void WaitForShutdown(boost::thread_group* threadGroup)
 {
     bool fShutdown = ShutdownRequested();
     // Tell the main threads to shutdown.
@@ -45,7 +50,7 @@ void DetectShutdownThread(boost::thread_group* threadGroup)
     }
     if (threadGroup)
     {
-        threadGroup->interrupt_all();
+        Interrupt(*threadGroup);
         threadGroup->join_all();
     }
 }
@@ -57,18 +62,41 @@ void DetectShutdownThread(boost::thread_group* threadGroup)
 bool AppInit(int argc, char* argv[])
 {
     boost::thread_group threadGroup;
-    boost::thread* detectShutdownThread = NULL;
+    CScheduler scheduler;
 
     bool fRet = false;
+
+    //
+    // Parameters
+    //
+    // If Qt is used, parameters/chaincoin.conf are parsed in qt/chaincoin.cpp's main()
+    ParseParameters(argc, argv);
+
+    // Process help and version before taking care about datadir
+    if (mapArgs.count("-?") || mapArgs.count("-h") ||  mapArgs.count("-help") || mapArgs.count("-version"))
+    {
+        std::string strUsage = _("Chaincoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+
+        if (mapArgs.count("-version"))
+        {
+            strUsage += LicenseInfo();
+        }
+        else
+        {
+            strUsage += "\n" + _("Usage:") + "\n" +
+                  "  chaincoind [options]                     " + _("Start Chaincoin Core Daemon") + "\n";
+
+            strUsage += "\n" + HelpMessage(HMM_BITCOIND);
+        }
+
+        fprintf(stdout, "%s", strUsage.c_str());
+        return true;
+    }
+
     try
     {
-        //
-        // Parameters
-        //
-        // If Qt is used, parameters/chaincoin.conf are parsed in qt/chaincoin.cpp's main()
-        ParseParameters(argc, argv);
         bool datadirFromCmdLine = mapArgs.count("-datadir") != 0;
-	if (datadirFromCmdLine && !boost::filesystem::is_directory(GetDataDir(false)))
+        if (datadirFromCmdLine && !boost::filesystem::is_directory(GetDataDir(false)))
         {
             fprintf(stderr, "Error: Specified data directory \"%s\" does not exist.\n", mapArgs["-datadir"].c_str());
             return false;
@@ -76,7 +104,7 @@ bool AppInit(int argc, char* argv[])
         try
         {
             ReadConfigFile(mapArgs, mapMultiArgs);
-        } catch(std::exception &e) {
+        } catch (const std::exception& e) {
             fprintf(stderr,"Error reading configuration file: %s\n", e.what());
             return false;
         }
@@ -85,10 +113,11 @@ bool AppInit(int argc, char* argv[])
             fprintf(stderr, "Error: Specified data directory \"%s\" from config file does not exist.\n", mapArgs["-datadir"].c_str());
             return EXIT_FAILURE;
         }
-
-        // Check for -testnet or -regtest parameter (TestNet() calls are only valid after this clause)
-        if (!SelectParamsFromCommandLine()) {
-            fprintf(stderr, "Error: Invalid combination of -regtest and -testnet.\n");
+        // Check for -testnet or -regtest parameter (Params() calls are only valid after this clause)
+        try {
+            SelectParams(ChainNameFromCommandLine());
+        } catch (const std::exception& e) {
+            fprintf(stderr, "Error: %s\n", e.what());
             return false;
         }
 
@@ -96,24 +125,6 @@ bool AppInit(int argc, char* argv[])
         std::string strErr;
         if(!masternodeConfig.read(strErr)) {
             fprintf(stderr,"Error reading masternode configuration file: %s\n", strErr.c_str());
-            return false;
-        }
-
-        if (mapArgs.count("-?") || mapArgs.count("--help"))
-        {
-            // First part of help message is specific to chaincoind / RPC client
-            std::string strUsage = _("Chaincoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n\n" +
-                _("Usage:") + "\n" +
-                  "  chaincoind [options]                     " + _("Start Chaincoin Core Daemon") + "\n" +
-                _("Usage (deprecated, use chaincoin-cli):") + "\n" +
-                  "  chaincoind [options] <command> [params]  " + _("Send command to Chaincoin Core") + "\n" +
-                  "  chaincoind [options] help                " + _("List commands") + "\n" +
-                  "  chaincoind [options] help <command>      " + _("Get help for a command") + "\n";
-
-            strUsage += "\n" + HelpMessage(HMM_BITCOIND);
-            strUsage += "\n" + HelpMessageCli(false);
-
-            fprintf(stdout, "%s", strUsage.c_str());
             return false;
         }
 
@@ -125,14 +136,14 @@ bool AppInit(int argc, char* argv[])
 
         if (fCommandLine)
         {
-            int ret = CommandLineRPC(argc, argv);
-            exit(ret);
+            fprintf(stderr, "Error: There is no RPC client functionality in chaincoind anymore. Use the chaincoin-cli utility instead.\n");
+            exit(EXIT_FAILURE);
         }
 #ifndef WIN32
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "Chaincoin server starting\n");
+            fprintf(stdout, "Chaincoin Core server starting\n");
 
             // Daemonize
             pid_t pid = fork();
@@ -143,7 +154,6 @@ bool AppInit(int argc, char* argv[])
             }
             if (pid > 0) // Parent process, pid is child process id
             {
-                CreatePidFile(GetPidFile(), pid);
                 return true;
             }
             // Child process falls through to rest of initialization
@@ -155,10 +165,12 @@ bool AppInit(int argc, char* argv[])
 #endif
         SoftSetBoolArg("-server", true);
 
-        detectShutdownThread = new boost::thread(boost::bind(&DetectShutdownThread, &threadGroup));
-        fRet = AppInit2(threadGroup);
+        // Set this early so that parameter interactions go to console
+        InitLogging();
+        InitParameterInteraction();
+        fRet = AppInit2(threadGroup, scheduler);
     }
-    catch (std::exception& e) {
+    catch (const std::exception& e) {
         PrintExceptionContinue(&e, "AppInit()");
     } catch (...) {
         PrintExceptionContinue(NULL, "AppInit()");
@@ -166,20 +178,12 @@ bool AppInit(int argc, char* argv[])
 
     if (!fRet)
     {
-        if (detectShutdownThread)
-            detectShutdownThread->interrupt();
-
-        threadGroup.interrupt_all();
+        Interrupt(threadGroup);
         // threadGroup.join_all(); was left out intentionally here, because we didn't re-test all of
         // the startup-failure cases to make sure they don't result in a hang due to some
         // thread-blocking-waiting-for-another-thread-during-startup case
-    }
-
-    if (detectShutdownThread)
-    {
-        detectShutdownThread->join();
-        delete detectShutdownThread;
-        detectShutdownThread = NULL;
+    } else {
+        WaitForShutdown(&threadGroup);
     }
     Shutdown();
 
@@ -190,15 +194,8 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    bool fRet = false;
-
     // Connect chaincoind signal handlers
     noui_connect();
 
-    fRet = AppInit(argc, argv);
-
-    if (fRet && fDaemon)
-        return 0;
-
-    return (fRet ? 0 : 1);
+    return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);
 }

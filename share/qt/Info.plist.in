@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
   <key>LSMinimumSystemVersion</key>
-  <string>10.9.0</string>
+  <string>10.7.0</string>
 
   <key>LSArchitecturePriority</key>
   <array>
@@ -30,6 +30,12 @@
 
   <key>CFBundleExecutable</key>
   <string>Chaincoin-Qt</string>
+  
+  <key>CFBundleName</key>
+  <string>Chaincoin-Qt</string>
+
+  <key>LSHasLocalizedDisplayName</key>
+  <true/>
 
   <key>CFBundleIdentifier</key>
   <string>org.chaincoin.Chaincoin-Qt</string>
@@ -40,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.chaincoin.DarkcoinPayment</string>
+      <string>org.chaincoin.ChaincoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>chaincoin</string>
@@ -52,7 +58,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.chaincoin.paymentrequest</string>
+      <string>org.chaincoin.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>Chaincoin payment request</string>
       <key>UTTypeConformsTo</key>
@@ -78,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.chaincoin.paymentrequest</string>
+        <string>org.chaincoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
@@ -91,6 +97,9 @@
   <key>NSHighResolutionCapable</key>
     <string>True</string>
 
+  <key>LSAppNapIsDisabled</key>
+    <string>True</string>
+  
   <key>LSApplicationCategoryType</key>
     <string>public.app-category.finance</string>
 </dict>
