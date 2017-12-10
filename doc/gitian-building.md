@@ -67,7 +67,7 @@ In the VirtualBox GUI click "Create" and choose the following parameters in the 
 
 ![](gitian-building/create_vm_storage_physical_hard_disk.png)
 
-- Storage on physical hard disk: Dynamically Allocated
+- Storage on physical hard disk: Dynamically Allocated (* see the performance section at the end of this document)
 
 ![](gitian-building/create_vm_file_location_size.png)
 
@@ -269,6 +269,7 @@ echo 'ifconfig br0 10.0.3.2/24 up' >> /etc/rc.local
 echo 'iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE' >> /etc/rc.local
 echo 'echo 1 > /proc/sys/net/ipv4/ip_forward' >> /etc/rc.local
 echo 'exit 0' >> /etc/rc.local
+chmod +x /etc/rc.local
 # make sure that USE_LXC is always set when logging in as debian,
 # and configure LXC IP addresses
 echo 'export USE_LXC=1' >> /home/debian/.profile
@@ -300,11 +301,11 @@ cd ..
 
 **Note**: When sudo asks for a password, enter the password for the user *debian* not for *root*.
 
-Clone the git repositories for Dash Core and Gitian.
+Clone the git repositories for Chaincoin Core and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/chaincoinpay/chaincoin
+git clone https://github.com/chaincoin/chaincoin.git
 ```
 
 Setting up the Gitian image
@@ -339,15 +340,15 @@ Getting and building the inputs
 --------------------------------
 
 Follow the instructions in [doc/release-process.md](release-process.md#fetch-and-build-inputs-first-time-or-when-dependency-versions-change)
-in the Dash Core repository under 'Fetch and build inputs' to install sources which require
+in the Chaincoin Core repository under 'Fetch and build inputs' to install sources which require
 manual intervention. Also optionally follow the next step: 'Seed the Gitian sources cache
 and offline git repositories' which will fetch the remaining files required for building
 offline.
 
-Building Dash Core
+Building Chaincoin Core
 ----------------
 
-To build Dash Core (for Linux, OS X and Windows) just follow the steps under 'perform
+To build Chaincoin Core (for Linux, OS X and Windows) just follow the steps under 'perform
 Gitian builds' in [doc/release-process.md](release-process.md#perform-gitian-builds) in the Dash Core repository.
 
 This may take some time as it will build all the dependencies needed for each descriptor.
@@ -479,3 +480,13 @@ In the future it will be possible to push your signatures (both the `.assert` an
 [chaincoin/gitian.sigs](https://github.com/chaincoinpay/gitian.sigs/) repository, or if that's not possible to create a pull
 request.
 There will be an official announcement when this repository is online.
+
+Poor build performance
+----------------------
+
+If you find the building speed in VirtualBox to be less than spectacular, see the following guide for some useful information:
+https://www.techrepublic.com/article/how-to-improve-virtualbox-guest-performance-in-five-steps/
+
+Please note that if you use the dynamically allocated disk on a mechanical hard drive you may experience extremely poor performance.
+
+I found that using Ubuntu 16.04 for the VM resulted in better build performance than Debian 9. I also found that 4GB RAM performed better than 8GB RAM and 2 CPU CORES performed better than 4 CPU CORES. Your mileage may vary, feel free to report your results.

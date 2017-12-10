@@ -1,7 +1,10 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://github.com/chaincoinpay/chaincoin/blob/master/doc/translation_process.md#syncing-with-transifex)
+* Please note this release process is not yet finalized, and is considered a work in progress.
+
+
+* Update translations, see [translation_process.md](https://github.com/chaincoin/chaincoin/blob/master/doc/translation_process.md#syncing-with-transifex)
 * Update hardcoded [seeds](/contrib/seeds)
 
 * * *
@@ -10,12 +13,14 @@ Release Process
 Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
-	git clone https://github.com/chaincoinpay/gitian.sigs.git
-	git clone https://github.com/chaincoinpay/chaincoin-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://github.com/chaincoinpay/chaincoin.git
+	git clone https://github.com/chaincoin/chaincoin.git
 
-### Dash Core maintainers/release engineers, update (commit) version in sources
+### For future consideration (not yet implemented)
+	git clone https://github.com/chaincoin/gitian.sigs.git
+	git clone https://github.com/chaincoin/chaincoin-detached-sigs.git
+
+### Chaincoin Core maintainers/release engineers, update (commit) version in sources
 
 	pushd ./chaincoin
 	contrib/verifysfbinaries/verify.sh
@@ -86,7 +91,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 ```
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Dash Core for Linux, Windows, and OS X:
+### Build and sign Chaincoin Core for Linux, Windows, and OS X:
 
 	./bin/gbuild --commit chaincoin=v${VERSION} ../chaincoin/contrib/gitian-descriptors/gitian-linux.yml
 	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../chaincoin/contrib/gitian-descriptors/gitian-linux.yml
@@ -139,7 +144,7 @@ Commit your signature to gitian.sigs:
 
   Wait for Windows/OS X detached signatures:
 	Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-	Detached signatures will then be committed to the [chaincoin-detached-sigs](https://github.com/chaincoinpay/chaincoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+	Detached signatures will then be committed to the [chaincoin-detached-sigs](https://github.com/chaincoin/chaincoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
   Create (and optionally verify) the signed OS X binary:
 
