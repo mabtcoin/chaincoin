@@ -169,7 +169,7 @@ struct set_dirty
 
 struct update_fee_delta
 {
-    update_fee_delta(int64_t _feeDelta) : feeDelta(_feeDelta) { }
+    explicit update_fee_delta(int64_t _feeDelta) : feeDelta(_feeDelta) { }
 
     void operator() (CTxMemPoolEntry &e) { e.UpdateFeeDelta(feeDelta); }
 
@@ -446,7 +446,7 @@ public:
      *  around what it "costs" to relay a transaction around the network and
      *  below which we would reasonably say a transaction has 0-effective-fee.
      */
-    CTxMemPool(const CFeeRate& _minReasonableRelayFee);
+    explicit CTxMemPool(const CFeeRate& _minReasonableRelayFee);
     ~CTxMemPool();
 
     /**
