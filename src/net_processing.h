@@ -24,7 +24,7 @@ private:
     CConnman* connman;
 
 public:
-    PeerLogicValidation(CConnman* connmanIn);
+    explicit PeerLogicValidation(CConnman* connmanIn);
 
     virtual void UpdatedBlockTip(const CBlockIndex *pindexNew, const CBlockIndex *pindexFork, bool fInitialDownload);
     virtual void BlockChecked(const CBlock& block, const CValidationState& state);

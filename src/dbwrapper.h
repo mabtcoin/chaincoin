@@ -20,7 +20,7 @@
 class dbwrapper_error : public std::runtime_error
 {
 public:
-    dbwrapper_error(const std::string& msg) : std::runtime_error(msg) {}
+    explicit dbwrapper_error(const std::string& msg) : std::runtime_error(msg) {}
 };
 
 void HandleError(const leveldb::Status& status) throw(dbwrapper_error);
@@ -38,7 +38,7 @@ public:
     /**
      * @param[in] obfuscate_key    If passed, XOR data with this key.
      */
-    CDBBatch(const std::vector<unsigned char> *obfuscate_key) : obfuscate_key(obfuscate_key) { };
+    explicit CDBBatch(const std::vector<unsigned char> *obfuscate_key) : obfuscate_key(obfuscate_key) { };
 
     template <typename K, typename V>
     void Write(const K& key, const V& value)
