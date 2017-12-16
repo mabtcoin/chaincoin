@@ -1153,7 +1153,7 @@ bool WriteBlockToDisk(const CBlock& block, CDiskBlockPos& pos, const CMessageHea
         return error("WriteBlockToDisk: OpenBlockFile failed");
 
     // Write index header
-    unsigned int nSize = fileout.GetSerializeSize(block);
+    unsigned int nSize = GetSerializeSize(fileout, block);
     fileout << FLATDATA(messageStart) << nSize;
 
     // Write block
@@ -1573,7 +1573,7 @@ bool UndoWriteToDisk(const CBlockUndo& blockundo, CDiskBlockPos& pos, const uint
         return error("%s: OpenUndoFile failed", __func__);
 
     // Write index header
-    unsigned int nSize = fileout.GetSerializeSize(blockundo);
+    unsigned int nSize = GetSerializeSize(fileout, blockundo);
     fileout << FLATDATA(messageStart) << nSize;
 
     // Write undo data
@@ -1906,7 +1906,7 @@ private:
     int bit;
 
 public:
-    WarningBitsConditionChecker(int bitIn) : bit(bitIn) {}
+    explicit WarningBitsConditionChecker(int bitIn) : bit(bitIn) {}
 
     int64_t BeginTime(const Consensus::Params& params) const { return 0; }
     int64_t EndTime(const Consensus::Params& params) const { return std::numeric_limits<int64_t>::max(); }

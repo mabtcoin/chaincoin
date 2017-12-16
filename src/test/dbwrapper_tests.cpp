@@ -243,7 +243,7 @@ struct StringContentsSerializer {
     // This is a terrible idea
     string str;
     StringContentsSerializer() {}
-    StringContentsSerializer(const string& inp) : str(inp) {}
+    explicit StringContentsSerializer(const string& inp) : str(inp) {}
 
     StringContentsSerializer& operator+=(const string& s) {
         str += s;
@@ -254,7 +254,7 @@ struct StringContentsSerializer {
     ADD_SERIALIZE_METHODS;
 
     template <typename Stream, typename Operation>
-    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion) {
+    inline void SerializationOp(Stream& s, Operation ser_action) {
         if (ser_action.ForRead()) {
             str.clear();
             char c = 0;

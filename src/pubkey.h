@@ -28,7 +28,7 @@ class CKeyID : public uint160
 {
 public:
     CKeyID() : uint160() {}
-    CKeyID(const uint160& in) : uint160(in) {}
+    explicit CKeyID(const uint160& in) : uint160(in) {}
 };
 
 typedef uint256 ChainCode;
@@ -86,7 +86,7 @@ public:
     }
 
     //! Construct a public key from a byte vector.
-    CPubKey(const std::vector<unsigned char>& vch)
+    explicit CPubKey(const std::vector<unsigned char>& vch)
     {
         Set(vch.begin(), vch.end());
     }
@@ -114,19 +114,15 @@ public:
     }
 
     //! Implement serialization, as if this was a byte vector.
-    unsigned int GetSerializeSize(int nType, int nVersion) const
-    {
-        return size() + 1;
-    }
     template <typename Stream>
-    void Serialize(Stream& s, int nType, int nVersion) const
+    void Serialize(Stream& s) const
     {
         unsigned int len = size();
         ::WriteCompactSize(s, len);
         s.write((char*)vch, len);
     }
     template <typename Stream>
-    void Unserialize(Stream& s, int nType, int nVersion)
+    void Unserialize(Stream& s)
     {
         unsigned int len = ::ReadCompactSize(s);
         if (len <= 65) {
@@ -209,12 +205,8 @@ struct CExtPubKey {
     void Decode(const unsigned char code[74]);
     bool Derive(CExtPubKey& out, unsigned int nChild) const;
 
-    unsigned int GetSerializeSize(int nType, int nVersion) const
-    {
-        return 74+1; //add one byte for the size (compact int)
-    }
     template <typename Stream>
-    void Serialize(Stream& s, int nType, int nVersion) const
+    void Serialize(Stream& s) const
     {
         unsigned int len = 74;
         ::WriteCompactSize(s, len);
@@ -223,7 +215,7 @@ struct CExtPubKey {
         s.write((const char *)&code[0], len);
     }
     template <typename Stream>
-    void Unserialize(Stream& s, int nType, int nVersion)
+    void Unserialize(Stream& s)
     {
         unsigned int len = ::ReadCompactSize(s);
         unsigned char code[74];
