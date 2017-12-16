@@ -222,7 +222,13 @@ public:
     // adapting relay policy by bumping MAX_STANDARD_VERSION, and then later date
     // bumping the default CURRENT_VERSION at which point both CURRENT_VERSION and
     // MAX_STANDARD_VERSION will be equal.
-    static const int32_t MAX_STANDARD_VERSION=2;
+
+    // Until now, regardless OP_RETURN a special tx message was allowed and
+    // tx version 2 has been dedicated for that
+
+    static const int32_t TXMSG_VERSION=2;
+
+    static const int32_t MAX_STANDARD_VERSION=3;
 
     // The local variables are made const to prevent unintended modification
     // without updating the cached hash value. However, CTransaction is not
@@ -233,6 +239,7 @@ public:
     const std::vector<CTxIn> vin;
     const std::vector<CTxOut> vout;
     const uint32_t nLockTime;
+    std::string strTxComment;
 
     /** Construct a CTransaction that qualifies as IsNull() */
     CTransaction();
@@ -251,6 +258,9 @@ public:
         READWRITE(*const_cast<std::vector<CTxIn>*>(&vin));
         READWRITE(*const_cast<std::vector<CTxOut>*>(&vout));
         READWRITE(*const_cast<uint32_t*>(&nLockTime));
+        if(this->nVersion == TXMSG_VERSION) {
+        READWRITE(strTxComment); }
+
         if (ser_action.ForRead())
             UpdateHash();
     }
