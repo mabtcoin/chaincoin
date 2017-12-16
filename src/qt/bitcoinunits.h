@@ -60,7 +60,7 @@ public:
         CHC,
         mCHC,
         uCHC,
-        duffs
+        chuffs
     };
 
     enum SeparatorStyle
