@@ -1231,7 +1231,6 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
     CAmount nSubsidy = 16 * COIN;
     // Subsidy is cut in half approximately every 2 years.
     nSubsidy >>= halvings;
-    return nSubsidy;
 
     // Hard fork to reduce the block reward by 10 extra percent (allowing budget/superblocks)
     CAmount nSuperblockPart = (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/10 : 0;
