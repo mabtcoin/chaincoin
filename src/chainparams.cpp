@@ -44,7 +44,7 @@ public:
         nRewardForkHeight2 = 1275200; // ~end oct 2017
 
         // Genesis block
-        const char* pszTimestamp = "18-01-14 - Anti-fracking campaigners chain themselves to petrol pumps";
+        const char* pszTimestamp = "18-03-22 - Most profitable coin";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
