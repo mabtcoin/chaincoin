@@ -64,18 +64,7 @@ public:
         assert(hashGenesisBlock == uint256("0x00000f639db5734b2b861ef8dbccc33aebd7de44d13de000a12d093bcc866c64"));
         assert(genesis.hashMerkleRoot == uint256("0xfa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88"));
 
-        vSeeds.push_back(CDNSSeedData("seed1.mabtcoin.com", "seed1.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed2.mabtcoin.com", "seed2.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed3.mabtcoin.com", "seed3.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed4.mabtcoin.com", "seed4.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed5.mabtcoin.com", "seed5.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed6.mabtcoin.com", "seed6.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed7.mabtcoin.com", "seed7.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed8.mabtcoin.com", "seed8.mabtcoin.com"));
-        vSeeds.push_back(CDNSSeedData("chc1.ignorelist.com", "chc1.ignorelist.com"));
-        vSeeds.push_back(CDNSSeedData("chc2.ignorelist.com", "chc2.ignorelist.com"));
-        vSeeds.push_back(CDNSSeedData("chc3.ignorelist.com", "chc3.ignorelist.com"));
-        vSeeds.push_back(CDNSSeedData("chc4.ignorelist.com", "chc4.ignorelist.com"));
+        vSeeds.push_back(CDNSSeedData("127.0.0.1", "127.0.0.1"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,4);
