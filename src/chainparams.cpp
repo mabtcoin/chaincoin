@@ -35,8 +35,8 @@ public:
         pchMessageStart[2] = 0x7a;
         pchMessageStart[3] = 0x03;
         vAlertPubKey = ParseHex("04c5788ca1e268a7474763fa965210b6fa6b04a45f52d21056c62fb19a2de991aa15aa1d1c516f34d2a0016f51a87959c89f51a148db30c839f71bc525dde8c480");
-        nDefaultPort = 11994;
-        nRPCPort = 11995;
+        nDefaultPort = 12994;
+        nRPCPort = 12995;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
         nSubsidyHalvingInterval = 700800; // 2 years
         nMasternodePortForkHeight = 1246400 - 1000; // ~end sep 2017

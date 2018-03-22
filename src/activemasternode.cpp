@@ -45,14 +45,14 @@ void CActiveMasternode::ManageStatus()
         if (chainActive.Height() >= Params().MasternodePortForkHeight())
         {
             if(Params().NetworkID() == CChainParams::MAIN){
-                if(service.GetPort() != 11994) {
-                    notCapableReason = "Invalid port: " + boost::lexical_cast<string>(service.GetPort()) + " - only 11994 is supported on mainnet.";
+                if(service.GetPort() != 12994) {
+                    notCapableReason = "Invalid port: " + boost::lexical_cast<string>(service.GetPort()) + " - only 12994 is supported on mainnet.";
                     status = MASTERNODE_NOT_CAPABLE;
                     LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason.c_str());
                     return;
                 }
-            } else if(service.GetPort() == 11994) {
-                notCapableReason = "Invalid port: " + boost::lexical_cast<string>(service.GetPort()) + " - 11994 is only supported on mainnet.";
+            } else if(service.GetPort() == 12994) {
+                notCapableReason = "Invalid port: " + boost::lexical_cast<string>(service.GetPort()) + " - 12994 is only supported on mainnet.";
                 status = MASTERNODE_NOT_CAPABLE;
                 LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason.c_str());
                 return;

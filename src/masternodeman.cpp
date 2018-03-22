@@ -623,7 +623,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
         {
             if(Params().NetworkID() == CChainParams::MAIN)
             {
-                if(addr.GetPort() != 11994)
+                if(addr.GetPort() != 12994)
                 {
                     LogPrintf("dsee - Got bad Masternode port\n");
                     Misbehaving(pfrom->GetId(), 100);
@@ -632,7 +632,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
             }
             else
             {
-                if(addr.GetPort() == 11994)
+                if(addr.GetPort() == 12994)
                 {
                     LogPrintf("dsee - Got bad Masternode port\n");
                     Misbehaving(pfrom->GetId(), 100);

@@ -158,8 +158,8 @@ Value addnode(const Array& params, bool fHelp)
             "1. \"node\"     (string, required) The node (see getpeerinfo for nodes)\n"
             "2. \"command\"  (string, required) 'add' to add a node to the list, 'remove' to remove a node from the list, 'onetry' to try a connection to the node once\n"
             "\nExamples:\n"
-            + HelpExampleCli("addnode", "\"192.168.0.6:11994\" \"onetry\"")
-            + HelpExampleRpc("addnode", "\"192.168.0.6:11994\", \"onetry\"")
+            + HelpExampleCli("addnode", "\"192.168.0.6:12994\" \"onetry\"")
+            + HelpExampleRpc("addnode", "\"192.168.0.6:12994\", \"onetry\"")
         );
 
     string strNode = params[0].get_str();
