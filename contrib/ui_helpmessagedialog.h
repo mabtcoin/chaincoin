@@ -103,7 +103,7 @@ public:
 
     void retranslateUi(QDialog *HelpMessageDialog)
     {
-        HelpMessageDialog->setWindowTitle(QApplication::translate("HelpMessageDialog", "Chaincoin Core - Command-line options", 0));
+        HelpMessageDialog->setWindowTitle(QApplication::translate("HelpMessageDialog", "Masterbitcoin Core - Command-line options", 0));
     } // retranslateUi
 
 };

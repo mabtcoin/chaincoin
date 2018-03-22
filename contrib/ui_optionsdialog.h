@@ -576,9 +576,9 @@ public:
     {
         OptionsDialog->setWindowTitle(QApplication::translate("OptionsDialog", "Options", 0));
 #ifndef QT_NO_TOOLTIP
-        bitcoinAtStartup->setToolTip(QApplication::translate("OptionsDialog", "Automatically start Chaincoin after logging in to the system.", 0));
+        bitcoinAtStartup->setToolTip(QApplication::translate("OptionsDialog", "Automatically start Masterbitcoin after logging in to the system.", 0));
 #endif // QT_NO_TOOLTIP
-        bitcoinAtStartup->setText(QApplication::translate("OptionsDialog", "&Start Chaincoin on system login", 0));
+        bitcoinAtStartup->setText(QApplication::translate("OptionsDialog", "&Start Masterbitcoin on system login", 0));
         databaseCacheLabel->setText(QApplication::translate("OptionsDialog", "Size of &database cache", 0));
         databaseCacheUnitLabel->setText(QApplication::translate("OptionsDialog", "MB", 0));
         threadsScriptVerifLabel->setText(QApplication::translate("OptionsDialog", "Number of script &verification threads", 0));
@@ -592,7 +592,7 @@ public:
 #ifndef QT_NO_TOOLTIP
         label_2->setToolTip(QApplication::translate("OptionsDialog", "This amount acts as a threshold to turn off Darksend once it's reached.", 0));
 #endif // QT_NO_TOOLTIP
-        label_2->setText(QApplication::translate("OptionsDialog", "Amount of Chaincoin to keep anonymized", 0));
+        label_2->setText(QApplication::translate("OptionsDialog", "Amount of Masterbitcoin to keep anonymized", 0));
         tabWidget->setTabText(tabWidget->indexOf(tabMain), QApplication::translate("OptionsDialog", "&Main", 0));
         transactionFeeInfoLabel->setText(QApplication::translate("OptionsDialog", "Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB.", 0));
         transactionFeeLabel->setText(QApplication::translate("OptionsDialog", "Pay transaction &fee", 0));
@@ -607,11 +607,11 @@ public:
         spendZeroConfChange->setText(QApplication::translate("OptionsDialog", "&Spend unconfirmed change", 0));
         tabWidget->setTabText(tabWidget->indexOf(tabWallet), QApplication::translate("OptionsDialog", "W&allet", 0));
 #ifndef QT_NO_TOOLTIP
-        mapPortUpnp->setToolTip(QApplication::translate("OptionsDialog", "Automatically open the Chaincoin client port on the router. This only works when your router supports UPnP and it is enabled.", 0));
+        mapPortUpnp->setToolTip(QApplication::translate("OptionsDialog", "Automatically open the Masterbitcoin client port on the router. This only works when your router supports UPnP and it is enabled.", 0));
 #endif // QT_NO_TOOLTIP
         mapPortUpnp->setText(QApplication::translate("OptionsDialog", "Map port using &UPnP", 0));
 #ifndef QT_NO_TOOLTIP
-        connectSocks->setToolTip(QApplication::translate("OptionsDialog", "Connect to the Chaincoin network through a SOCKS proxy.", 0));
+        connectSocks->setToolTip(QApplication::translate("OptionsDialog", "Connect to the Masterbitcoin network through a SOCKS proxy.", 0));
 #endif // QT_NO_TOOLTIP
         connectSocks->setText(QApplication::translate("OptionsDialog", "&Connect through SOCKS proxy (default proxy):", 0));
         proxyIpLabel->setText(QApplication::translate("OptionsDialog", "Proxy &IP:", 0));
@@ -638,17 +638,17 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tabWindow), QApplication::translate("OptionsDialog", "&Window", 0));
         langLabel->setText(QApplication::translate("OptionsDialog", "User Interface &language:", 0));
 #ifndef QT_NO_TOOLTIP
-        lang->setToolTip(QApplication::translate("OptionsDialog", "The user interface language can be set here. This setting will take effect after restarting Chaincoin.", 0));
+        lang->setToolTip(QApplication::translate("OptionsDialog", "The user interface language can be set here. This setting will take effect after restarting Masterbitcoin.", 0));
 #endif // QT_NO_TOOLTIP
         label_3->setText(QApplication::translate("OptionsDialog", "Language missing or translation incomplete? Help contributing translations here:\n"
-"https://www.transifex.com/projects/p/chaincoin/", 0));
+"https://www.transifex.com/projects/p/masterbitcoin/", 0));
         themeLabel->setText(QApplication::translate("OptionsDialog", "User Interface Theme:", 0));
         unitLabel->setText(QApplication::translate("OptionsDialog", "&Unit to show amounts in:", 0));
 #ifndef QT_NO_TOOLTIP
         unit->setToolTip(QApplication::translate("OptionsDialog", "Choose the default subdivision unit to show in the interface and when sending coins.", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_TOOLTIP
-        displayAddresses->setToolTip(QApplication::translate("OptionsDialog", "Whether to show Chaincoin addresses in the transaction list or not.", 0));
+        displayAddresses->setToolTip(QApplication::translate("OptionsDialog", "Whether to show Masterbitcoin addresses in the transaction list or not.", 0));
 #endif // QT_NO_TOOLTIP
         displayAddresses->setText(QApplication::translate("OptionsDialog", "&Display addresses in transaction list", 0));
 #ifndef QT_NO_TOOLTIP

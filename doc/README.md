@@ -1,11 +1,11 @@
-Chaincoin 0.11.x BETA
+Masterbitcoin 0.11.x BETA
 ====================
 
 Copyright (c) 2009-2015 Bitcoin Developers
 
 Copyright (c) 2014-2015 Dash Developers
 
-Copyright (c) 2014-2015 Chaincoin Developers
+Copyright (c) 2014-2015 Masterbitcoin Developers
 
 
 Setup

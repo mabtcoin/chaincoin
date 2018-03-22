@@ -78,7 +78,7 @@ public slots:
     void showConsole();
     /** Switch to network tab and show */
     void showNetwork();
-    /** Open external (default) editor with chaincoin.conf */
+    /** Open external (default) editor with masterbitcoin.conf */
     void showConfEditor();
     /** Show folder with wallet backups in default browser */
     void showBackups();

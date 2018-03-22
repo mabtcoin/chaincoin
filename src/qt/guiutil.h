@@ -112,7 +112,7 @@ namespace GUIUtil
     // Open debug.log
     void openDebugLogfile();
 	
-    // Open chaincoin.conf
+    // Open masterbitcoin.conf
     void openConfigfile();	
     
     // Browse backup folder

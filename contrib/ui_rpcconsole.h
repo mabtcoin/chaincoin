@@ -835,7 +835,7 @@ public:
         networkName->setText(QApplication::translate("RPCConsole", "N/A", 0));
         label_7->setText(QApplication::translate("RPCConsole", "Number of connections", 0));
 #ifndef QT_NO_TOOLTIP
-        openDebugLogfileButton->setToolTip(QApplication::translate("RPCConsole", "Open the Chaincoin debug log file from the current data directory. This can take a few seconds for large log files.", 0));
+        openDebugLogfileButton->setToolTip(QApplication::translate("RPCConsole", "Open the Masterbitcoin debug log file from the current data directory. This can take a few seconds for large log files.", 0));
 #endif // QT_NO_TOOLTIP
         openDebugLogfileButton->setText(QApplication::translate("RPCConsole", "&Open", 0));
         label_13->setText(QApplication::translate("RPCConsole", "Startup time", 0));

@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "chaincoin-config.h"
+#include "masterbitcoin-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -71,8 +71,8 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     /* Display elements init */
     
     /* Theme selector */
-    ui->theme->addItem(QString("CHAINCOIN-green"), QVariant("drkblue"));
-    ui->theme->addItem(QString("CHAINCOIN-traditional"), QVariant("trad"));
+    ui->theme->addItem(QString("MASTERBITCOIN-green"), QVariant("drkblue"));
+    ui->theme->addItem(QString("MASTERBITCOIN-traditional"), QVariant("trad"));
 
     
     /* Language selector */

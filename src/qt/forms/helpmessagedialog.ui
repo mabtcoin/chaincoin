@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Chaincoin Core - Command-line options</string>
+   <string>Masterbitcoin Core - Command-line options</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>

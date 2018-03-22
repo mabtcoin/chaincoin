@@ -98,7 +98,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 
     widget->setFont(bitcoinAddressFont());
 #if QT_VERSION >= 0x040700
-    widget->setPlaceholderText(QObject::tr("Enter a Chaincoin address (e.g. XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)"));
+    widget->setPlaceholderText(QObject::tr("Enter a Masterbitcoin address (e.g. XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)"));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -133,8 +133,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no chaincoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("chaincoin"))
+    // return if URI is not valid or is no masterbitcoin: URI
+    if(!uri.isValid() || uri.scheme() != QString("masterbitcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -170,7 +170,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!BitcoinUnits::parse(BitcoinUnits::CHAINCOIN, i->second, &rv.amount))
+                if(!BitcoinUnits::parse(BitcoinUnits::MASTERBITCOIN, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -190,13 +190,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert chaincoin:// to chaincoin:
+    // Convert masterbitcoin:// to masterbitcoin:
     //
-    //    Cannot handle this later, because chaincoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because masterbitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("chaincoin://", Qt::CaseInsensitive))
+    if(uri.startsWith("masterbitcoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "chaincoin:");
+        uri.replace(0, 11, "masterbitcoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -204,12 +204,12 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("chaincoin:%1").arg(info.address);
+    QString ret = QString("masterbitcoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::CHAINCOIN, info.amount));
+        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::MASTERBITCOIN, info.amount));
         paramCount++;
     }
 
@@ -397,7 +397,7 @@ void openConfigfile()
 {
     boost::filesystem::path pathConfig = GetConfigFile();
 
-    /* Open chaincoin.conf with the associated application */
+    /* Open masterbitcoin.conf with the associated application */
     if (boost::filesystem::exists(pathConfig))
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 }
@@ -611,12 +611,12 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Chaincoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Masterbitcoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Chaincoin.lnk
+    // check for Masterbitcoin.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -693,7 +693,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "chaincoin.desktop";
+    return GetAutostartDir() / "masterbitcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -731,10 +731,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a chaincoin.desktop file to the autostart directory:
+        // Write a masterbitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Chaincoin\n";
+        optionFile << "Name=Masterbitcoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -753,7 +753,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the chaincoin app
+    // loop through the list of startup items and try to find the masterbitcoin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -787,7 +787,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add chaincoin app to startup item list
+        // add masterbitcoin app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {

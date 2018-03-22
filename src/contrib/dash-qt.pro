@@ -139,8 +139,8 @@ SOURCES += \
     ../src/core.cpp \
     ../src/crypter.cpp \
     ../src/crypto/cubehash.c \
-    ../src/chaincoin-cli.cpp \
-    ../src/chaincoind.cpp \
+    ../src/masterbitcoin-cli.cpp \
+    ../src/masterbitcoind.cpp \
     ../src/darksend.cpp \
     ../src/db.cpp \
     ../src/crypto/echo.c \
@@ -234,7 +234,7 @@ SOURCES += \
     ../src/qt/coincontroldialog.cpp \
     ../src/qt/coincontroltreewidget.cpp \
     ../src/qt/csvmodelwriter.cpp \
-    ../src/qt/chaincoin.cpp \
+    ../src/qt/masterbitcoin.cpp \
     ../src/qt/darksendconfig.cpp \
     ../src/qt/editaddressdialog.cpp \
     ../src/qt/guiutil.cpp \
@@ -350,4 +350,4 @@ FORMS += \
 
 RESOURCES += \
     ../src/qt/dash.qrc \
-    ../src/qt/chaincoin.qrc
+    ../src/qt/masterbitcoin.qrc

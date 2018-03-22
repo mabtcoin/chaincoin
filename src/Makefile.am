@@ -3,27 +3,27 @@ include Makefile.include
 AM_CPPFLAGS += -I$(builddir)
 
 noinst_LIBRARIES = \
-  libchaincoin_server.a \
-  libchaincoin_common.a \
-  libchaincoin_cli.a
+  libmasterbitcoin_server.a \
+  libmasterbitcoin_common.a \
+  libmasterbitcoin_cli.a
 if ENABLE_WALLET
-noinst_LIBRARIES += libchaincoin_wallet.a
+noinst_LIBRARIES += libmasterbitcoin_wallet.a
 endif
 
 bin_PROGRAMS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += chaincoind
+  bin_PROGRAMS += masterbitcoind
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += chaincoin-cli
+  bin_PROGRAMS += masterbitcoin-cli
 endif
 
 SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 .PHONY: FORCE
-# chaincoin core #
+# masterbitcoin core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -116,7 +116,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 version.o: obj/build.h
 
-libchaincoin_server_a_SOURCES = \
+libmasterbitcoin_server_a_SOURCES = \
   activemasternode.cpp \
   addrman.cpp \
   alert.cpp \
@@ -142,7 +142,7 @@ libchaincoin_server_a_SOURCES = \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-libchaincoin_wallet_a_SOURCES = \
+libmasterbitcoin_wallet_a_SOURCES = \
   activemasternode.cpp \
   db.cpp \
   crypter.cpp \
@@ -153,7 +153,7 @@ libchaincoin_wallet_a_SOURCES = \
   keepass.cpp \
   $(BITCOIN_CORE_H)
 
-libchaincoin_common_a_SOURCES = \
+libmasterbitcoin_common_a_SOURCES = \
   activemasternode.cpp \
   base58.cpp \
   allocators.cpp \
@@ -195,47 +195,47 @@ libchaincoin_common_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libchaincoin_common_a_SOURCES += compat/glibc_compat.cpp
-libchaincoin_common_a_SOURCES += compat/glibcxx_compat.cpp
+libmasterbitcoin_common_a_SOURCES += compat/glibc_compat.cpp
+libmasterbitcoin_common_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-libchaincoin_cli_a_SOURCES = \
+libmasterbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libchaincoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
+nodist_libmasterbitcoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
-# chaincoind binary #
-chaincoind_LDADD = \
-  libchaincoin_server.a \
-  libchaincoin_cli.a \
-  libchaincoin_common.a \
+# masterbitcoind binary #
+masterbitcoind_LDADD = \
+  libmasterbitcoin_server.a \
+  libmasterbitcoin_cli.a \
+  libmasterbitcoin_common.a \
   $(LIBLEVELDB) \
   $(LIBMEMENV)
 if ENABLE_WALLET
-chaincoind_LDADD += libchaincoin_wallet.a
+masterbitcoind_LDADD += libmasterbitcoin_wallet.a
 endif
-chaincoind_SOURCES = chaincoind.cpp
+masterbitcoind_SOURCES = masterbitcoind.cpp
 #
 
 if TARGET_WINDOWS
-chaincoind_SOURCES += chaincoind-res.rc
+masterbitcoind_SOURCES += masterbitcoind-res.rc
 endif
 
 AM_CPPFLAGS += $(BDB_CPPFLAGS)
-chaincoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+masterbitcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
-# chaincoin-cli binary #
-chaincoin_cli_LDADD = \
-  libchaincoin_cli.a \
-  libchaincoin_common.a \
+# masterbitcoin-cli binary #
+masterbitcoin_cli_LDADD = \
+  libmasterbitcoin_cli.a \
+  libmasterbitcoin_common.a \
   $(BOOST_LIBS)
-chaincoin_cli_SOURCES = chaincoin-cli.cpp
+masterbitcoin_cli_SOURCES = masterbitcoin-cli.cpp
 #
 
 if TARGET_WINDOWS
-chaincoin_cli_SOURCES += chaincoin-cli-res.rc
+masterbitcoin_cli_SOURCES += masterbitcoin-cli-res.rc
 endif
 
 # NOTE: This dependency is not strictly necessary, but without it make may try to build both in parallel, which breaks the LevelDB build system in a race
@@ -246,7 +246,7 @@ leveldb/%.a:
 	  CC="$(CC)" PLATFORM=$(TARGET_OS) AR="$(AR)" $(LEVELDB_TARGET_FLAGS) \
 	  OPT="$(CXXFLAGS) $(CPPFLAGS)"
 
-qt/chaincoinstrings.cpp: $(libchaincoin_server_a_SOURCES) $(libchaincoin_common_a_SOURCES) $(libchaincoin_cli_a_SOURCES)
+qt/masterbitcoinstrings.cpp: $(libmasterbitcoin_server_a_SOURCES) $(libmasterbitcoin_common_a_SOURCES) $(libmasterbitcoin_cli_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	@cd $(top_srcdir); XGETTEXT=$(XGETTEXT) share/qt/extract_strings_qt.py
 

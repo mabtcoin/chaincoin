@@ -1,4 +1,4 @@
-Building Chaincoin
+Building Masterbitcoin
 
 Use the autogen script to prepare the build environment.
 
@@ -6,6 +6,6 @@ Use the autogen script to prepare the build environment.
     ./configure
     make
 
-See doc/build-*.md for instructions on building chaincoind,
+See doc/build-*.md for instructions on building masterbitcoind,
 the intended-for-services, no-graphical-interface, reference
 implementation of Dash.

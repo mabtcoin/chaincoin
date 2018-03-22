@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = chaincoin
+TARGET = masterbitcoin
 INCLUDEPATH += . \
                src \
                src/leveldb/port/win \
@@ -26,7 +26,7 @@ HEADERS += src/activemasternode.h \
            src/base58.h \
            src/bignum.h \
            src/bloom.h \
-           src/chaincoin-config.h \
+           src/masterbitcoin-config.h \
            src/chainparams.h \
            src/checkpoints.h \
            src/checkqueue.h \
@@ -265,7 +265,7 @@ HEADERS += src/activemasternode.h \
            src/leveldb/port/win/stdint.h \
            src/aes_helper.c \
            src/crypto/aes_helper.c \
-           src/qt/chaincoin.moc \
+           src/qt/masterbitcoin.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc
@@ -298,8 +298,8 @@ SOURCES += src/activemasternode.cpp \
            src/blake.c \
            src/bloom.cpp \
            src/bmw.c \
-           src/chaincoin-cli.cpp \
-           src/chaincoind.cpp \
+           src/masterbitcoin-cli.cpp \
+           src/masterbitcoind.cpp \
            src/chainparams.cpp \
            src/checkpoints.cpp \
            src/coins.cpp \
@@ -386,8 +386,8 @@ SOURCES += src/activemasternode.cpp \
            src/qt/bitcoinamountfield.cpp \
            src/qt/bitcoingui.cpp \
            src/qt/bitcoinunits.cpp \
-           src/qt/chaincoin.cpp \
-           src/qt/chaincoinstrings.cpp \
+           src/qt/masterbitcoin.cpp \
+           src/qt/masterbitcoinstrings.cpp \
            src/qt/clientmodel.cpp \
            src/qt/coincontroldialog.cpp \
            src/qt/coincontroltreewidget.cpp \
@@ -408,7 +408,7 @@ SOURCES += src/activemasternode.cpp \
            src/qt/paymentrequestplus.cpp \
            src/qt/paymentserver.cpp \
            src/qt/peertablemodel.cpp \
-           src/qt/qrc_chaincoin.cpp \
+           src/qt/qrc_masterbitcoin.cpp \
            src/qt/qvalidatedlineedit.cpp \
            src/qt/qvaluecombobox.cpp \
            src/qt/receivecoinsdialog.cpp \
@@ -466,7 +466,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/serialize_tests.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
-           src/test/test_chaincoin.cpp \
+           src/test/test_masterbitcoin.cpp \
            src/test/test_darkcoin.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -544,7 +544,7 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/doc/bench/db_bench_tree_db.cc \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc
-RESOURCES += src/qt/chaincoin.qrc
+RESOURCES += src/qt/masterbitcoin.qrc
 TRANSLATIONS += src/qt/locale/dash_bar.ts \
                 src/qt/locale/dash_bg.ts \
                 src/qt/locale/dash_ca.ts \

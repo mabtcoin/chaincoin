@@ -5,12 +5,12 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = chaincoin-qt
-noinst_LIBRARIES = libchaincoinqt.a
+bin_PROGRAMS = masterbitcoin-qt
+noinst_LIBRARIES = libmasterbitcoinqt.a
 SUBDIRS = . $(BUILD_TEST_QT)
 DIST_SUBDIRS = . test
 
-# chaincoin qt core #
+# masterbitcoin qt core #
 QT_TS = \
   locale/dash_bar.ts \
   locale/dash_bg.ts \
@@ -116,13 +116,13 @@ BITCOIN_MM = \
   macnotificationhandler.mm
 
 QT_MOC = \
-  chaincoin.moc \
+  masterbitcoin.moc \
   intro.moc \
   overviewpage.moc \
   rpcconsole.moc
 
-QT_QRC_CPP = qrc_chaincoin.cpp
-QT_QRC = chaincoin.qrc
+QT_QRC_CPP = qrc_masterbitcoin.cpp
+QT_QRC = masterbitcoin.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
@@ -240,7 +240,7 @@ RES_ICONS = \
 
 
 BITCOIN_QT_CPP = \
-  chaincoin.cpp \
+  masterbitcoin.cpp \
   bitcoinaddressvalidator.cpp \
   bitcoinamountfield.cpp \
   bitcoingui.cpp \
@@ -297,7 +297,7 @@ BITCOIN_QT_CPP += \
 endif
 
 RES_IMAGES = \
-  res/images/chaincoinimg.png \
+  res/images/masterbitcoinimg.png \
   res/images/splash.png \
   res/images/splash_testnet.png \
   res/images/dash_logo_horizontal.png \
@@ -315,40 +315,40 @@ RES_CSS = \
   
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-CHAINCOIN_RC = res/chaincoin-qt-res.rc
+MASTERBITCOIN_RC = res/masterbitcoin-qt-res.rc
 
-libchaincoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+libmasterbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
-libchaincoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+libmasterbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS)
 
-nodist_libchaincoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_libmasterbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP)
 
-BUILT_SOURCES = $(nodist_libchaincoinqt_a_SOURCES)
+BUILT_SOURCES = $(nodist_libmasterbitcoinqt_a_SOURCES)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# chaincoin-qt binary #
-chaincoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# masterbitcoin-qt binary #
+masterbitcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-chaincoin_qt_SOURCES = chaincoin.cpp
+masterbitcoin_qt_SOURCES = masterbitcoin.cpp
 if TARGET_DARWIN
-  chaincoin_qt_SOURCES += $(BITCOIN_MM)
+  masterbitcoin_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  chaincoin_qt_SOURCES += $(CHAINCOIN_RC)
+  masterbitcoin_qt_SOURCES += $(MASTERBITCOIN_RC)
 endif
-chaincoin_qt_LDADD = libchaincoinqt.a $(LIBBITCOIN_SERVER)
+masterbitcoin_qt_LDADD = libmasterbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-chaincoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+masterbitcoin_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-chaincoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+masterbitcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-chaincoin_qt_LDFLAGS = $(QT_LDFLAGS)
+masterbitcoin_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -359,10 +359,10 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-chaincoinstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/chaincoinstrings.cpp
+masterbitcoinstrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/masterbitcoinstrings.cpp
 
-translate: chaincoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: masterbitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
 	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/dash_en.ts
 

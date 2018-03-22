@@ -22,8 +22,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Chaincoin (http://www.chaincoinpay.io/),
- * which enables instant payments to anyone, anywhere in the world. Chaincoin uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Masterbitcoin (http://www.masterbitcoinpay.io/),
+ * which enables instant payments to anyone, anywhere in the world. Masterbitcoin uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -65,7 +65,7 @@ bool AppInit(int argc, char* argv[])
         //
         // Parameters
         //
-        // If Qt is used, parameters/chaincoin.conf are parsed in qt/chaincoin.cpp's main()
+        // If Qt is used, parameters/masterbitcoin.conf are parsed in qt/masterbitcoin.cpp's main()
         ParseParameters(argc, argv);
         bool datadirFromCmdLine = mapArgs.count("-datadir") != 0;
 	if (datadirFromCmdLine && !boost::filesystem::is_directory(GetDataDir(false)))
@@ -101,14 +101,14 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to chaincoind / RPC client
-            std::string strUsage = _("Chaincoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n\n" +
+            // First part of help message is specific to masterbitcoind / RPC client
+            std::string strUsage = _("Masterbitcoin Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  chaincoind [options]                     " + _("Start Chaincoin Core Daemon") + "\n" +
-                _("Usage (deprecated, use chaincoin-cli):") + "\n" +
-                  "  chaincoind [options] <command> [params]  " + _("Send command to Chaincoin Core") + "\n" +
-                  "  chaincoind [options] help                " + _("List commands") + "\n" +
-                  "  chaincoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  masterbitcoind [options]                     " + _("Start Masterbitcoin Core Daemon") + "\n" +
+                _("Usage (deprecated, use masterbitcoin-cli):") + "\n" +
+                  "  masterbitcoind [options] <command> [params]  " + _("Send command to Masterbitcoin Core") + "\n" +
+                  "  masterbitcoind [options] help                " + _("List commands") + "\n" +
+                  "  masterbitcoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
             strUsage += "\n" + HelpMessageCli(false);
@@ -120,7 +120,7 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "chaincoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "masterbitcoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -132,7 +132,7 @@ bool AppInit(int argc, char* argv[])
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "Chaincoin server starting\n");
+            fprintf(stdout, "Masterbitcoin server starting\n");
 
             // Daemonize
             pid_t pid = fork();
@@ -192,7 +192,7 @@ int main(int argc, char* argv[])
 
     bool fRet = false;
 
-    // Connect chaincoind signal handlers
+    // Connect masterbitcoind signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);

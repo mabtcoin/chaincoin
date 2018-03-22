@@ -72,11 +72,11 @@ MSYS shell:
 	mkdir miniupnpc
 	cp *.h miniupnpc/
 
-Chaincoin
+Masterbitcoin
 -------
 MSYS shell:
 
-	cd \chaincoin
+	cd \masterbitcoin
 	sh autogen.sh
 	sh configure
 	mingw32-make

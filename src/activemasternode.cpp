@@ -108,7 +108,7 @@ void CActiveMasternode::ManageStatus()
                 return;
             }
 
-            /* donations are not supported in chaincoin.conf */
+            /* donations are not supported in masterbitcoin.conf */
             CScript donationAddress = CScript();
             int donationPercentage = 0;
 

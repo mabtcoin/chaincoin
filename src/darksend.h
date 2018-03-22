@@ -479,7 +479,7 @@ public:
 
     void GetDenominationsToString(int nDenom, std::string& strDenom);
 
-    /// Get the denominations for a specific amount of chaincoin.
+    /// Get the denominations for a specific amount of masterbitcoin.
     int GetDenominationsByAmount(int64_t nAmount, int nDenomTarget=0);
     int GetDenominationsByAmounts(std::vector<int64_t>& vecAmount);
 

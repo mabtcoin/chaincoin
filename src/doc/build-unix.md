@@ -91,7 +91,7 @@ Optional:
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build Chaincoin-Qt, make sure that the required packages for Qt development
+If you want to build Masterbitcoin-Qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 Pass `--with-gui=qt5` to configure to choose Qt5.
 To build without GUI pass `--without-gui`.

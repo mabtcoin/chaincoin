@@ -76,7 +76,7 @@ BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
 
     GUIUtil::restoreWindowGeometry("nWindow", QSize(850, 550), this);
 
-    QString windowTitle = tr("Chaincoin Core") + " - ";
+    QString windowTitle = tr("Masterbitcoin Core") + " - ";
 #ifdef ENABLE_WALLET
     /* if compiled with wallet support, -disablewallet can still disable the wallet */
     bool enableWallet = !GetBoolArg("-disablewallet", false);
@@ -239,7 +239,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Chaincoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Masterbitcoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -250,7 +250,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     tabGroup->addAction(sendCoinsAction);
 
     receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and chaincoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and masterbitcoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -318,10 +318,10 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
     if (!fIsTestnet)
-        aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Chaincoin Core"), this);
+        aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Masterbitcoin Core"), this);
     else
-        aboutAction = new QAction(QIcon(":/icons/bitcoin_testnet"), tr("&About Chaincoin Core"), this);
-    aboutAction->setStatusTip(tr("Show information about Chaincoin"));
+        aboutAction = new QAction(QIcon(":/icons/bitcoin_testnet"), tr("&About Masterbitcoin Core"), this);
+    aboutAction->setStatusTip(tr("Show information about Masterbitcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -331,7 +331,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Chaincoin"));
+    optionsAction->setStatusTip(tr("Modify configuration options for Masterbitcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     if (!fIsTestnet)
         toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
@@ -350,9 +350,9 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     unlockWalletAction->setToolTip(tr("Unlock wallet"));
     lockWalletAction = new QAction(tr("&Lock Wallet"), this);
     signMessageAction = new QAction(QIcon(":/icons/sign"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Chaincoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Masterbitcoin addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/verify"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Chaincoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Masterbitcoin addresses"));
 
     openInfoAction = new QAction(QIcon(":/icons/info"), tr("&Information"), this);
     openInfoAction->setStatusTip(tr("Show diagnostic information"));
@@ -371,10 +371,10 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(QIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a chaincoin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a masterbitcoin: URI or payment request"));
 
     showHelpMessageAction = new QAction(QIcon(":/icons/info"), tr("&Command-line options"), this);
-    showHelpMessageAction->setStatusTip(tr("Show the Chaincoin Core help message to get a list with possible Chaincoin command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the Masterbitcoin Core help message to get a list with possible Masterbitcoin command-line options"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -569,12 +569,12 @@ void BitcoinGUI::createTrayIcon(bool fIsTestnet)
 
     if (!fIsTestnet)
     {
-        trayIcon->setToolTip(tr("Chaincoin client"));
+        trayIcon->setToolTip(tr("Masterbitcoin client"));
         trayIcon->setIcon(QIcon(":/icons/toolbar"));
     }
     else
     {
-        trayIcon->setToolTip(tr("Chaincoin client") + " " + tr("[testnet]"));
+        trayIcon->setToolTip(tr("Masterbitcoin client") + " " + tr("[testnet]"));
         trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
     }
 
@@ -736,7 +736,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Chaincoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Masterbitcoin network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count)
@@ -851,7 +851,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Chaincoin"); // default title
+    QString strTitle = tr("Masterbitcoin"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -877,7 +877,7 @@ void BitcoinGUI::message(const QString &title, const QString &message, unsigned 
             break;
         }
     }
-    // Append title to "Chaincoin - "
+    // Append title to "Masterbitcoin - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 

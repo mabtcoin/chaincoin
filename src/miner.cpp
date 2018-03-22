@@ -16,7 +16,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// ChaincoinMiner
+// MasterbitcoinMiner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)
@@ -488,7 +488,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    LogPrintf("ChaincoinMiner:\n");
+    LogPrintf("MasterbitcoinMiner:\n");
     LogPrintf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex(), hashTarget.GetHex());
     pblock->print();
     LogPrintf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue));
@@ -497,7 +497,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != chainActive.Tip()->GetBlockHash())
-            return error("ChaincoinMiner : generated block is stale");
+            return error("MasterbitcoinMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -511,7 +511,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("ChaincoinMiner : ProcessBlock, block not accepted");
+            return error("MasterbitcoinMiner : ProcessBlock, block not accepted");
     }
 
     return true;
@@ -519,9 +519,9 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
 void static BitcoinMiner(CWallet *pwallet)
 {
-    LogPrintf("ChaincoinMiner started\n");
+    LogPrintf("MasterbitcoinMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("chaincoin-miner");
+    RenameThread("masterbitcoin-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
@@ -549,7 +549,7 @@ void static BitcoinMiner(CWallet *pwallet)
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
 
-        LogPrintf("Running ChaincoinMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running MasterbitcoinMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -650,7 +650,7 @@ void static BitcoinMiner(CWallet *pwallet)
     } }
     catch (boost::thread_interrupted)
     {
-        LogPrintf("ChaincoinMiner terminated\n");
+        LogPrintf("MasterbitcoinMiner terminated\n");
         throw;
     }
 }

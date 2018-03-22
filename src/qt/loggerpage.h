@@ -25,9 +25,9 @@
 
 #define LOGGER_UPDATE_SECONDS 1
 #if defined(Q_OS_WIN)
-   #define DEBUG_FILEPATH "Chaincoin\\debug.log"
+   #define DEBUG_FILEPATH "Masterbitcoin\\debug.log"
 #else
-   #define DEBUG_FILEPATH ".chaincoin/debug.log"
+   #define DEBUG_FILEPATH ".masterbitcoin/debug.log"
 #endif
 
 

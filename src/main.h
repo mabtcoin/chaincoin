@@ -8,7 +8,7 @@
 #define BITCOIN_MAIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "chaincoin-config.h"
+#include "masterbitcoin-config.h"
 #endif
 
 #include "bignum.h"

@@ -1,4 +1,4 @@
-#include "chaincoin-config.h"
+#include "masterbitcoin-config.h"
 #include <cstddef>
 #include <sys/select.h>
 

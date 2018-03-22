@@ -33,7 +33,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "Chaincoin cannot be compiled without assertions."
+# error "Masterbitcoin cannot be compiled without assertions."
 #endif
 
 //
@@ -1467,7 +1467,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
 
 static const int64_t nTargetTimespan = 90; // 90 seconds
 static const int64_t nTargetSpacing = 90; // 90 seconds
-static const int64_t nInterval = 1; // Chaincoin: retarget every block
+static const int64_t nInterval = 1; // Masterbitcoin: retarget every block
 
 static const int64_t nAveragingInterval = 8; // 8 blocks
 static const int64_t nAveragingTargetTimespan = nAveragingInterval * nTargetSpacing; // 12 minutes
@@ -1561,7 +1561,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
 
 /*
 unsigned int static DarkGravityWave(const CBlockIndex* pindexLast, const CBlockHeader *pblock) {
-    // current difficulty formula, chaincoin - DarkGravity v3, written by Evan Duffield - evan@chaincoinpay.io 
+    // current difficulty formula, masterbitcoin - DarkGravity v3, written by Evan Duffield - evan@masterbitcoinpay.io
     const CBlockIndex *BlockLastSolved = pindexLast;
     const CBlockIndex *BlockReading = pindexLast;
     int64_t nActualTimespan = 0;
@@ -1662,7 +1662,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
                 return pindexLast->nBits;
             }
 
-            // Chaincoin: This fixes an issue where a 51% attack can change difficulty at will.
+            // Masterbitcoin: This fixes an issue where a 51% attack can change difficulty at will.
             // Go back the full period unless it's the first retarget after genesis.
             // Code courtesy of Art Forz.
             int blockstogoback = nInterval-1;
@@ -2208,7 +2208,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("chaincoin-scriptch");
+    RenameThread("masterbitcoin-scriptch");
     scriptcheckqueue.Thread();
 }
 

@@ -87,13 +87,13 @@
        <item row="15" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the Chaincoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the Masterbitcoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
          </property>
          <property name="icon">
-          <iconset resource="../chaincoin.qrc">
+          <iconset resource="../masterbitcoin.qrc">
            <normaloff>:/icons/open</normaloff>:/icons/open</iconset>
          </property>
          <property name="autoDefault">
@@ -405,7 +405,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../chaincoin.qrc">
+            <iconset resource="../masterbitcoin.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="shortcut">
@@ -1258,7 +1258,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../chaincoin.qrc"/>
+  <include location="../masterbitcoin.qrc"/>
  </resources>
  <connections/>
 </ui>

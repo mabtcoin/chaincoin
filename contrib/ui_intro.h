@@ -182,9 +182,9 @@ public:
     void retranslateUi(QDialog *Intro)
     {
         Intro->setWindowTitle(QApplication::translate("Intro", "Welcome", 0));
-        label_2->setText(QApplication::translate("Intro", "Welcome to Chaincoin Core.", 0));
-        label_4->setText(QApplication::translate("Intro", "As this is the first time the program is launched, you can choose where Chaincoin Core will store its data.", 0));
-        sizeWarningLabel->setText(QApplication::translate("Intro", "Chaincoin Core will download and store a copy of the Chaincoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.", 0));
+        label_2->setText(QApplication::translate("Intro", "Welcome to Masterbitcoin Core.", 0));
+        label_4->setText(QApplication::translate("Intro", "As this is the first time the program is launched, you can choose where Masterbitcoin Core will store its data.", 0));
+        sizeWarningLabel->setText(QApplication::translate("Intro", "Masterbitcoin Core will download and store a copy of the Masterbitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.", 0));
         dataDirDefault->setText(QApplication::translate("Intro", "Use the default data directory", 0));
         dataDirCustom->setText(QApplication::translate("Intro", "Use a custom data directory:", 0));
         freeSpace->setText(QString());

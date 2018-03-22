@@ -99,7 +99,7 @@ using namespace std;
 #define MAX_ALLOWED_DEGUB_SIZE_IN_BYTES 10000000 // 10MB
 long long debugFileSize = 0;
 
-//Chaincoin only features
+//Masterbitcoin only features
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
@@ -109,7 +109,7 @@ int nDarksendRounds = 2;
 int nAnonymizeDarkcoinAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
-//int64_t enforceMasternodePaymentsTime = 4085657524; // Chaincoin
+//int64_t enforceMasternodePaymentsTime = 4085657524; // Masterbitcoin
 int64_t enforceMasternodePaymentsTime = 9085657524;
 int nMasternodeMinProtocol = 0;
 bool fSucessfullyLoaded = false;
@@ -572,10 +572,10 @@ void ParseParameters(int argc, const char* const argv[])
         //  interpret --foo as -foo (as long as both are not set)
         if (name.find("--") == 0)
         {
-            std::string singleChaincoin(name.begin()+1, name.end());
-            if (mapArgs.count(singleChaincoin) == 0)
-                mapArgs[singleChaincoin] = entry.second;
-            name = singleChaincoin;
+            std::string singleMasterbitcoin(name.begin()+1, name.end());
+            if (mapArgs.count(singleMasterbitcoin) == 0)
+                mapArgs[singleMasterbitcoin] = entry.second;
+            name = singleMasterbitcoin;
         }
 
         // interpret -nofoo as -foo=0 (and -nofoo=0 as -foo=1) as long as -foo not set
@@ -1050,7 +1050,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "chaincoin";
+    const char* pszModule = "masterbitcoin";
 #endif
     if (pex)
         return strprintf(
@@ -1077,13 +1077,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Chaincoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Chaincoin
-    // Mac: ~/Library/Application Support/Chaincoin
-    // Unix: ~/.chaincoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Masterbitcoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Masterbitcoin
+    // Mac: ~/Library/Application Support/Masterbitcoin
+    // Unix: ~/.masterbitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Chaincoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Masterbitcoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1095,10 +1095,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "Chaincoin";
+    return pathRet / "Masterbitcoin";
 #else
     // Unix
-    return pathRet / ".chaincoin";
+    return pathRet / ".masterbitcoin";
 #endif
 #endif
 }
@@ -1147,7 +1147,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "chaincoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "masterbitcoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1164,7 +1164,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()){
-        // Create empty chaincoin.conf if it does not excist
+        // Create empty masterbitcoin.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -1176,7 +1176,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override chaincoin.conf
+        // Don't overwrite existing settings so command line settings override masterbitcoin.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -1192,7 +1192,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "chaincoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "masterbitcoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1425,7 +1425,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Chaincoin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Masterbitcoin will not work properly.");
                     strMiscWarning = strMessage;
                     LogPrintf("*** %s\n", strMessage);
                     uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);

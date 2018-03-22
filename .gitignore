@@ -1,11 +1,11 @@
 *.tar.gz
 
 *.exe
-src/chaincoin
-src/chaincoind
-src/chaincoin-cli
-src/test/test_chaincoin
-src/qt/test/test_chaincoin-qt
+src/masterbitcoin
+src/masterbitcoind
+src/masterbitcoin-cli
+src/test/test_masterbitcoin
+src/qt/test/test_masterbitcoin-qt
 
 Makefile.in
 aclocal.m4
@@ -13,8 +13,8 @@ autom4te.cache/
 config.log
 config.status
 configure
-src/chaincoin-config.h
-src/chaincoin-config.h.in
+src/masterbitcoin-config.h
+src/masterbitcoin-config.h.in
 src/build-aux/
 src/stamp-h1
 
@@ -40,18 +40,18 @@ dirstamp
 *.o
 *.o-*
 *.patch
-.chaincoin
+.masterbitcoin
 
 
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-chaincoin-qt
-Chaincoin-Qt.app
+masterbitcoin-qt
+Masterbitcoin-Qt.app
 
 # Unit-tests
 Makefile.test
-chaincoin-qt_test
+masterbitcoin-qt_test
 
 # Resources cpp
 qrc_*.cpp

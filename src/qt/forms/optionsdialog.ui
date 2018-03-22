@@ -30,10 +30,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start Chaincoin after logging in to the system.</string>
+          <string>Automatically start Masterbitcoin after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start Chaincoin on system login</string>
+          <string>&amp;Start Masterbitcoin on system login</string>
          </property>
         </widget>
        </item>
@@ -177,7 +177,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Amount of Chaincoin to keep anonymized</string>
+            <string>Amount of Masterbitcoin to keep anonymized</string>
            </property>
           </widget>
          </item>
@@ -304,7 +304,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Chaincoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Masterbitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -314,7 +314,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the Chaincoin network through a SOCKS proxy.</string>
+          <string>Connect to the Masterbitcoin network through a SOCKS proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS proxy (default proxy):</string>
@@ -500,7 +500,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting Chaincoin.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting Masterbitcoin.</string>
            </property>
           </widget>
          </item>
@@ -522,7 +522,7 @@
          </property>
          <property name="text">
           <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/chaincoin/</string>
+https://www.transifex.com/projects/p/masterbitcoin/</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -583,7 +583,7 @@ https://www.transifex.com/projects/p/chaincoin/</string>
        <item>
         <widget class="QCheckBox" name="displayAddresses">
          <property name="toolTip">
-          <string>Whether to show Chaincoin addresses in the transaction list or not.</string>
+          <string>Whether to show Masterbitcoin addresses in the transaction list or not.</string>
          </property>
          <property name="text">
           <string>&amp;Display addresses in transaction list</string>

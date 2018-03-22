@@ -11,7 +11,7 @@ class MNRandIPs:
 
     def refresh_mn_ips(self):
         ips = []
-        result = subprocess.check_output(['sudo', 'chaincoind', 'masternode', 'list'])
+        result = subprocess.check_output(['sudo', 'masterbitcoind', 'masternode', 'list'])
         result = result.replace('\n    ', '')
         result = result.replace('\n', '')
         result = result.replace(' : "ENABLED"', '')

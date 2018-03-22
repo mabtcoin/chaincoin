@@ -127,11 +127,11 @@ public:
 
     void retranslateUi(QDialog *AboutDialog)
     {
-        AboutDialog->setWindowTitle(QApplication::translate("AboutDialog", "About Chaincoin Core", 0));
-        label->setText(QApplication::translate("AboutDialog", "<b>Chaincoin Core</b> version", 0));
+        AboutDialog->setWindowTitle(QApplication::translate("AboutDialog", "About Masterbitcoin Core", 0));
+        label->setText(QApplication::translate("AboutDialog", "<b>Masterbitcoin Core</b> version", 0));
         copyrightLabel->setText(QApplication::translate("AboutDialog", "Copyright &copy; 2009-2014 The Bitcoin Core developers.\n"
 "Copyright &copy; 2014-YYYY The Dash Core developers.\n"
-"Copyright &copy; 2014-YYYY The Chaincoin Core developers.", 0));
+"Copyright &copy; 2014-YYYY The Masterbitcoin Core developers.", 0));
         label_2->setText(QApplication::translate("AboutDialog", "\n"
 "This is experimental software.\n"
 "\n"

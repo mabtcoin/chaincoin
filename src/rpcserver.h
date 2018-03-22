@@ -63,7 +63,7 @@ public:
 };
 
 /**
- * Chaincoin RPC command dispatcher.
+ * Masterbitcoin RPC command dispatcher.
  */
 class CRPCTable
 {

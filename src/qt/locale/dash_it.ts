@@ -3,20 +3,20 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="14"/>
-        <source>About Chaincoin Core</source>
-        <translation>Su Chaincoin core</translation>
+        <source>About Masterbitcoin Core</source>
+        <translation>Su Masterbitcoin core</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="53"/>
-        <source>&lt;b&gt;Chaincoin Core&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Chaincoin Core&lt;/b&gt; versione</translation>
+        <source>&lt;b&gt;Masterbitcoin Core&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Masterbitcoin Core&lt;/b&gt; versione</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="94"/>
         <source>Copyright &amp;copy; 2009-2014 The Bitcoin Core developers.
-Copyright &amp;copy; 2014-YYYY The Chaincoin Core developers.</source>
+Copyright &amp;copy; 2014-YYYY The Masterbitcoin Core developers.</source>
         <translation>Copyright &amp;copy; 2009-2014 The Bitcoin Core developers.
-Copyright &amp;copy; 2014-YYYY The Chaincoin Core developers.</translation>
+Copyright &amp;copy; 2014-YYYY The Masterbitcoin Core developers.</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="111"/>
@@ -46,8 +46,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="31"/>
-        <source>The Chaincoin Core developers</source>
-        <translation>Gli sviluppatori di Chaincoin Core</translation>
+        <source>The Masterbitcoin Core developers</source>
+        <translation>Gli sviluppatori di Masterbitcoin Core</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="43"/>
@@ -111,12 +111,12 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location filename="../addressbookpage.cpp" line="45"/>
         <source>Choose the address to send coins to</source>
-        <translation>Scegli l&apos;indirizzo a cui inviare i chaincoin</translation>
+        <translation>Scegli l&apos;indirizzo a cui inviare i masterbitcoin</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="46"/>
         <source>Choose the address to receive coins with</source>
-        <translation>Scegli l&apos;indirizzo con cui ricevere chaincoin</translation>
+        <translation>Scegli l&apos;indirizzo con cui ricevere masterbitcoin</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="51"/>
@@ -135,13 +135,13 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="65"/>
-        <source>These are your Chaincoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono i tuoi indirizzi Chaincoin per inviare i pagamenti. Controlla sempre l&apos;ammontare e l&apos;indirizzo destinatario prima di inviare i chaincoin.</translation>
+        <source>These are your Masterbitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono i tuoi indirizzi Masterbitcoin per inviare i pagamenti. Controlla sempre l&apos;ammontare e l&apos;indirizzo destinatario prima di inviare i masterbitcoin.</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="69"/>
-        <source>These are your Chaincoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono i tuoi indirizzi di Chaincoin per ricevere i pagamenti. Si raccomanda di usare un nuovo indirizzo di ricezione per ogni operazione.</translation>
+        <source>These are your Masterbitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono i tuoi indirizzi di Masterbitcoin per ricevere i pagamenti. Si raccomanda di usare un nuovo indirizzo di ricezione per ogni operazione.</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="75"/>
@@ -292,8 +292,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="124"/>
-        <source>Chaincoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your chaincoins from being stolen by malware infecting your computer.</source>
-        <translation>Chaincoin adesso si chiuderá per finire il processo di crittografia. Ricorda che crittogafiare il tuo portafoglio non ti da una protezione totale se il tuo computer é infettato da malware</translation>
+        <source>Masterbitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your masterbitcoins from being stolen by malware infecting your computer.</source>
+        <translation>Masterbitcoin adesso si chiuderá per finire il processo di crittografia. Ricorda che crittogafiare il tuo portafoglio non ti da una protezione totale se il tuo computer é infettato da malware</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="128"/>
@@ -352,8 +352,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <name>BitcoinGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="76"/>
-        <source>Chaincoin Core</source>
-        <translation>Chaincoin Core</translation>
+        <source>Masterbitcoin Core</source>
+        <translation>Masterbitcoin Core</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="85"/>
@@ -388,8 +388,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="235"/>
-        <source>Send coins to a Chaincoin address</source>
-        <translation>Spedire chaincoin ad un indirizzo Chaincoin</translation>
+        <source>Send coins to a Masterbitcoin address</source>
+        <translation>Spedire masterbitcoin ad un indirizzo Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="241"/>
@@ -398,8 +398,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="242"/>
-        <source>Request payments (generates QR codes and chaincoin: URIs)</source>
-        <translation>Richieste di pagamenti (genera codici QR e chaincoin: URLs)</translation>
+        <source>Request payments (generates QR codes and masterbitcoin: URIs)</source>
+        <translation>Richieste di pagamenti (genera codici QR e masterbitcoin: URLs)</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="248"/>
@@ -424,13 +424,13 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location filename="../bitcoingui.cpp" line="271"/>
         <location filename="../bitcoingui.cpp" line="273"/>
-        <source>&amp;About Chaincoin Core</source>
-        <translation>&amp;Su Chaincoin Core</translation>
+        <source>&amp;About Masterbitcoin Core</source>
+        <translation>&amp;Su Masterbitcoin Core</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="274"/>
-        <source>Show information about Chaincoin</source>
-        <translation>Mostra informazioni su Chaincoin</translation>
+        <source>Show information about Masterbitcoin</source>
+        <translation>Mostra informazioni su Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="277"/>
@@ -450,8 +450,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="284"/>
-        <source>Modify configuration options for Chaincoin</source>
-        <translation>Modifica le opzioni di configurazione di Chaincoin</translation>
+        <source>Modify configuration options for Masterbitcoin</source>
+        <translation>Modifica le opzioni di configurazione di Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="287"/>
@@ -516,8 +516,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="303"/>
-        <source>Sign messages with your Chaincoin addresses to prove you own them</source>
-        <translation>Firma i messaggi con il tuo indirizzo Chaincoin per dimostrarne che li possiedi</translation>
+        <source>Sign messages with your Masterbitcoin addresses to prove you own them</source>
+        <translation>Firma i messaggi con il tuo indirizzo Masterbitcoin per dimostrarne che li possiedi</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="304"/>
@@ -526,8 +526,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="305"/>
-        <source>Verify messages to ensure they were signed with specified Chaincoin addresses</source>
-        <translation>Verificare i messaggi per assicurarsi che sono firmati con gli indirizzi specificati di Chaincoin</translation>
+        <source>Verify messages to ensure they were signed with specified Masterbitcoin addresses</source>
+        <translation>Verificare i messaggi per assicurarsi che sono firmati con gli indirizzi specificati di Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="307"/>
@@ -596,8 +596,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Open a chaincoin: URI or payment request</source>
-        <translation>Apri un chaincoin: URI o una richiesta di pagamento</translation>
+        <source>Open a masterbitcoin: URI or payment request</source>
+        <translation>Apri un masterbitcoin: URI o una richiesta di pagamento</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="324"/>
@@ -606,8 +606,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="325"/>
-        <source>Show the Chaincoin Core help message to get a list with possible Chaincoin command-line options</source>
-        <translation>Mostra il messaggio di aiuto di Chaincoin Core per ottenere una lista con le possibili opzioni di linea di comando di Chaincoin</translation>
+        <source>Show the Masterbitcoin Core help message to get a list with possible Masterbitcoin command-line options</source>
+        <translation>Mostra il messaggio di aiuto di Masterbitcoin Core per ottenere una lista con le possibili opzioni di linea di comando di Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="361"/>
@@ -637,13 +637,13 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location filename="../bitcoingui.cpp" line="493"/>
         <location filename="../bitcoingui.cpp" line="498"/>
-        <source>Chaincoin client</source>
-        <translation>Chaincoin Client</translation>
+        <source>Masterbitcoin client</source>
+        <translation>Masterbitcoin Client</translation>
     </message>
     <message numerus="yes">
         <location filename="../bitcoingui.cpp" line="643"/>
-        <source>%n active connection(s) to Chaincoin network</source>
-        <translation><numerusform>%n connessione(i) attive alla rete Chaincoin</numerusform><numerusform>%n connessione(i) attive alla rete Chaincoin</numerusform></translation>
+        <source>%n active connection(s) to Masterbitcoin network</source>
+        <translation><numerusform>%n connessione(i) attive alla rete Masterbitcoin</numerusform><numerusform>%n connessione(i) attive alla rete Masterbitcoin</numerusform></translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="655"/>
@@ -723,8 +723,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="755"/>
-        <source>Chaincoin</source>
-        <translation>Chaincoin</translation>
+        <source>Masterbitcoin</source>
+        <translation>Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="769"/>
@@ -781,9 +781,9 @@ Indirizzo: %4
         <translation>Il portafoglio è &lt;b&gt;cifrato&lt;/b&gt; ed attualmente &lt;b&gt;bloccato&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../chaincoin.cpp" line="449"/>
-        <source>A fatal error occurred. Chaincoin can no longer continue safely and will quit.</source>
-        <translation>Si è verificato un errore fatale. Chaincoin non può continuare a funzionare correttamente e verrà chiuso.</translation>
+        <location filename="../masterbitcoin.cpp" line="449"/>
+        <source>A fatal error occurred. Masterbitcoin can no longer continue safely and will quit.</source>
+        <translation>Si è verificato un errore fatale. Masterbitcoin non può continuare a funzionare correttamente e verrà chiuso.</translation>
     </message>
 </context>
 <context>
@@ -1179,18 +1179,18 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../darksendconfig.cpp" line="44"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Masterbitcoin&apos;s configuration screen.</source>
         <translation>Dark send è statto correttamente impostato su base (%1 e 2 round). Puoi cambiare questa impostazione in qualsiasi momento tu lo voglia dalla finestra di configurazione.</translation>
     </message>
     <message>
         <location filename="../darksendconfig.cpp" line="59"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Masterbitcoin&apos;s configuration screen.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../darksendconfig.cpp" line="74"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Chaincoin&apos;s configuration screen.</source>
-        <translation>Darksend è stato correttamente settato al massimo (%1 e 16 rounds). Puoi cambiarlo quando vuoi aprendo la finestra di configurazione di Chaincoin</translation>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Masterbitcoin&apos;s configuration screen.</source>
+        <translation>Darksend è stato correttamente settato al massimo (%1 e 16 rounds). Puoi cambiarlo quando vuoi aprendo la finestra di configurazione di Masterbitcoin</translation>
     </message>
 </context>
 <context>
@@ -1242,8 +1242,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="111"/>
-        <source>The entered address &quot;%1&quot; is not a valid Chaincoin address.</source>
-        <translation>L&apos;indirizzo inserito &quot;%1&quot; non é un indirizzo Chaincoin valido</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Masterbitcoin address.</source>
+        <translation>L&apos;indirizzo inserito &quot;%1&quot; non é un indirizzo Masterbitcoin valido</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="116"/>
@@ -1293,13 +1293,13 @@ Indirizzo: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="19"/>
-        <source>Chaincoin Core - Command-line options</source>
-        <translation>Chaincoin Core - Opzioni riga di comando</translation>
+        <source>Masterbitcoin Core - Command-line options</source>
+        <translation>Masterbitcoin Core - Opzioni riga di comando</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="69"/>
-        <source>Chaincoin Core</source>
-        <translation>Chaincoin Core</translation>
+        <source>Masterbitcoin Core</source>
+        <translation>Masterbitcoin Core</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="69"/>
@@ -1356,18 +1356,18 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/intro.ui" line="23"/>
-        <source>Welcome to Chaincoin Core.</source>
-        <translation>Benvenuto in Chaincoin Core</translation>
+        <source>Welcome to Masterbitcoin Core.</source>
+        <translation>Benvenuto in Masterbitcoin Core</translation>
     </message>
     <message>
         <location filename="../forms/intro.ui" line="49"/>
-        <source>As this is the first time the program is launched, you can choose where Chaincoin Core will store its data.</source>
-        <translation>Essendo la prima volta nella quale il programma viene lanciato, puoi scegliere dove Chaincoin Core memorizzerà i propri dati.</translation>
+        <source>As this is the first time the program is launched, you can choose where Masterbitcoin Core will store its data.</source>
+        <translation>Essendo la prima volta nella quale il programma viene lanciato, puoi scegliere dove Masterbitcoin Core memorizzerà i propri dati.</translation>
     </message>
     <message>
         <location filename="../forms/intro.ui" line="59"/>
-        <source>Chaincoin Core will download and store a copy of the Chaincoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Chaincoin Core scaricherà e salverà una copia della blockchain. Almeno %1GB di dati sarà immagazzinato in questa cartella e aumenterà coll tempo. Anche il portafoglio sará conservato in questa cartella.</translation>
+        <source>Masterbitcoin Core will download and store a copy of the Masterbitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Masterbitcoin Core scaricherà e salverà una copia della blockchain. Almeno %1GB di dati sarà immagazzinato in questa cartella e aumenterà coll tempo. Anche il portafoglio sará conservato in questa cartella.</translation>
     </message>
     <message>
         <location filename="../forms/intro.ui" line="69"/>
@@ -1381,8 +1381,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="185"/>
-        <source>Chaincoin</source>
-        <translation>Chaincoin</translation>
+        <source>Masterbitcoin</source>
+        <translation>Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../intro.cpp" line="186"/>
@@ -1447,13 +1447,13 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="33"/>
-        <source>Automatically start Chaincoin after logging in to the system.</source>
-        <translation>Esegui automaticamente Chaincoin Core all&apos;avvio del sistema.</translation>
+        <source>Automatically start Masterbitcoin after logging in to the system.</source>
+        <translation>Esegui automaticamente Masterbitcoin Core all&apos;avvio del sistema.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="36"/>
-        <source>&amp;Start Chaincoin on system login</source>
-        <translation>&amp;Esegui Chaincoin al login di sistema</translation>
+        <source>&amp;Start Masterbitcoin on system login</source>
+        <translation>&amp;Esegui Masterbitcoin al login di sistema</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="45"/>
@@ -1492,8 +1492,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="180"/>
-        <source>Amount of Chaincoin to keep anonymized</source>
-        <translation>Quantitá di Chaincoin da mantenere anonima.</translation>
+        <source>Amount of Masterbitcoin to keep anonymized</source>
+        <translation>Quantitá di Masterbitcoin da mantenere anonima.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="206"/>
@@ -1542,8 +1542,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="307"/>
-        <source>Automatically open the Chaincoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Apri automaticamente la porta utilizzata dal client Chaincoin nel router. Funziona solo se il router supporta UPnP ed è attivato.</translation>
+        <source>Automatically open the Masterbitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Apri automaticamente la porta utilizzata dal client Masterbitcoin nel router. Funziona solo se il router supporta UPnP ed è attivato.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="310"/>
@@ -1552,8 +1552,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="317"/>
-        <source>Connect to the Chaincoin network through a SOCKS proxy.</source>
-        <translation>Connettiti al network del Chaincoin attraverso un proxy SOCKS.</translation>
+        <source>Connect to the Masterbitcoin network through a SOCKS proxy.</source>
+        <translation>Connettiti al network del Masterbitcoin attraverso un proxy SOCKS.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="320"/>
@@ -1627,15 +1627,15 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="503"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Chaincoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Masterbitcoin.</source>
         <translation>La lingua dell&apos;interfaccia utente può essere impostata qui. Questo settaggio sarà attivo al riavvio del client.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="524"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/chaincoin/</source>
+https://www.transifex.com/projects/p/masterbitcoin/</source>
         <translation>La tua lingua manca o la traduzione è incompleta? Contribuisci alla traduzione qui: 
-https://www.transifex.com/projects/p/chaincoin/</translation>
+https://www.transifex.com/projects/p/masterbitcoin/</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="550"/>
@@ -1649,8 +1649,8 @@ https://www.transifex.com/projects/p/chaincoin/</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="572"/>
-        <source>Whether to show Chaincoin addresses in the transaction list or not.</source>
-        <translation>Visualizza gli indirizzi Chaincoin nella lista transazioni o no.</translation>
+        <source>Whether to show Masterbitcoin addresses in the transaction list or not.</source>
+        <translation>Visualizza gli indirizzi Masterbitcoin nella lista transazioni o no.</translation>
     </message>
     <message>
         <location filename="../forms/optionsdialog.ui" line="575"/>
@@ -1747,7 +1747,7 @@ Più URL vengono separati da una barra verticale |.</translation>
         <location filename="../forms/overviewpage.ui" line="70"/>
         <location filename="../forms/overviewpage.ui" line="953"/>
         <location filename="../forms/overviewpage.ui" line="1021"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Chaincoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Masterbitcoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Le informazioni visualizzate potrebbero essere datate. Il portafoglio si sincronizza automaticamente col netowork dopo che una connessione viene stabilizzata, ma questo processo non è stato ancora completato.</translation>
     </message>
     <message>
@@ -2064,8 +2064,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../paymentserver.cpp" line="294"/>
-        <source>Cannot start chaincoin: click-to-pay handler</source>
-        <translation>Impossibile avviare chaincoin: gestore click-to-pay</translation>
+        <source>Cannot start masterbitcoin: click-to-pay handler</source>
+        <translation>Impossibile avviare masterbitcoin: gestore click-to-pay</translation>
     </message>
     <message>
         <location filename="../paymentserver.cpp" line="352"/>
@@ -2090,8 +2090,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../paymentserver.cpp" line="418"/>
-        <source>URI can not be parsed! This can be caused by an invalid Chaincoin address or malformed URI parameters.</source>
-        <translation>Impossibile interpretare l&apos;URI! Ciò può essere provocato da un indirizzo Chaincoin non valido o da parametri URI non corretti.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Masterbitcoin address or malformed URI parameters.</source>
+        <translation>Impossibile interpretare l&apos;URI! Ciò può essere provocato da un indirizzo Masterbitcoin non valido o da parametri URI non corretti.</translation>
     </message>
     <message>
         <location filename="../paymentserver.cpp" line="432"/>
@@ -2147,42 +2147,42 @@ Più URL vengono separati da una barra verticale |.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../chaincoin.cpp" line="525"/>
-        <location filename="../chaincoin.cpp" line="532"/>
-        <location filename="../chaincoin.cpp" line="539"/>
-        <location filename="../chaincoin.cpp" line="552"/>
-        <source>Chaincoin</source>
-        <translation>Chaincoin</translation>
+        <location filename="../masterbitcoin.cpp" line="525"/>
+        <location filename="../masterbitcoin.cpp" line="532"/>
+        <location filename="../masterbitcoin.cpp" line="539"/>
+        <location filename="../masterbitcoin.cpp" line="552"/>
+        <source>Masterbitcoin</source>
+        <translation>Masterbitcoin</translation>
     </message>
     <message>
-        <location filename="../chaincoin.cpp" line="526"/>
+        <location filename="../masterbitcoin.cpp" line="526"/>
         <source>Error: Specified data directory &quot;%1&quot; does not exist.</source>
         <translation>Errore: La cartella dati &quot;%1&quot; specificata non esiste.</translation>
     </message>
     <message>
-        <location filename="../chaincoin.cpp" line="533"/>
+        <location filename="../masterbitcoin.cpp" line="533"/>
         <source>Error: Cannot parse configuration file: %1. Only use key=value syntax.</source>
         <translation>Errore: impossibile interpretare il file di configurazione: %1. Usare esclusivamente la sintassi chiave=valore.</translation>
     </message>
     <message>
-        <location filename="../chaincoin.cpp" line="540"/>
+        <location filename="../masterbitcoin.cpp" line="540"/>
         <source>Error reading masternode configuration file: %1</source>
         <translation>Errore nella lettura del file di configurazione del masternode: %1</translation>
     </message>
     <message>
-        <location filename="../chaincoin.cpp" line="552"/>
+        <location filename="../masterbitcoin.cpp" line="552"/>
         <source>Error: Invalid combination of -regtest and -testnet.</source>
         <translation>Errore: combinazione di -regtest e -testnet non valida.</translation>
     </message>
     <message>
-        <location filename="../chaincoin.cpp" line="612"/>
-        <source>Chaincoin Core didn&apos;t yet exit safely...</source>
-        <translation>Chaincoin Core non e&apos; chiuso sicuro ancora...</translation>
+        <location filename="../masterbitcoin.cpp" line="612"/>
+        <source>Masterbitcoin Core didn&apos;t yet exit safely...</source>
+        <translation>Masterbitcoin Core non e&apos; chiuso sicuro ancora...</translation>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="101"/>
-        <source>Enter a Chaincoin address (e.g. XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
-        <translation>Inserisci un indirizzo Chaincoin (es.XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
+        <source>Enter a Masterbitcoin address (e.g. XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
+        <translation>Inserisci un indirizzo Masterbitcoin (es.XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
 </context>
 <context>
@@ -2261,7 +2261,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../forms/rpcconsole.ui" line="90"/>
-        <source>Open the Chaincoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Masterbitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Apri il file log di debug dall&apos;attuale cartella dei dati. Può richiedere un paio di secondi per file di grossa dimensione.</translation>
     </message>
     <message>
@@ -2353,8 +2353,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="333"/>
-        <source>Welcome to the Chaincoin RPC console.</source>
-        <translation>Benvenuto nella console RPC Chaincoin</translation>
+        <source>Welcome to the Masterbitcoin RPC console.</source>
+        <translation>Benvenuto nella console RPC Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="334"/>
@@ -2417,8 +2417,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     <message>
         <location filename="../forms/receivecoinsdialog.ui" line="51"/>
         <location filename="../forms/receivecoinsdialog.ui" line="74"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Chaincoin network.</source>
-        <translation>Messaggio opzionale da allegare alla richiesta di pagamento, che verrà visualizzato quando la richiesta verrà aperta. Nota: il messaggio non sarà inviato insieme al pagamento nel network Chaincoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Masterbitcoin network.</source>
+        <translation>Messaggio opzionale da allegare alla richiesta di pagamento, che verrà visualizzato quando la richiesta verrà aperta. Nota: il messaggio non sarà inviato insieme al pagamento nel network Masterbitcoin.</translation>
     </message>
     <message>
         <location filename="../forms/receivecoinsdialog.ui" line="54"/>
@@ -2622,7 +2622,7 @@ Più URL vengono separati da una barra verticale |.</translation>
         <location filename="../sendcoinsdialog.cpp" line="521"/>
         <location filename="../sendcoinsdialog.cpp" line="531"/>
         <source>Send Coins</source>
-        <translation>Invia chaincoin</translation>
+        <translation>Invia masterbitcoin</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="90"/>
@@ -2848,7 +2848,7 @@ Più URL vengono separati da una barra verticale |.</translation>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="280"/>
         <source>Confirm send coins</source>
-        <translation>Conferma l&apos;invio di chaincoin</translation>
+        <translation>Conferma l&apos;invio di masterbitcoin</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="435"/>
@@ -2902,8 +2902,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="635"/>
-        <source>Warning: Invalid Chaincoin address</source>
-        <translation>ATTENZIONE: Indirizzo Chaincoin non valido</translation>
+        <source>Warning: Invalid Masterbitcoin address</source>
+        <translation>ATTENZIONE: Indirizzo Masterbitcoin non valido</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="644"/>
@@ -2984,8 +2984,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsentry.ui" line="157"/>
-        <source>A message that was attached to the chaincoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Chaincoin network.</source>
-        <translation>Un messaggio allegato con l&apos;URI chaincoin che verrà memorizzato nella transazione per il tuo referente. Nota: questo messaggio non verrà inviato attraverso il network Chaincoin.</translation>
+        <source>A message that was attached to the masterbitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Masterbitcoin network.</source>
+        <translation>Un messaggio allegato con l&apos;URI masterbitcoin che verrà memorizzato nella transazione per il tuo referente. Nota: questo messaggio non verrà inviato attraverso il network Masterbitcoin.</translation>
     </message>
     <message>
         <location filename="../forms/sendcoinsentry.ui" line="583"/>
@@ -3019,8 +3019,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="129"/>
-        <source>Chaincoin Core is shutting down...</source>
-        <translation>Chaincoin Core si sta chiudendo...</translation>
+        <source>Masterbitcoin Core is shutting down...</source>
+        <translation>Masterbitcoin Core si sta chiudendo...</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="130"/>
@@ -3089,8 +3089,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="152"/>
-        <source>Sign the message to prove you own this Chaincoin address</source>
-        <translation>Firma il mssaggio per dimostrare il possesso di questo indirizzo Chaincoin</translation>
+        <source>Sign the message to prove you own this Masterbitcoin address</source>
+        <translation>Firma il mssaggio per dimostrare il possesso di questo indirizzo Masterbitcoin</translation>
     </message>
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="155"/>
@@ -3125,8 +3125,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="295"/>
-        <source>Verify the message to ensure it was signed with the specified Chaincoin address</source>
-        <translation>Verifica il messaggio per assicurarti sia stato firmato con l&apos;indirizzo Chaincoin specificato</translation>
+        <source>Verify the message to ensure it was signed with the specified Masterbitcoin address</source>
+        <translation>Verifica il messaggio per assicurarti sia stato firmato con l&apos;indirizzo Masterbitcoin specificato</translation>
     </message>
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="298"/>
@@ -3145,8 +3145,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="31"/>
-        <source>Enter a Chaincoin address (e.g. XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
-        <translation>Inserisci un indirizzo Chaincoin (es.XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
+        <source>Enter a Masterbitcoin address (e.g. XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</source>
+        <translation>Inserisci un indirizzo Masterbitcoin (es.XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg)</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="114"/>
@@ -3219,8 +3219,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="33"/>
-        <source>Chaincoin Core</source>
-        <translation>Chaincoin Core</translation>
+        <source>Masterbitcoin Core</source>
+        <translation>Masterbitcoin Core</translation>
     </message>
     <message>
         <location filename="../splashscreen.cpp" line="34"/>
@@ -3234,8 +3234,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../splashscreen.cpp" line="36"/>
-        <source>The Chaincoin Core developers</source>
-        <translation>Gli sviluppatori di Chaincoin Core</translation>
+        <source>The Masterbitcoin Core developers</source>
+        <translation>Gli sviluppatori di Masterbitcoin Core</translation>
     </message>
     <message>
         <location filename="../splashscreen.cpp" line="37"/>
@@ -3869,7 +3869,7 @@ Più URL vengono separati da una barra verticale |.</translation>
         <location filename="../walletmodel.cpp" line="271"/>
         <location filename="../walletmodel.cpp" line="285"/>
         <source>Send Coins</source>
-        <translation>Invia chaincoin</translation>
+        <translation>Invia masterbitcoin</translation>
     </message>
     <message numerus="yes">
         <location filename="../walletmodel.cpp" line="271"/>
@@ -3921,274 +3921,274 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
 </context>
 <context>
-    <name>chaincoin-core</name>
+    <name>masterbitcoin-core</name>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="16"/>
+        <location filename="../masterbitcoinstrings.cpp" line="16"/>
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=chaincoinrpc
+rpcuser=masterbitcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Masterbitcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, devi settare la rpcpassword nel file de configurazione:
 %s
 Si raccomanda di utilizzare la seguente password randomizzata:
-rpcuser=chaincoinrpc
+rpcuser=masterbitcoinrpc
 rpcpassword=%s
 (non è necessario che ti ricordi questa password)
 username e password NON devono essere uguali.
 Se il file non eseiste, crealo con i soli permessi di lettura da parte del propietario.
 Si raccomanda inoltre di impostare la notifica di allerta in modo da ricevere un avviso in caso di problemi;
-ad esempio: alertnotify=echo %%s | mail -s &quot;Chaincoin Alert&quot; admin@foo.com
+ad esempio: alertnotify=echo %%s | mail -s &quot;Masterbitcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="29"/>
+        <location filename="../masterbitcoinstrings.cpp" line="29"/>
         <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
         <translation>Cifrature accettabili (predefinito: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="32"/>
+        <location filename="../masterbitcoinstrings.cpp" line="32"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation>Errore riscontrato durante l&apos;impostazione della porta RPC %u per l&apos;ascolto su IPv4: %s</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="34"/>
+        <location filename="../masterbitcoinstrings.cpp" line="34"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
         <translation>Errore riscontrato durante l&apos;impostazione della porta RPC %u per l&apos;ascolto su IPv6, tornando su IPv4: %s</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="37"/>
+        <location filename="../masterbitcoinstrings.cpp" line="37"/>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Associa all&apos;indirizzo indicato e resta permanentemente in ascolto su questo. Usa la notazione [host]:porta per l&apos;IPv6</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="40"/>
-        <source>Cannot obtain a lock on data directory %s. Chaincoin Core is probably already running.</source>
-        <translation>Impossibile ottenere un blocco sulla data directory % s. Chaincoin Core è probabilmente già in esecuzione.</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="40"/>
+        <source>Cannot obtain a lock on data directory %s. Masterbitcoin Core is probably already running.</source>
+        <translation>Impossibile ottenere un blocco sulla data directory % s. Masterbitcoin Core è probabilmente già in esecuzione.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="43"/>
+        <location filename="../masterbitcoinstrings.cpp" line="43"/>
         <source>Continuously rate-limit free transactions to &lt;n&gt;*1000 bytes per minute (default:15)</source>
         <translation>Limita la quantità di transazioni gratuite ad &lt;n&gt;*1000 byte al minuto (predefinito: 15)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="46"/>
+        <location filename="../masterbitcoinstrings.cpp" line="46"/>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="49"/>
+        <location filename="../masterbitcoinstrings.cpp" line="49"/>
         <source>Disable all Masternode and Darksend related functionality (0-1, default: 0)</source>
         <translation>Disabilita tutti i Masternode e le funzioni relative a Darksend (0-1, default: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="51"/>
+        <location filename="../masterbitcoinstrings.cpp" line="51"/>
         <source>Enable instantx, show confirmations for locked transactions (bool, default: true)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="54"/>
+        <location filename="../masterbitcoinstrings.cpp" line="54"/>
         <source>Enable use of automated darksend for funds stored in this wallet (0-1, default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="57"/>
+        <location filename="../masterbitcoinstrings.cpp" line="57"/>
         <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
         <translation>Entra in modalità di test di regressione, la quale usa una speciale catena in cui i blocchi sono risolti istantaneamente. Questo è fatto per lo sviluppo di strumenti e applicazioni per test di regressione.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="61"/>
+        <location filename="../masterbitcoinstrings.cpp" line="61"/>
         <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly.</source>
         <translation>Entra in modalità di test di regressione, la quale usa una speciale catena in cui i blocchi possono essere risolti istantaneamente.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="64"/>
+        <location filename="../masterbitcoinstrings.cpp" line="64"/>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="66"/>
+        <location filename="../masterbitcoinstrings.cpp" line="66"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
         <translation>Errore: la transazione è stata rifiutata! Questo può accadere se alcuni bitcoin nel tuo portamonete sono già stati spesi, ad esempio se hai utilizzato una copia del file wallet.dat per spendere bitcoin e questi non sono stati considerati spesi dal portamonete corrente.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="70"/>
+        <location filename="../masterbitcoinstrings.cpp" line="70"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
         <translation>Errore: questa transazione necessita di una commissione di almeno %s a causa del suo ammontare, della sua complessità, o dell&apos;uso di fondi recentemente ricevuti!</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="73"/>
+        <location filename="../masterbitcoinstrings.cpp" line="73"/>
         <source>Error: Wallet unlocked for anonymization only, unable to create transaction.</source>
         <translation>Errore: Portafoglio sbloccato solamente per l&apos;anonimizzazione, impossibile creare la transazione.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="75"/>
+        <location filename="../masterbitcoinstrings.cpp" line="75"/>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
         <translation>Esegue un comando quando viene ricevuto un allarme rilevante o quando vediamo un fork veramente lungo (%s in cmd è sostituito dal messaggio)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="78"/>
+        <location filename="../masterbitcoinstrings.cpp" line="78"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
         <translation>Esegui comando quando una transazione del portamonete cambia (%s in cmd è sostituito da TxID)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="81"/>
+        <location filename="../masterbitcoinstrings.cpp" line="81"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Esegui il comando quando il migliore blocco cambia(%s nel cmd è sostituito dall&apos;hash del blocco)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="84"/>
+        <location filename="../masterbitcoinstrings.cpp" line="84"/>
         <source>Fees smaller than this are considered zero fee (for transaction creation) (default:</source>
         <translation>Le commissioni inferiori a questo valore saranno considerate nulle (per la creazione della transazione) (prefedinito:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="87"/>
+        <location filename="../masterbitcoinstrings.cpp" line="87"/>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: 100)</source>
         <translation>Scarica l&apos;attività del database dalla memoria al log su disco ogni &lt;n&gt; megabytes (predefinito: 100)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="90"/>
+        <location filename="../masterbitcoinstrings.cpp" line="90"/>
         <source>Found unconfirmed denominated outputs, will wait till they confirm to continue.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="93"/>
+        <location filename="../masterbitcoinstrings.cpp" line="93"/>
         <source>How thorough the block verification of -checkblocks is (0-4, default: 3)</source>
         <translation>Determina quanto sarà approfondita la verifica da parte di -checkblocks (0-4, predefinito: 3)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="95"/>
+        <location filename="../masterbitcoinstrings.cpp" line="95"/>
         <source>In this mode -genproclimit controls how many blocks are generated immediately.</source>
         <translation>In questa modalità -genproclimit determina quanti blocchi saranno generati immediatamente.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="98"/>
+        <location filename="../masterbitcoinstrings.cpp" line="98"/>
         <source>InstantX requires inputs with at least 6 confirmations, you might need to wait a few minutes and try again.</source>
         <translation>InstantX richiede input con almeno 6 conferme, potrebbe essere necessario attendere qualche minuto e poi riprovare.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="101"/>
+        <location filename="../masterbitcoinstrings.cpp" line="101"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="103"/>
+        <location filename="../masterbitcoinstrings.cpp" line="103"/>
         <source>Name to construct url for KeePass entry that stores the wallet passphrase</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="105"/>
+        <location filename="../masterbitcoinstrings.cpp" line="105"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>Numero di secondi di sospensione che i peer di cattiva qualità devono attendere prima di potersi riconnettere (predefiniti: 86400)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="108"/>
+        <location filename="../masterbitcoinstrings.cpp" line="108"/>
         <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
         <translation>Emette informazioni di debug in output (predefinito: 0, fornire &lt;category&gt; è opzionale)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="110"/>
+        <location filename="../masterbitcoinstrings.cpp" line="110"/>
         <source>Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="114"/>
+        <location filename="../masterbitcoinstrings.cpp" line="114"/>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="117"/>
+        <location filename="../masterbitcoinstrings.cpp" line="117"/>
         <source>Set external address:port to get to this masternode (example: address:port)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="119"/>
+        <location filename="../masterbitcoinstrings.cpp" line="119"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
         <translation>Imposta la dimensione massima in byte delle transazioni ad alta-priorità/basse-commissioni (predefinita: %d)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="121"/>
+        <location filename="../masterbitcoinstrings.cpp" line="121"/>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
         <translation>Imposta il numero di thread per la verifica degli script (da %u a %d, 0 = automatico, &lt;0 = lascia questo numero di core liberi, predefinito: %d)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="124"/>
+        <location filename="../masterbitcoinstrings.cpp" line="124"/>
         <source>Set the processor limit for when generation is on (-1 = unlimited, default: -1)</source>
         <translation>Imposta il limite della cpu quando la generazione è abilitata (-1 = non limitato, predefinito: -1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="127"/>
+        <location filename="../masterbitcoinstrings.cpp" line="127"/>
         <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="130"/>
+        <location filename="../masterbitcoinstrings.cpp" line="130"/>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation>Questa versione è una compilazione pre-rilascio - usala a tuo rischio - non utilizzarla per la generazione o per applicazioni di commercio</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="133"/>
-        <source>Unable to bind to %s on this computer. Chaincoin Core is probably already running.</source>
+        <location filename="../masterbitcoinstrings.cpp" line="133"/>
+        <source>Unable to bind to %s on this computer. Masterbitcoin Core is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="136"/>
+        <location filename="../masterbitcoinstrings.cpp" line="136"/>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="138"/>
+        <location filename="../masterbitcoinstrings.cpp" line="138"/>
         <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 DASH.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="141"/>
+        <location filename="../masterbitcoinstrings.cpp" line="141"/>
         <source>Unable to locate enough Darksend non-denominated funds for this transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="143"/>
+        <location filename="../masterbitcoinstrings.cpp" line="143"/>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: -proxy)</source>
         <translation>Usa un SOCKS5 proxy separato per raggiungere servizi nascosti di Tor (predefinito: -proxy)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="146"/>
+        <location filename="../masterbitcoinstrings.cpp" line="146"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Attenzione: -paytxfee è molto alta. Questa è la commissione che si paga quando si invia una transazione.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="149"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Chaincoin will not work properly.</source>
-        <translation>Attenzione: Per favore assicurati che la data e l&apos;ora del tuo computer siano corrette, altrimenti Chaincoin non funzionará adeguatamente.</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="149"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Masterbitcoin will not work properly.</source>
+        <translation>Attenzione: Per favore assicurati che la data e l&apos;ora del tuo computer siano corrette, altrimenti Masterbitcoin non funzionará adeguatamente.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="152"/>
+        <location filename="../masterbitcoinstrings.cpp" line="152"/>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Attenzione: La rete non sembra essere d&apos;accordo pienamente! Alcuni minatori sembrano riscontrare problemi.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="155"/>
+        <location filename="../masterbitcoinstrings.cpp" line="155"/>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation>Attenzione: Sembra che non ci sia completo accordo con i nostri peer! Un aggiornamento da parte tua o degli altri nodi potrebbe essere necessario.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="158"/>
+        <location filename="../masterbitcoinstrings.cpp" line="158"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Attenzione: errore di lettura di wallet.dat! Tutte le chiavi sono state lette correttamente, ma i dati delle transazioni o le voci in rubrica potrebbero mancare o non essere corretti.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="161"/>
+        <location filename="../masterbitcoinstrings.cpp" line="161"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Attenzione: wallet.dat corrotto, dati recuperati! Il wallet.dat originale è stato salvato come wallet.{timestamp}.bak in %s; se il tuo saldo o le transazioni non sono corrette dovresti ripristinare da un backup.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="165"/>
+        <location filename="../masterbitcoinstrings.cpp" line="165"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
@@ -4197,1073 +4197,1073 @@ If the file does not exist, create it with owner-readable-only file permissions.
 Se il file non esiste, crealo assegnando i permessi di lettura solamente al proprietario.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="170"/>
+        <location filename="../masterbitcoinstrings.cpp" line="170"/>
         <source>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</source>
         <translation>Devi specificare una masternodeprivkey nella configurazione. Per favore consulta la documentazione di aiuto.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="173"/>
+        <location filename="../masterbitcoinstrings.cpp" line="173"/>
         <source>(default: 1)</source>
         <translation>(predefinito: 1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="174"/>
+        <location filename="../masterbitcoinstrings.cpp" line="174"/>
         <source>(default: wallet.dat)</source>
         <translation>(predefinito: wallet.dat)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="175"/>
+        <location filename="../masterbitcoinstrings.cpp" line="175"/>
         <source>&lt;category&gt; can be:</source>
         <translation>&lt;category&gt; può essere:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="176"/>
+        <location filename="../masterbitcoinstrings.cpp" line="176"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accetta comandi da riga di comando e JSON-RPC</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="177"/>
+        <location filename="../masterbitcoinstrings.cpp" line="177"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>Accetta connessioni dall&apos;esterno (predefinito: 1 se no -proxy o -connect)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="178"/>
+        <location filename="../masterbitcoinstrings.cpp" line="178"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Aggiunge un nodo a cui connettersi e tenta di tenere aperta la connessione</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="179"/>
+        <location filename="../masterbitcoinstrings.cpp" line="179"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>Consenti ricerche DNS per -addnode, -seednode e -connect</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="180"/>
+        <location filename="../masterbitcoinstrings.cpp" line="180"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Consenti connessioni JSON-RPC dall&apos;indirizzo IP specificato
 </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="181"/>
+        <location filename="../masterbitcoinstrings.cpp" line="181"/>
         <source>Already have that input.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="182"/>
+        <location filename="../masterbitcoinstrings.cpp" line="182"/>
         <source>Always query for peer addresses via DNS lookup (default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="183"/>
+        <location filename="../masterbitcoinstrings.cpp" line="183"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation>Tenta di recuperare le chiavi private da un wallet.dat corrotto</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="184"/>
+        <location filename="../masterbitcoinstrings.cpp" line="184"/>
         <source>Block creation options:</source>
         <translation>Opzioni creazione blocco:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="185"/>
+        <location filename="../masterbitcoinstrings.cpp" line="185"/>
         <source>Can&apos;t denominate: no compatible inputs left.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="186"/>
+        <location filename="../masterbitcoinstrings.cpp" line="186"/>
         <source>Cannot downgrade wallet</source>
         <translation>Non è possibile effettuare il downgrade del portamonete</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="187"/>
+        <location filename="../masterbitcoinstrings.cpp" line="187"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation>Impossibile risolvere -bind address: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="188"/>
+        <location filename="../masterbitcoinstrings.cpp" line="188"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
         <translation>Impossibile risolvere indirizzo -externalip: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="189"/>
+        <location filename="../masterbitcoinstrings.cpp" line="189"/>
         <source>Cannot write default address</source>
         <translation>Non è possibile scrivere l&apos;indirizzo predefinito</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="190"/>
+        <location filename="../masterbitcoinstrings.cpp" line="190"/>
         <source>Clear list of wallet transactions (diagnostic tool; implies -rescan)</source>
         <translation>Cancella elenco delle transazioni sul portamonete (strumento di diagnostica; implica -rescan)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="191"/>
+        <location filename="../masterbitcoinstrings.cpp" line="191"/>
         <source>Collateral is not valid.</source>
         <translation>Il collateral non è valido.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="192"/>
+        <location filename="../masterbitcoinstrings.cpp" line="192"/>
         <source>Collateral not valid.</source>
         <translation>Collateral non valido.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="193"/>
+        <location filename="../masterbitcoinstrings.cpp" line="193"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Connetti solo al nodo specificato</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="194"/>
+        <location filename="../masterbitcoinstrings.cpp" line="194"/>
         <source>Connect through SOCKS proxy</source>
         <translation>Connetti attraverso SOCKS proxy</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="195"/>
+        <location filename="../masterbitcoinstrings.cpp" line="195"/>
         <source>Connect to JSON-RPC on &lt;port&gt; (default: 9998 or testnet: 19998)</source>
         <translation>Connetti a JSON-RPC su &lt;port&gt; (predefinita: 9998 o testnet: 19998)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="196"/>
+        <location filename="../masterbitcoinstrings.cpp" line="196"/>
         <source>Connect to KeePassHttp on port &lt;port&gt; (default: 19455)</source>
         <translation>Connetti a KeePassHttp sulla porta &lt;port&gt; (predefinita: 19455)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="197"/>
+        <location filename="../masterbitcoinstrings.cpp" line="197"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
         <translation>Connettiti ad un nodo per recuperare gli indirizzi dei peer e scollegati</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="198"/>
+        <location filename="../masterbitcoinstrings.cpp" line="198"/>
         <source>Connection options:</source>
         <translation>Opzioni di connessione:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="199"/>
+        <location filename="../masterbitcoinstrings.cpp" line="199"/>
         <source>Corrupted block database detected</source>
         <translation>Rilevato database blocchi corrotto</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="200"/>
-        <source>Chaincoin Core Daemon</source>
-        <translation>Chaincoin Core Daemon</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="200"/>
+        <source>Masterbitcoin Core Daemon</source>
+        <translation>Masterbitcoin Core Daemon</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="201"/>
-        <source>Chaincoin Core RPC client version</source>
-        <translation>Versione client RPC di Chaincoin Core</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="201"/>
+        <source>Masterbitcoin Core RPC client version</source>
+        <translation>Versione client RPC di Masterbitcoin Core</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="202"/>
+        <location filename="../masterbitcoinstrings.cpp" line="202"/>
         <source>Darksend is disabled.</source>
         <translation>Darksend è disabilitato</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="203"/>
+        <location filename="../masterbitcoinstrings.cpp" line="203"/>
         <source>Darksend options:</source>
         <translation>Opzioni Darksend:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="204"/>
+        <location filename="../masterbitcoinstrings.cpp" line="204"/>
         <source>Debugging/Testing options:</source>
         <translation>Opzioni di Debug/Test:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="205"/>
+        <location filename="../masterbitcoinstrings.cpp" line="205"/>
         <source>Disable safemode, override a real safe mode event (default: 0)</source>
         <translation>Disabilita la modalità sicura, escludi effettivamente gli eventi di modalità sicura (predefinito: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="206"/>
+        <location filename="../masterbitcoinstrings.cpp" line="206"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
         <translation>Scopre il proprio indirizzo IP (predefinito: 1 se in ascolto e no -externalip)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="207"/>
+        <location filename="../masterbitcoinstrings.cpp" line="207"/>
         <source>Do not load the wallet and disable wallet RPC calls</source>
         <translation>Non caricare il portamonete e disabilita le chiamate RPC al portamonete</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="208"/>
+        <location filename="../masterbitcoinstrings.cpp" line="208"/>
         <source>Do you want to rebuild the block database now?</source>
         <translation>Vuoi ricostruire ora il database dei blocchi?</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="209"/>
+        <location filename="../masterbitcoinstrings.cpp" line="209"/>
         <source>Done loading</source>
         <translation>Caricamento completato</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="210"/>
+        <location filename="../masterbitcoinstrings.cpp" line="210"/>
         <source>Downgrading and trying again.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="211"/>
+        <location filename="../masterbitcoinstrings.cpp" line="211"/>
         <source>Enable the client to act as a masternode (0-1, default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="212"/>
+        <location filename="../masterbitcoinstrings.cpp" line="212"/>
         <source>Entries are full.</source>
         <translation>Entrate sono piene.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="213"/>
+        <location filename="../masterbitcoinstrings.cpp" line="213"/>
         <source>Error connecting to masternode.</source>
         <translation>Connesione per masternode error.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="214"/>
+        <location filename="../masterbitcoinstrings.cpp" line="214"/>
         <source>Error initializing block database</source>
         <translation>Errore durante l&apos;inizializzazione del database dei blocchi</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="215"/>
+        <location filename="../masterbitcoinstrings.cpp" line="215"/>
         <source>Error initializing wallet database environment %s!</source>
         <translation>Errore durante l&apos;inizializzazione dell&apos;ambiente %s del database del portamonete!</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="216"/>
+        <location filename="../masterbitcoinstrings.cpp" line="216"/>
         <source>Error loading block database</source>
         <translation>Errore caricamento database blocchi</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="217"/>
+        <location filename="../masterbitcoinstrings.cpp" line="217"/>
         <source>Error loading wallet.dat</source>
         <translation>Errore caricamento wallet.dat</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="218"/>
+        <location filename="../masterbitcoinstrings.cpp" line="218"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Errore caricamento wallet.dat: Portamonete corrotto</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="219"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Chaincoin</source>
-        <translation>Errore caricando wallet.dat: Wallet necessita la versione piú recente di Chaincoin</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="219"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Masterbitcoin</source>
+        <translation>Errore caricando wallet.dat: Wallet necessita la versione piú recente di Masterbitcoin</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="220"/>
+        <location filename="../masterbitcoinstrings.cpp" line="220"/>
         <source>Error opening block database</source>
         <translation>Errore caricamento database blocchi</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="221"/>
+        <location filename="../masterbitcoinstrings.cpp" line="221"/>
         <source>Error reading from database, shutting down.</source>
         <translation>Errore di lettura del database, spegnimento</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="222"/>
+        <location filename="../masterbitcoinstrings.cpp" line="222"/>
         <source>Error recovering public key.</source>
         <translation>Errore nel recupero della chiave pubblica.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="223"/>
+        <location filename="../masterbitcoinstrings.cpp" line="223"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="224"/>
+        <location filename="../masterbitcoinstrings.cpp" line="224"/>
         <source>Error: Disk space is low!</source>
         <translation>Errore: la spazio libero sul disco è insufficiente!</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="225"/>
+        <location filename="../masterbitcoinstrings.cpp" line="225"/>
         <source>Error: Wallet locked, unable to create transaction!</source>
         <translation>Errore: portamonete bloccato, impossibile creare la transazione!</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="226"/>
+        <location filename="../masterbitcoinstrings.cpp" line="226"/>
         <source>Error: You already have pending entries in the Darksend pool</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="227"/>
+        <location filename="../masterbitcoinstrings.cpp" line="227"/>
         <source>Error: system error: </source>
         <translation>Errore: errore di sistema:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="228"/>
+        <location filename="../masterbitcoinstrings.cpp" line="228"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Nessuna porta disponibile per l&apos;ascolto. Usa -listen=0 se vuoi procedere comunque.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="229"/>
+        <location filename="../masterbitcoinstrings.cpp" line="229"/>
         <source>Failed to read block info</source>
         <translation>Lettura informazioni blocco fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="230"/>
+        <location filename="../masterbitcoinstrings.cpp" line="230"/>
         <source>Failed to read block</source>
         <translation>Lettura blocco fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="231"/>
+        <location filename="../masterbitcoinstrings.cpp" line="231"/>
         <source>Failed to sync block index</source>
         <translation>Sincronizzazione dell&apos;indice del blocco fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="232"/>
+        <location filename="../masterbitcoinstrings.cpp" line="232"/>
         <source>Failed to write block index</source>
         <translation>Scrittura dell&apos;indice del blocco fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="233"/>
+        <location filename="../masterbitcoinstrings.cpp" line="233"/>
         <source>Failed to write block info</source>
         <translation>Scrittura informazioni blocco fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="234"/>
+        <location filename="../masterbitcoinstrings.cpp" line="234"/>
         <source>Failed to write block</source>
         <translation>Scrittura blocco fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="235"/>
+        <location filename="../masterbitcoinstrings.cpp" line="235"/>
         <source>Failed to write file info</source>
         <translation>Scrittura informazioni file fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="236"/>
+        <location filename="../masterbitcoinstrings.cpp" line="236"/>
         <source>Failed to write to coin database</source>
         <translation>Scrittura nel database dei bitcoin fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="237"/>
+        <location filename="../masterbitcoinstrings.cpp" line="237"/>
         <source>Failed to write transaction index</source>
         <translation>Scrittura dell&apos;indice di transazione fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="238"/>
+        <location filename="../masterbitcoinstrings.cpp" line="238"/>
         <source>Failed to write undo data</source>
         <translation>Scrittura dei dati di ripristino fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="239"/>
+        <location filename="../masterbitcoinstrings.cpp" line="239"/>
         <source>Fee per kB to add to transactions you send</source>
         <translation>Commissione per kB da aggiungere alle transazioni in uscita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="240"/>
+        <location filename="../masterbitcoinstrings.cpp" line="240"/>
         <source>Fees smaller than this are considered zero fee (for relaying) (default:</source>
         <translation>Le commissioni inferiori a questo valore saranno considerate nulle (per la trasmissione) (prefedinito:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="241"/>
+        <location filename="../masterbitcoinstrings.cpp" line="241"/>
         <source>Force safe mode (default: 0)</source>
         <translation>Forza modalità provvisoria (predefinito: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="242"/>
+        <location filename="../masterbitcoinstrings.cpp" line="242"/>
         <source>Generate coins (default: 0)</source>
         <translation>Genera valuta (predefinito: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="243"/>
+        <location filename="../masterbitcoinstrings.cpp" line="243"/>
         <source>Get help for a command</source>
         <translation>Aiuto su un comando</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="244"/>
+        <location filename="../masterbitcoinstrings.cpp" line="244"/>
         <source>How many blocks to check at startup (default: 288, 0 = all)</source>
         <translation>Numero di blocchi da controllare all&apos;avvio (predefinito: 288, 0 = tutti)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="245"/>
+        <location filename="../masterbitcoinstrings.cpp" line="245"/>
         <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
         <translation>Se &lt;category&gt; non è specificata, mostra tutte le informazioni di debug.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="246"/>
+        <location filename="../masterbitcoinstrings.cpp" line="246"/>
         <source>Ignore masternodes less than version (example: 70050; default : 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="247"/>
+        <location filename="../masterbitcoinstrings.cpp" line="247"/>
         <source>Importing...</source>
         <translation>Importazione...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="248"/>
+        <location filename="../masterbitcoinstrings.cpp" line="248"/>
         <source>Imports blocks from external blk000??.dat file</source>
         <translation>Importa blocchi da un file blk000??.dat esterno</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="249"/>
+        <location filename="../masterbitcoinstrings.cpp" line="249"/>
         <source>Incompatible mode.</source>
         <translation>Modalità incompatibile</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="250"/>
+        <location filename="../masterbitcoinstrings.cpp" line="250"/>
         <source>Incompatible version.</source>
         <translation>Versione incompatibile</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="251"/>
+        <location filename="../masterbitcoinstrings.cpp" line="251"/>
         <source>Incorrect or no genesis block found. Wrong datadir for network?</source>
         <translation>Blocco genesis non corretto o non trovato. Cartella dati errata?</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="252"/>
+        <location filename="../masterbitcoinstrings.cpp" line="252"/>
         <source>Information</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="253"/>
-        <source>Initialization sanity check failed. Chaincoin Core is shutting down.</source>
-        <translation>Controllo di inizializzazione sanity fallito. Chaincoin Core verrà chiuso.</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="253"/>
+        <source>Initialization sanity check failed. Masterbitcoin Core is shutting down.</source>
+        <translation>Controllo di inizializzazione sanity fallito. Masterbitcoin Core verrà chiuso.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="254"/>
+        <location filename="../masterbitcoinstrings.cpp" line="254"/>
         <source>Input is not valid.</source>
         <translation>L&apos;input non è valido.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="255"/>
+        <location filename="../masterbitcoinstrings.cpp" line="255"/>
         <source>InstantX options:</source>
         <translation>Opzioni InstantX</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="256"/>
+        <location filename="../masterbitcoinstrings.cpp" line="256"/>
         <source>Insufficient funds</source>
         <translation>Fondi insufficienti</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="257"/>
+        <location filename="../masterbitcoinstrings.cpp" line="257"/>
         <source>Insufficient funds.</source>
         <translation>Fondi insufficienti.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="258"/>
+        <location filename="../masterbitcoinstrings.cpp" line="258"/>
         <source>Invalid -onion address: &apos;%s&apos;</source>
         <translation>Indirizzo -onion non valido: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="259"/>
+        <location filename="../masterbitcoinstrings.cpp" line="259"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>Indirizzo -proxy non valido: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="260"/>
+        <location filename="../masterbitcoinstrings.cpp" line="260"/>
         <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Importo non valido per -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="261"/>
+        <location filename="../masterbitcoinstrings.cpp" line="261"/>
         <source>Invalid amount for -mintxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Importo non valido per -mintxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="262"/>
+        <location filename="../masterbitcoinstrings.cpp" line="262"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Importo non valido per -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="263"/>
+        <location filename="../masterbitcoinstrings.cpp" line="263"/>
         <source>Invalid amount</source>
         <translation>Importo non valido</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="264"/>
+        <location filename="../masterbitcoinstrings.cpp" line="264"/>
         <source>Invalid masternodeprivkey. Please see documenation.</source>
         <translation>masternodeprivkey non valida. Per favore consulta la documentazione</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="265"/>
+        <location filename="../masterbitcoinstrings.cpp" line="265"/>
         <source>Invalid private key.</source>
         <translation>Chiave privata incompatibile</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="266"/>
+        <location filename="../masterbitcoinstrings.cpp" line="266"/>
         <source>Invalid script detected.</source>
         <translation>Script invalido</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="267"/>
+        <location filename="../masterbitcoinstrings.cpp" line="267"/>
         <source>KeePassHttp id for the established association</source>
         <translation>ID KeePassHttp per la connessione stabilita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="268"/>
+        <location filename="../masterbitcoinstrings.cpp" line="268"/>
         <source>KeePassHttp key for AES encrypted communication with KeePass</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="269"/>
-        <source>Keep N chaincoin anonymized (default: 0)</source>
+        <location filename="../masterbitcoinstrings.cpp" line="269"/>
+        <source>Keep N masterbitcoin anonymized (default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="270"/>
+        <location filename="../masterbitcoinstrings.cpp" line="270"/>
         <source>Keep at most &lt;n&gt; unconnectable blocks in memory (default: %u)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="271"/>
+        <location filename="../masterbitcoinstrings.cpp" line="271"/>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="272"/>
+        <location filename="../masterbitcoinstrings.cpp" line="272"/>
         <source>Last Darksend was too recent.</source>
         <translation>L&apos;ultima darksend è troppo recente</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="273"/>
+        <location filename="../masterbitcoinstrings.cpp" line="273"/>
         <source>Last successful darksend action was too recent.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="274"/>
+        <location filename="../masterbitcoinstrings.cpp" line="274"/>
         <source>Limit size of signature cache to &lt;n&gt; entries (default: 50000)</source>
         <translation>Limita la dimensione della cache delle firme a &lt;n&gt; voci (predefinito: 50000)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="275"/>
+        <location filename="../masterbitcoinstrings.cpp" line="275"/>
         <source>List commands</source>
         <translation>Elenco comandi</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="276"/>
+        <location filename="../masterbitcoinstrings.cpp" line="276"/>
         <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="277"/>
+        <location filename="../masterbitcoinstrings.cpp" line="277"/>
         <source>Loading addresses...</source>
         <translation>Caricamento indirizzi...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="278"/>
+        <location filename="../masterbitcoinstrings.cpp" line="278"/>
         <source>Loading block index...</source>
         <translation>Caricamento dell&apos;indice del blocco...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="279"/>
+        <location filename="../masterbitcoinstrings.cpp" line="279"/>
         <source>Loading masternode list...</source>
         <translation>Sto carricando la lista dei masternode...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="280"/>
+        <location filename="../masterbitcoinstrings.cpp" line="280"/>
         <source>Loading wallet... (%3.2f %%)</source>
         <translation>Caricando portafoglio... (%3.2f %%)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="281"/>
+        <location filename="../masterbitcoinstrings.cpp" line="281"/>
         <source>Loading wallet...</source>
         <translation>Caricamento portafoglio...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="282"/>
+        <location filename="../masterbitcoinstrings.cpp" line="282"/>
         <source>Log transaction priority and fee per kB when mining blocks (default: 0)</source>
         <translation>Abilita il log della priorità di transazione e della commissione per kB quando si generano blocchi (default: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="283"/>
+        <location filename="../masterbitcoinstrings.cpp" line="283"/>
         <source>Maintain a full transaction index (default: 0)</source>
         <translation>Mantieni un indice di transazione completo (predefinito: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="284"/>
+        <location filename="../masterbitcoinstrings.cpp" line="284"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
         <translation>Mantieni al massimo &lt;n&gt; connessioni ai peer (predefinite: 125)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="285"/>
+        <location filename="../masterbitcoinstrings.cpp" line="285"/>
         <source>Masternode options:</source>
         <translation>Opzioni masternode:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="286"/>
+        <location filename="../masterbitcoinstrings.cpp" line="286"/>
         <source>Masternode queue is full.</source>
         <translation>La lista di masternode e&apos; piena.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="287"/>
+        <location filename="../masterbitcoinstrings.cpp" line="287"/>
         <source>Masternode:</source>
         <translation>Masternode: </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="288"/>
+        <location filename="../masterbitcoinstrings.cpp" line="288"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation>Buffer di ricezione massimo per connessione, &lt;n&gt;*1000 byte (predefinito: 5000)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="289"/>
+        <location filename="../masterbitcoinstrings.cpp" line="289"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
         <translation>Buffer di invio massimo per connessione, &lt;n&gt;*1000 byte (predefinito: 1000)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="290"/>
+        <location filename="../masterbitcoinstrings.cpp" line="290"/>
         <source>Missing input transaction information.</source>
         <translation>Mancano le informazioni di input della transazione</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="291"/>
+        <location filename="../masterbitcoinstrings.cpp" line="291"/>
         <source>No compatible masternode found.</source>
         <translation>Nessun masternode compatibile trovato</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="292"/>
+        <location filename="../masterbitcoinstrings.cpp" line="292"/>
         <source>No funds detected in need of denominating.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="293"/>
+        <location filename="../masterbitcoinstrings.cpp" line="293"/>
         <source>No masternodes detected.</source>
         <translation>La rilevazione di masternode impossibile.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="294"/>
+        <location filename="../masterbitcoinstrings.cpp" line="294"/>
         <source>No matching denominations found for mixing.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="295"/>
+        <location filename="../masterbitcoinstrings.cpp" line="295"/>
         <source>Non-standard public key detected.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="296"/>
+        <location filename="../masterbitcoinstrings.cpp" line="296"/>
         <source>Not compatible with existing transactions.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="297"/>
+        <location filename="../masterbitcoinstrings.cpp" line="297"/>
         <source>Not enough file descriptors available.</source>
         <translation>Non ci sono abbastanza descrittori di file disponibili.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="298"/>
+        <location filename="../masterbitcoinstrings.cpp" line="298"/>
         <source>Not in the masternode list.</source>
         <translation>Non presente nella lista masternode</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="299"/>
+        <location filename="../masterbitcoinstrings.cpp" line="299"/>
         <source>Only accept block chain matching built-in checkpoints (default: 1)</source>
         <translation>Accetta solo una catena di blocchi che corrisponde ai checkpoint predefiniti (predefinito: 1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="300"/>
+        <location filename="../masterbitcoinstrings.cpp" line="300"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
         <translation>Connetti solo a nodi nella rete &lt;net&gt; (IPv4, IPv6 o Tor)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="301"/>
+        <location filename="../masterbitcoinstrings.cpp" line="301"/>
         <source>Options:</source>
         <translation>Opzioni:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="302"/>
+        <location filename="../masterbitcoinstrings.cpp" line="302"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Password per connessioni JSON-RPC
 </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="303"/>
+        <location filename="../masterbitcoinstrings.cpp" line="303"/>
         <source>Prepend debug output with timestamp (default: 1)</source>
         <translation>Preponi timestamp all&apos;output di debug (predefinito: 1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="304"/>
+        <location filename="../masterbitcoinstrings.cpp" line="304"/>
         <source>Print block on startup, if found in block index</source>
         <translation>Stampa il blocco all&apos;avvio, se presente nell&apos;indice dei blocchi</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="305"/>
+        <location filename="../masterbitcoinstrings.cpp" line="305"/>
         <source>Print block tree on startup (default: 0)</source>
         <translation>Stampa l&apos;albero dei blocchi all&apos;avvio (default: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="306"/>
+        <location filename="../masterbitcoinstrings.cpp" line="306"/>
         <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation>Opzioni RPC SSL: (consulta la Bitcoin Wiki per le istruzioni relative alla configurazione SSL)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="307"/>
+        <location filename="../masterbitcoinstrings.cpp" line="307"/>
         <source>RPC client options:</source>
         <translation>Opzioni client RPC:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="308"/>
+        <location filename="../masterbitcoinstrings.cpp" line="308"/>
         <source>RPC server options:</source>
         <translation>Opzioni server RPC:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="309"/>
+        <location filename="../masterbitcoinstrings.cpp" line="309"/>
         <source>Randomly drop 1 of every &lt;n&gt; network messages</source>
         <translation>Scarta casualmente 1 ogni &lt;n&gt; messaggi di rete</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="310"/>
+        <location filename="../masterbitcoinstrings.cpp" line="310"/>
         <source>Randomly fuzz 1 of every &lt;n&gt; network messages</source>
         <translation>Altera casualmente 1 ogni &lt;n&gt; messaggi di rete</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="311"/>
+        <location filename="../masterbitcoinstrings.cpp" line="311"/>
         <source>Rebuild block chain index from current blk000??.dat files</source>
         <translation>Ricreare l&apos;indice della catena di blocchi dai file blk000??.dat correnti</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="312"/>
+        <location filename="../masterbitcoinstrings.cpp" line="312"/>
         <source>Rescan the block chain for missing wallet transactions</source>
         <translation>Ripeti analisi della catena dei blocchi per cercare le transazioni mancanti dal portamonete
 </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="313"/>
+        <location filename="../masterbitcoinstrings.cpp" line="313"/>
         <source>Rescanning...</source>
         <translation>Ripetizione scansione...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="314"/>
+        <location filename="../masterbitcoinstrings.cpp" line="314"/>
         <source>Run a thread to flush wallet periodically (default: 1)</source>
         <translation>Mantieni in esecuzione un thread per scaricare periodicamente il portafoglio (predefinito: 1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="315"/>
+        <location filename="../masterbitcoinstrings.cpp" line="315"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Esegui in background come demone ed accetta i comandi</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="316"/>
+        <location filename="../masterbitcoinstrings.cpp" line="316"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation>Opzioni SSL: (vedi il wiki di Bitcoin per le istruzioni di configurazione SSL)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="317"/>
+        <location filename="../masterbitcoinstrings.cpp" line="317"/>
         <source>Select SOCKS version for -proxy (4 or 5, default: 5)</source>
         <translation>Selezionare la versione SOCKS per -proxy (4 o 5, predefinito: 5)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="318"/>
-        <source>Send command to Chaincoin Core</source>
-        <translation>Invia comando a Chaincoin Core</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="318"/>
+        <source>Send command to Masterbitcoin Core</source>
+        <translation>Invia comando a Masterbitcoin Core</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="319"/>
+        <location filename="../masterbitcoinstrings.cpp" line="319"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Inviare comandi al nodo in esecuzione su &lt;ip&gt; (predefinito: 127.0.0.1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="320"/>
+        <location filename="../masterbitcoinstrings.cpp" line="320"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Invia le informazioni di trace/debug alla console invece che al file debug.log</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="321"/>
+        <location filename="../masterbitcoinstrings.cpp" line="321"/>
         <source>Server certificate file (default: server.cert)</source>
         <translation>File certificato del server (predefinito: server.cert)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="322"/>
+        <location filename="../masterbitcoinstrings.cpp" line="322"/>
         <source>Server private key (default: server.pem)</source>
         <translation>Chiave privata del server (predefinito: server.pem)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="323"/>
+        <location filename="../masterbitcoinstrings.cpp" line="323"/>
         <source>Session not complete!</source>
         <translation>Sessione non completata!</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="324"/>
+        <location filename="../masterbitcoinstrings.cpp" line="324"/>
         <source>Session timed out (30 seconds), please resubmit.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="325"/>
+        <location filename="../masterbitcoinstrings.cpp" line="325"/>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
         <translation>Imposta la dimensione cache del database in megabyte (%d a %d, predefinito: %d)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="326"/>
+        <location filename="../masterbitcoinstrings.cpp" line="326"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
         <translation>Impostare la quantità di chiavi nel key pool a &lt;n&gt; (predefinita: 100)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="327"/>
+        <location filename="../masterbitcoinstrings.cpp" line="327"/>
         <source>Set maximum block size in bytes (default: %d)</source>
         <translation>Imposta la dimensione massima del blocco in byte (predefinita: %d)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="328"/>
+        <location filename="../masterbitcoinstrings.cpp" line="328"/>
         <source>Set minimum block size in bytes (default: 0)</source>
         <translation>Imposta dimensione minima del blocco in bytes (predefinita: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="329"/>
+        <location filename="../masterbitcoinstrings.cpp" line="329"/>
         <source>Set the masternode private key</source>
         <translation>Configura la chiave privata del Masternode</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="330"/>
+        <location filename="../masterbitcoinstrings.cpp" line="330"/>
         <source>Set the number of threads to service RPC calls (default: 4)</source>
         <translation>Specifica il numero massimo di richieste RPC in parallelo (predefinito: 4)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="331"/>
+        <location filename="../masterbitcoinstrings.cpp" line="331"/>
         <source>Sets the DB_PRIVATE flag in the wallet db environment (default: 1)</source>
         <translation>Imposta il flag DB_PRIVATE nell&apos;ambiente di database del portamonete (predefinito: 1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="332"/>
+        <location filename="../masterbitcoinstrings.cpp" line="332"/>
         <source>Show all debugging options (usage: --help -help-debug)</source>
         <translation>Mostra tutte le opzioni di debug (utilizzo: --help -help-debug)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="333"/>
+        <location filename="../masterbitcoinstrings.cpp" line="333"/>
         <source>Show benchmark information (default: 0)</source>
         <translation>Visualizza le informazioni relative al benchmark (predefinito: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="334"/>
+        <location filename="../masterbitcoinstrings.cpp" line="334"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Riduci il file debug.log all&apos;avvio del client (predefinito: 1 se non impostato -debug)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="335"/>
+        <location filename="../masterbitcoinstrings.cpp" line="335"/>
         <source>Signing failed.</source>
         <translation>Firma fallita.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="336"/>
+        <location filename="../masterbitcoinstrings.cpp" line="336"/>
         <source>Signing timed out, please resubmit.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="337"/>
+        <location filename="../masterbitcoinstrings.cpp" line="337"/>
         <source>Signing transaction failed</source>
         <translation>Transazione di firma fallita</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="338"/>
-        <source>Specify configuration file (default: chaincoin.conf)</source>
-        <translation>Configurazioni specifiche file (default: chaincoin.conf)</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="338"/>
+        <source>Specify configuration file (default: masterbitcoin.conf)</source>
+        <translation>Configurazioni specifiche file (default: masterbitcoin.conf)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="339"/>
+        <location filename="../masterbitcoinstrings.cpp" line="339"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Specifica il timeout di connessione in millisecondi (predefinito: 5000)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="340"/>
+        <location filename="../masterbitcoinstrings.cpp" line="340"/>
         <source>Specify data directory</source>
         <translation>Specifica la cartella dati </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="341"/>
+        <location filename="../masterbitcoinstrings.cpp" line="341"/>
         <source>Specify masternode configuration file (default: masternode.conf)</source>
         <translation>Configurazioni specifiche dei file Masternode (default: masternode.conf)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="342"/>
-        <source>Specify pid file (default: chaincoind.pid)</source>
+        <location filename="../masterbitcoinstrings.cpp" line="342"/>
+        <source>Specify pid file (default: masterbitcoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="343"/>
+        <location filename="../masterbitcoinstrings.cpp" line="343"/>
         <source>Specify wallet file (within data directory)</source>
         <translation>Specifica il file portamonete (all&apos;interno della cartella dati)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="344"/>
+        <location filename="../masterbitcoinstrings.cpp" line="344"/>
         <source>Specify your own public address</source>
         <translation>Specifica il tuo indirizzo pubblico</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="345"/>
+        <location filename="../masterbitcoinstrings.cpp" line="345"/>
         <source>Spend unconfirmed change when sending transactions (default: 1)</source>
         <translation>Spendi il resto non confermato quando si inviano transazioni (predefinito: 1)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="346"/>
-        <source>Start Chaincoin Core Daemon</source>
-        <translation>Avvia il demone Chaincoin Core</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="346"/>
+        <source>Start Masterbitcoin Core Daemon</source>
+        <translation>Avvia il demone Masterbitcoin Core</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="347"/>
+        <location filename="../masterbitcoinstrings.cpp" line="347"/>
         <source>System error: </source>
         <translation>Errore di sistema:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="348"/>
+        <location filename="../masterbitcoinstrings.cpp" line="348"/>
         <source>This help message</source>
         <translation>Questo messaggio di aiuto
 </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="349"/>
+        <location filename="../masterbitcoinstrings.cpp" line="349"/>
         <source>This is intended for regression testing tools and app development.</source>
         <translation>Questo è previsto per l&apos;uso con test di regressione e per lo sviluppo di applicazioni.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="350"/>
+        <location filename="../masterbitcoinstrings.cpp" line="350"/>
         <source>This is not a masternode.</source>
         <translation>Questo non è un Masternode</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="351"/>
+        <location filename="../masterbitcoinstrings.cpp" line="351"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Soglia di disconnessione dei peer di cattiva qualità (predefinita: 100)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="352"/>
+        <location filename="../masterbitcoinstrings.cpp" line="352"/>
         <source>To use the %s option</source>
         <translation>Per usare l&apos;opzione %s</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="353"/>
+        <location filename="../masterbitcoinstrings.cpp" line="353"/>
         <source>Transaction amount too small</source>
         <translation>Importo transazione troppo piccolo</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="354"/>
+        <location filename="../masterbitcoinstrings.cpp" line="354"/>
         <source>Transaction amounts must be positive</source>
         <translation>L&apos;importo della transazione deve essere positivo</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="355"/>
+        <location filename="../masterbitcoinstrings.cpp" line="355"/>
         <source>Transaction created successfully.</source>
         <translation>Transazione creata con successo.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="356"/>
+        <location filename="../masterbitcoinstrings.cpp" line="356"/>
         <source>Transaction fees are too high.</source>
         <translation>Commissioni della transazione troppo alte.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="357"/>
+        <location filename="../masterbitcoinstrings.cpp" line="357"/>
         <source>Transaction not valid.</source>
         <translation>Transazione non valida</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="358"/>
+        <location filename="../masterbitcoinstrings.cpp" line="358"/>
         <source>Transaction too large</source>
         <translation>Transazione troppo grande</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="359"/>
+        <location filename="../masterbitcoinstrings.cpp" line="359"/>
         <source>Unable to bind to %s on this computer (bind returned error %s)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="360"/>
+        <location filename="../masterbitcoinstrings.cpp" line="360"/>
         <source>Unable to sign masternode payment winner, wrong key?</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="361"/>
+        <location filename="../masterbitcoinstrings.cpp" line="361"/>
         <source>Unable to sign spork message, wrong key?</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="362"/>
+        <location filename="../masterbitcoinstrings.cpp" line="362"/>
         <source>Unknown -socks proxy version requested: %i</source>
         <translation>Versione -socks proxy sconosciuta richiesta: %i</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="363"/>
+        <location filename="../masterbitcoinstrings.cpp" line="363"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
         <translation>Rete sconosciuta specificata in -onlynet: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="364"/>
+        <location filename="../masterbitcoinstrings.cpp" line="364"/>
         <source>Upgrade wallet to latest format</source>
         <translation>Aggiorna il portafoglio all&apos;ultimo formato</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="365"/>
-        <source>Usage (deprecated, use chaincoin-cli):</source>
+        <location filename="../masterbitcoinstrings.cpp" line="365"/>
+        <source>Usage (deprecated, use masterbitcoin-cli):</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="366"/>
+        <location filename="../masterbitcoinstrings.cpp" line="366"/>
         <source>Usage:</source>
         <translation>Utilizzo:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="367"/>
+        <location filename="../masterbitcoinstrings.cpp" line="367"/>
         <source>Use KeePass 2 integration using KeePassHttp plugin (default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="368"/>
+        <location filename="../masterbitcoinstrings.cpp" line="368"/>
         <source>Use N separate masternodes to anonymize funds  (2-8, default: 2)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="369"/>
+        <location filename="../masterbitcoinstrings.cpp" line="369"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Utilizzare OpenSSL (https) per le connessioni JSON-RPC
 </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="370"/>
+        <location filename="../masterbitcoinstrings.cpp" line="370"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Usa UPnP per mappare la porta in ascolto (predefinito: 0)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="371"/>
+        <location filename="../masterbitcoinstrings.cpp" line="371"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
         <translation>Usa UPnP per mappare la porta in ascolto (predefinito: 1 when listening)</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="372"/>
+        <location filename="../masterbitcoinstrings.cpp" line="372"/>
         <source>Use the test network</source>
         <translation>Utilizza la rete di prova</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="373"/>
+        <location filename="../masterbitcoinstrings.cpp" line="373"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Nome utente per connessioni JSON-RPC
 </translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="374"/>
+        <location filename="../masterbitcoinstrings.cpp" line="374"/>
         <source>Value more than Darksend pool maximum allows.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="375"/>
+        <location filename="../masterbitcoinstrings.cpp" line="375"/>
         <source>Verifying blocks...</source>
         <translation>Verifica blocchi...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="376"/>
+        <location filename="../masterbitcoinstrings.cpp" line="376"/>
         <source>Verifying wallet...</source>
         <translation>Verifica portafoglio...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="377"/>
+        <location filename="../masterbitcoinstrings.cpp" line="377"/>
         <source>Wait for RPC server to start</source>
         <translation>Attendere l&apos;avvio dell&apos;RPC server</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="378"/>
+        <location filename="../masterbitcoinstrings.cpp" line="378"/>
         <source>Wallet %s resides outside data directory %s</source>
         <translation>Il portafoglio %s si trova al di fuori dalla cartella dati %s</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="379"/>
+        <location filename="../masterbitcoinstrings.cpp" line="379"/>
         <source>Wallet is locked.</source>
         <translation>Portafoglio bloccato</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="380"/>
-        <source>Wallet needed to be rewritten: restart Chaincoin to complete</source>
-        <translation>Il portafoglio necessita di essere riscritto: riavvare Chaincoin per compeltare.</translation>
+        <location filename="../masterbitcoinstrings.cpp" line="380"/>
+        <source>Wallet needed to be rewritten: restart Masterbitcoin to complete</source>
+        <translation>Il portafoglio necessita di essere riscritto: riavvare Masterbitcoin per compeltare.</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="381"/>
+        <location filename="../masterbitcoinstrings.cpp" line="381"/>
         <source>Wallet options:</source>
         <translation>Opzioni portafoglio:</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="382"/>
+        <location filename="../masterbitcoinstrings.cpp" line="382"/>
         <source>Warning</source>
         <translation>Attenzione</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="383"/>
+        <location filename="../masterbitcoinstrings.cpp" line="383"/>
         <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
         <translation>Attenzione: Argomento deprecato -debugnet ignorato, usare -debug=net</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="384"/>
+        <location filename="../masterbitcoinstrings.cpp" line="384"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation>Attenzione: questa versione è obsoleta, aggiornamento necessario!</translation>
     </message>
@@ -5272,27 +5272,27 @@ Se il file non esiste, crealo assegnando i permessi di lettura solamente al prop
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="385"/>
+        <location filename="../masterbitcoinstrings.cpp" line="385"/>
         <source>You need to rebuild the database using -reindex to change -txindex</source>
         <translation>È necessario ricostruire il database usando -reindex per cambiare -txindex</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="386"/>
+        <location filename="../masterbitcoinstrings.cpp" line="386"/>
         <source>Zapping all transactions from wallet...</source>
         <translation>Cancella e ricompila tutte le transazioni dal wallet...</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="387"/>
+        <location filename="../masterbitcoinstrings.cpp" line="387"/>
         <source>on startup</source>
         <translation>all&apos;avvio</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="388"/>
+        <location filename="../masterbitcoinstrings.cpp" line="388"/>
         <source>version</source>
         <translation>versione</translation>
     </message>
     <message>
-        <location filename="../chaincoinstrings.cpp" line="389"/>
+        <location filename="../masterbitcoinstrings.cpp" line="389"/>
         <source>wallet.dat corrupt, salvage failed</source>
         <translation>wallet.dat corrotto, recupero fallito</translation>
     </message>
