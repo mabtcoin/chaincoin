@@ -25,9 +25,9 @@ class DomainName(str):
     def __getattr__(self, item):
         return DomainName(item + '.' + self)
 
-DOMAN_NAME = 'dnsseed1.chaincoin.org'
+DOMAN_NAME = 'dnsseed1.mabtcoin.com'
 IP = '52.89.51.214'
-NS = "ns1.chaincoin.org"
+NS = "ns1.mabtcoin.com"
 D = DomainName(DOMAN_NAME)
 
 TTL = 60 * 5

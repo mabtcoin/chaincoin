@@ -1,7 +1,7 @@
 Chaincoin Core staging tree 0.9
 ===============================
 
-http://www.chaincoin.org
+http://www.mabtcoin.com
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
 
@@ -21,7 +21,7 @@ are carried out collectively by the network. Chaincoin Core is the name of open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Chaincoin Core software, see http://www.chaincoin.org/
+the Chaincoin Core software, see http://www.mabtcoin.com/
 
 
 License
