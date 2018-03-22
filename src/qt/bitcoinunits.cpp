@@ -43,9 +43,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case MASTERBITCOIN: return QString("CHC");
-            case mMASTERBITCOIN: return QString("mCHC");
-            case uMASTERBITCOIN: return QString::fromUtf8("μCHC");
+            case MASTERBITCOIN: return QString("MABT");
+            case mMASTERBITCOIN: return QString("mMABT");
+            case uMASTERBITCOIN: return QString::fromUtf8("μMABT");
             case chuffs: return QString::fromUtf8("chuffs");
             default: return QString("???");
         }
@@ -54,9 +54,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case MASTERBITCOIN: return QString("tCHC");
-            case mMASTERBITCOIN: return QString("mtCHC");
-            case uMASTERBITCOIN: return QString::fromUtf8("μtCHC");
+            case MASTERBITCOIN: return QString("tMABT");
+            case mMASTERBITCOIN: return QString("mtMABT");
+            case uMASTERBITCOIN: return QString::fromUtf8("μtMABT");
             case chuffs: return QString::fromUtf8("tchuffs");
             default: return QString("???");
         }

@@ -145,10 +145,10 @@ Berkeley DB
 It is recommended to use Berkeley DB 4.8. If you have to build it yourself:
 
 ```bash
-CHC_ROOT=$(pwd)
+MABT_ROOT=$(pwd)
 
 # Pick some path to install BDB to, here we create a directory within the masterbitcoin directory
-BDB_PREFIX="${CHC_ROOT}/db4"
+BDB_PREFIX="${MABT_ROOT}/db4"
 mkdir -p $BDB_PREFIX
 
 # Fetch the source and verify that it is not tampered with
@@ -164,7 +164,7 @@ cd db-4.8.30.NC/build_unix/
 make install
 
 # Configure Masterbitcoin Core to use our own-built instance of BDB
-cd $CHC_ROOT
+cd $MABT_ROOT
 ./configure (other args...) LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/"
 ```
 
