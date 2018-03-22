@@ -1427,22 +1427,15 @@ double ConvertBitsToDouble(unsigned int nBits)
     return dDiff;
 }
 
-static const int64_t nStartSubsidy = 16 * COIN;
+static const int64_t nStartSubsidy = 32 * COIN;
 static const int64_t nMinSubsidy = 0.001 * COIN;
 
 int64_t GetBlockValue(int nBits, int nHeight, int64_t nFees)
 {
     int64_t nSubsidy = nStartSubsidy;
 
-    // Mining phase: Subsidy is cut in half every SubsidyHalvingInterval
-    nSubsidy >>= (nHeight / Params().SubsidyHalvingInterval());
-    
-    // Inflation phase: Subsidy reaches minimum subsidy
-    // Network is rewarded for transaction processing with transaction fees and 
-    // the inflationary subsidy
-    if (nSubsidy < nMinSubsidy)
-    {
-        nSubsidy = nMinSubsidy;
+    if (nHeight == 1) {
+        nSubsidy = 1000000;
     }
 
     return nSubsidy + nFees;
@@ -1451,17 +1444,9 @@ int64_t GetBlockValue(int nBits, int nHeight, int64_t nFees)
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue)
 {
     int64_t ret;
-    if (nHeight >= Params().RewardForkHeight2())
-    {
-        ret = blockValue * 45 / 100; // 45%
-    } else
-    if (nHeight >= Params().RewardForkHeight1())
-    {
-        ret = blockValue * 35 / 100; // 35%
-    } else
-    {
-        ret = blockValue/4; // 25%
-    }
+
+    ret = blockValue * 75 / 100; // 75%
+
     return ret;
 }
 
