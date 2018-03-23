@@ -10,6 +10,8 @@
 #include "core.h"
 #include "protocol.h"
 #include "util.h"
+#include "uint256.h"
+
 
 #include <boost/assign/list_of.hpp>
 
@@ -49,20 +51,20 @@ public:
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-        txNew.vout[0].nValue = 16 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04becedf6ebadd4596964d890f677f8d2e74fdcc313c6416434384a66d6d8758d1c92de272dc6713e4a81d98841dfdfdc95e204ba915447d2fe9313435c78af3e8") << OP_CHECKSIG;
+        txNew.vout[0].nValue = 32 * COIN;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1390078220;
+        genesis.nTime    = 1521784627;
         genesis.nBits    = 0x1e0fffff;
-        genesis.nNonce   = 2099366979;
+        genesis.nNonce   = 2100232723;
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x00000f639db5734b2b861ef8dbccc33aebd7de44d13de000a12d093bcc866c64"));
-        assert(genesis.hashMerkleRoot == uint256("0xfa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88"));
+        assert(hashGenesisBlock == uint256("0x00000801b39fbd4478decc849bcced1d8e8f283667a74586c84b3c06b4d04e11"));
+        assert(genesis.hashMerkleRoot == uint256("0xdf94ef24198752cc9134ce585c4a42578d4e234d32717301eee69e9a8a815c77"));
 
         vSeeds.push_back(CDNSSeedData("127.0.0.1", "127.0.0.1"));
 
@@ -126,11 +128,11 @@ public:
         nRewardForkHeight2 = 1000;
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1388868139;
-        genesis.nNonce = 423087994;
+        genesis.nTime = 1521784627;
+        genesis.nNonce = 423949192;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000082f5939c2154dbcba35f784530d12e9d72472fcfaf29674ea312cdf4c83"));
+        assert(hashGenesisBlock == uint256("0x000008f67d53fd15b2a03ff411602637bf8fc5cc1bc0cdea3839109cc28578fa"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
