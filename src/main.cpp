@@ -1435,7 +1435,7 @@ int64_t GetBlockValue(int nBits, int nHeight, int64_t nFees)
     int64_t nSubsidy = nStartSubsidy;
 
     if (nHeight == 1) {
-        nSubsidy = 1000000;
+        nSubsidy = 1000000 * COIN;
     }
 
     return nSubsidy + nFees;
