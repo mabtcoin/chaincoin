@@ -66,7 +66,8 @@ public:
         assert(hashGenesisBlock == uint256("0x00000801b39fbd4478decc849bcced1d8e8f283667a74586c84b3c06b4d04e11"));
         assert(genesis.hashMerkleRoot == uint256("0xdf94ef24198752cc9134ce585c4a42578d4e234d32717301eee69e9a8a815c77"));
 
-        vSeeds.push_back(CDNSSeedData("127.0.0.1", "127.0.0.1"));
+        vSeeds.push_back(CDNSSeedData("seed1.mabtcoin.com", "seed1.mabtcoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed2.mabtcoin.com", "seed2.mabtcoin.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,4);
