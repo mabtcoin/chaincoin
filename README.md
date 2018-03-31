@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/mabtcoin/masterbitcoin.svg?branch=master)](https://travis-ci.org/mabtcoin/masterbitcoin)
-
 Masterbitcoin Core staging tree 0.9
 ===============================
 
