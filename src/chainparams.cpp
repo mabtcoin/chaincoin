@@ -72,8 +72,8 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,4);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,28 + 128);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x02, 0xFE, 0x52, 0xF8};
-        base58Prefixes[EXT_SECRET_KEY] = {0x02, 0xFE, 0x52, 0xCC};
+//        base58Prefixes[EXT_PUBLIC_KEY] = {0x02, 0xFE, 0x52, 0xF8};
+//        base58Prefixes[EXT_SECRET_KEY] = {0x02, 0xFE, 0x52, 0xCC};
 
         // Convert the pnSeeds array into usable address objects.
         for (unsigned int i = 0; i < ARRAYLEN(pnSeed); i++)
@@ -141,8 +141,8 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,80);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,44);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,88 + 128);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x3a, 0x80, 0x61, 0xa0};
-        base58Prefixes[EXT_SECRET_KEY] = {0x3a, 0x80, 0x58, 0x37};
+//        base58Prefixes[EXT_PUBLIC_KEY] = new int[4] {0x3a, 0x80, 0x61, 0xa0};
+//        base58Prefixes[EXT_SECRET_KEY] = new int[4] {0x3a, 0x80, 0x58, 0x37};
     }
     virtual Network NetworkID() const { return CChainParams::TESTNET; }
 };

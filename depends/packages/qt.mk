@@ -1,6 +1,6 @@
 PACKAGE=qt
 $(package)_version=5.2.1
-$(package)_download_path=http://download.qt-project.org/official_releases/qt/5.2/$($(package)_version)/single
+$(package)_download_path=http://download.qt.io/archive/qt/5.2/$($(package)_version)/single
 $(package)_file_name=$(package)-everywhere-opensource-src-$($(package)_version).tar.gz
 $(package)_sha256_hash=84e924181d4ad6db00239d87250cc89868484a14841f77fb85ab1f1dbdcd7da1
 $(package)_dependencies=openssl
@@ -54,7 +54,6 @@ define $(package)_preprocess_cmds
   cp -f qtbase/mkspecs/macx-clang/Info.plist.app qtbase/mkspecs/macx-clang-linux/ &&\
   cp -f qtbase/mkspecs/macx-clang/qplatformdefs.h qtbase/mkspecs/macx-clang-linux/ &&\
   cp -f $($(package)_patch_dir)/mac-qmake.conf qtbase/mkspecs/macx-clang-linux/qmake.conf && \
-  patch -p1 < $($(package)_patch_dir)/fix-xcb-include-order.patch && \
   patch -p1 < $($(package)_patch_dir)/qt5-tablet-osx.patch && \
   echo "QMAKE_CFLAGS     += $($(package)_cflags) $($(package)_cppflags)" >> qtbase/mkspecs/common/gcc-base.conf && \
   echo "QMAKE_CXXFLAGS   += $($(package)_cxxflags) $($(package)_cppflags)" >> qtbase/mkspecs/common/gcc-base.conf && \

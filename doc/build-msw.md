@@ -81,3 +81,4 @@ MSYS shell:
 	sh configure
 	mingw32-make
 	strip dashd.exe
+min
