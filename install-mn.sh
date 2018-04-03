@@ -54,14 +54,14 @@ clonerepo() { #TODO: add error detection
 
 compile() {
 	cd masterbitcoin #TODO: squash relative path
+	message "Preparing to build..."
+	./autogen.sh
+	if [ $? -ne 0 ]; then error; fi
     message "Building Dependencies..."
     cd depends
     make HOST=x86_64-pc-linux-gnu
    	if [ $? -ne 0 ]; then error; fi
     cd ..
-	message "Preparing to build..."
-	./autogen.sh
-	if [ $? -ne 0 ]; then error; fi
 	message "Configuring build options..."
 	CONFIG_SITE=$PWD/depends/x86_64-pc-linux-gnu/share/conifg.site ./configure $1 --disable-tests -prefix=$PWD/depends/x86_64-pc-linux-gnu/
 	if [ $? -ne 0 ]; then error; fi
