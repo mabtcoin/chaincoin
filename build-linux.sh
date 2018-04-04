@@ -32,7 +32,7 @@ prepdependencies() { #TODO: add error detection
 	sudo add-apt-repository ppa:bitcoin/bitcoin -y
 	sudo apt-get update
 	sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
-	sudo apt-get dos2unix
+	sudo apt-get install dos2unix curl -y
 }
 
 createswap() { #TODO: add error detection
@@ -60,7 +60,6 @@ compile() {
 	if [ $? -ne 0 ]; then error; fi
     message "Building Dependencies..."
     cd depends
-    sudo dos2unix *
     make HOST=x86_64-pc-linux-gnu
    	if [ $? -ne 0 ]; then error; fi
     cd ..
