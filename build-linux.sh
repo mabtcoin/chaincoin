@@ -62,6 +62,10 @@ compile() {
     cd depends
     make HOST=x86_64-pc-linux-gnu
    	if [ $? -ne 0 ]; then error; fi
+  	pushd $PWD/depends/x86_64-pc-linux-gnu/
+   	tar -xf $PWD/depends/built/x86_64-pc-linux-gnu/protobuf*.tar.gz
+   	popd
+
     cd ..
 	message "Configuring build options..."
 	CONFIG_SITE=$PWD/depends/x86_64-pc-linux-gnu/share/conifg.site ./configure $1 --disable-tests -prefix=$PWD/depends/x86_64-pc-linux-gnu/
